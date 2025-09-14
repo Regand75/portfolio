@@ -1,0 +1,59 @@
+import React from 'react';
+import styled from "styled-components";
+import {Container} from "../../../components/common/Container.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import skillsGroupImage from "../../../assets/images/group.png"
+import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
+import {Skill} from "./Skill.tsx";
+
+const skillsItems = [
+    {title: 'Databases', list: 'MongoDB Postman Swagger REST API RxJS'},
+    {title: 'Tools', list: 'WebStorm Git GitHub NPM PNPM Yarn'},
+    {title: 'Other', list: 'HTML CSS SASS Webpack'},
+    {title: 'Languages', list: 'JavaScript TypeScript'},
+    {title: 'Frameworks', list: 'Angular React'},
+]
+
+export const Skills = () => {
+    return (
+        <StyledSkills>
+            <Container>
+                <SectionTitle title={'skills'} width={'250px'} left={'133px'}/>
+                <SkillsSectionWrapper>
+                    <FlexWrapper justify={'space-between'} gap={'59px'}>
+                        <SkillsGroupImage src={skillsGroupImage} alt="group"/>
+                        <SkillsWrapper>
+                            <FlexWrapper direction={'column'} wrap={'wrap-reverse'} gap={'16px'}>
+                                {skillsItems.map((skill, index) => (
+                                    <React.Fragment key={index}>
+                                        <Skill title={skill.title} list={skill.list}/>
+                                    </React.Fragment>
+                                ))}
+                            </FlexWrapper>
+                        </SkillsWrapper>
+                    </FlexWrapper>
+                </SkillsSectionWrapper>
+            </Container>
+        </StyledSkills>
+    );
+};
+
+const StyledSkills = styled.section`
+    padding-bottom: 112px;
+`;
+
+const SkillsSectionWrapper = styled.div`
+    padding: 12px 0 0 34px;
+    
+`;
+
+const SkillsGroupImage = styled.img`
+    width: 350px;
+    height: 284px;
+    object-fit: cover;
+`;
+
+const SkillsWrapper = styled(FlexWrapper)`
+    margin-top: 31px;
+    height: 280px;
+`;
