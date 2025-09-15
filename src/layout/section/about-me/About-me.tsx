@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
-import {Button} from "../../../components/common/Button.tsx";
 import aboutMeImage from "../../../assets/images/about-me-image.png"
+import {Button} from "../../../components/common/Button.tsx";
 
 export const AboutMe = () => {
     return (
@@ -32,7 +32,7 @@ export const AboutMe = () => {
                                     teamwork.
                                 </p>
                             </AboutMeDescription>
-                            <Button title={'Read more'}/>
+                            <Button type='button'>Read more</Button>
                         </FlexWrapper>
                     </AboutMeWrapper>
                     <div>

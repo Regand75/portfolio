@@ -9,6 +9,7 @@ import {Footer} from "./layout/footer/Footer.tsx";
 import {GlobalStyles} from "./styles/GlobalStyles.tsx";
 import {ThemeProvider} from "styled-components";
 import {theme} from "./styles/ThemeStyles.tsx";
+import {Slogan} from "./layout/section/slogan/slogan.tsx";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <GlobalStyles/>
                 <Header/>
                 <Main/>
+                <Slogan />
                 <Projects/>
                 <Skills/>
                 <AboutMe/>

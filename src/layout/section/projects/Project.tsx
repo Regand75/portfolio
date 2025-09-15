@@ -19,7 +19,7 @@ export const Project = (props: ProjectPropsType) => {
                 <FlexWrapper direction={'column'} gap={'16px'}>
                     <ProjectTitle>{props.titleProject}</ProjectTitle>
                     <ProjectDescription>{props.descriptionProject}</ProjectDescription>
-                    <Button title='Live' $colorBorder={'tertiary'} $colorText={'primary'} type={"button"}/>
+                    <Button type="button">Live</Button>
                 </FlexWrapper>
             </ProjectWrapper>
         </StyledProject>
@@ -28,7 +28,6 @@ export const Project = (props: ProjectPropsType) => {
 
 const StyledProject = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
-    margin-top: 48px;
     min-width: 330px;
     width: 100%;
     height: fit-content;

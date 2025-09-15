@@ -18,21 +18,19 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <SectionTitle title={'skills'} width={'250px'} left={'133px'}/>
-                <SkillsSectionWrapper>
-                    <FlexWrapper justify={'space-between'} gap={'59px'}>
-                        <SkillsGroupImage src={skillsGroupImage} alt="group"/>
-                        <SkillsWrapper>
-                            <FlexWrapper direction={'column'} wrap={'wrap-reverse'} gap={'16px'}>
-                                {skillsItems.map((skill, index) => (
-                                    <React.Fragment key={index}>
-                                        <Skill title={skill.title} list={skill.list}/>
-                                    </React.Fragment>
-                                ))}
-                            </FlexWrapper>
-                        </SkillsWrapper>
-                    </FlexWrapper>
-                </SkillsSectionWrapper>
+                <SectionTitle title={'skills'} width={'250px'} left={'133px'} mb={'12px'}/>
+                <FlexWrapper justify={'space-between'} gap={'59px'}>
+                    <SkillsGroupImage src={skillsGroupImage} alt="group"/>
+                    <SkillsWrapper>
+                        <FlexWrapper direction={'column'} wrap={'wrap-reverse'} gap={'16px'}>
+                            {skillsItems.map((skill, index) => (
+                                <React.Fragment key={index}>
+                                    <Skill title={skill.title} list={skill.list}/>
+                                </React.Fragment>
+                            ))}
+                        </FlexWrapper>
+                    </SkillsWrapper>
+                </FlexWrapper>
             </Container>
         </StyledSkills>
     );
@@ -40,11 +38,6 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     padding-bottom: 112px;
-`;
-
-const SkillsSectionWrapper = styled.div`
-    padding: 12px 0 0 34px;
-    
 `;
 
 const SkillsGroupImage = styled.img`

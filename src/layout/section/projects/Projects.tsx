@@ -13,7 +13,7 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <SectionTitle title={'projects'} width={'511px'} left={'170px'}/>
+                <SectionTitle title={'projects'} width={'511px'} left={'170px'} mb={'48px'}/>
                 <FlexWrapper gap={'16px'}>
                     <Project srcImageProject={projectImage1}
                              listSkillsProject={'HTML SCSS Python Flask'}

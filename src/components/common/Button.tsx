@@ -1,27 +1,13 @@
-import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../styles/ThemeStyles.tsx";
 
-type ButtonPropsType = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    title: string,
+type ButtonPropsType = {
     $colorBorder?: keyof typeof theme.colors,
     $colorText?: keyof typeof theme.colors,
     $colorBackground?: keyof typeof theme.colors,
 }
 
-export const Button = ({title, ...rest}: ButtonPropsType) => {
-    return (
-        <StyledButton {...rest}>
-            {title}
-        </StyledButton>
-    );
-};
-
-const StyledButton = styled.button<{
-    $colorBorder?: keyof typeof theme.colors,
-    $$colorText?: keyof typeof theme.colors,
-    $colorBackground?: keyof typeof theme.colors
-}>`
+export const Button = styled.button<ButtonPropsType>`
     padding: 8px 16px;
     background-color: transparent;
     text-align: center;

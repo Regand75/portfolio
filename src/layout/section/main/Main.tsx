@@ -22,7 +22,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.div`
-    padding-bottom: 74px;
+    padding-bottom: 112px;
 `;
 
 const MainPhoto = styled.img`
