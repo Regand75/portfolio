@@ -22,3 +22,4 @@ const LogoSpane = styled.span`
     font-size: 16px;
     color: ${({theme}) => theme.colors.primary};
 `;
+

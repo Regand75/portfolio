@@ -8,15 +8,19 @@ import {Contacts} from "./layout/section/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 import {GlobalStyles} from "./styles/GlobalStyles.tsx";
 import {ThemeProvider} from "styled-components";
-import {theme} from "./styles/ThemeStyles.tsx";
+import {darkTheme, lightTheme} from "./styles/ThemeStyles.tsx";
 import {Slogan} from "./layout/section/slogan/slogan.tsx";
+import {useState} from "react";
 
 function App() {
+    const [isDark, setIsDark] = useState(true);
+    const toggleTheme = () => setIsDark(!isDark);
+
     return (
         <div className="App">
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
                 <GlobalStyles/>
-                <Header/>
+                <Header toggleTheme={toggleTheme} isDark={isDark} />
                 <Main/>
                 <Slogan />
                 <Projects/>

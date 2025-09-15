@@ -35,10 +35,11 @@ const StyledProject = styled.div`
 
 const ProjectImage = styled.img`
     width: 100%;
+    max-height: 200px;
+    height: 100%;
 `;
 
 const ProjectSkills = styled.div`
-    border-top: 1px solid ${({theme}) => theme.colors.secondary};
     border-bottom: 1px solid ${({theme}) => theme.colors.secondary};
     padding: 8px;
     font-family: 'Fira Code',sans-serif;

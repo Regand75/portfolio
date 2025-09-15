@@ -4,10 +4,15 @@ import {Logo} from "../../components/logo/Logo.tsx";
 import {Menu} from "../../components/logo/Menu.tsx";
 import {Container} from "../../components/common/Container.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
+import {Icon} from "../../components/icon/Icon.tsx";
 
-const items = ['home', 'project', 'about-me', 'contacts'];
+type HeaderProps = {
+    toggleTheme: () => void,
+    isDark: boolean,
+}
 
-export const Header = () => {
+export const Header = ({toggleTheme, isDark}: HeaderProps) => {
+    const items = ['home', 'project', 'about-me', 'contacts'];
     return (
         <StyledHeader>
             <Container>
@@ -19,6 +24,14 @@ export const Header = () => {
                             <option value="english">EN</option>
                             <option value="russain">RU</option>
                         </select>
+                        <button onClick={toggleTheme}
+                                style={{background: "transparent", border: "none", cursor: "pointer"}}>
+                            {isDark ? (
+                                <Icon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                            ) : (
+                                <Icon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                            )}
+                        </button>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>

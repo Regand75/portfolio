@@ -40,8 +40,12 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     body {
+        font-family: 'Fira Code',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         background-color: ${({theme}) => theme.colors.background};
-        font-family: 'Fira Code', sans-serif;
         font-weight: 400;
         font-size: 16px;
         color: ${({theme}) => theme.colors.secondary};
@@ -55,4 +59,4 @@ export const GlobalStyles = createGlobalStyle`
     ul {
         list-style: none;
     }
-`
+`;

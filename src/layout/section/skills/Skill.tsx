@@ -17,6 +17,7 @@ export const Skill = ({title, list}: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     width: 178px;
+    height: fit-content;
     border: 1px solid ${({theme}) => theme.colors.secondary};
     text-align: start;
 `;

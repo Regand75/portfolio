@@ -33,7 +33,7 @@ export const Footer = () => {
                                 </FooterIconItem>
                                 <FooterIconItem>
                                     <FooterIconLink href='#'>
-                                        <Icon iconId={'discord'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
+                                        <Icon iconId={'bitcoin'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
                                     </FooterIconLink>
                                 </FooterIconItem>
                             </FlexWrapper>
