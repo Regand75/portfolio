@@ -24,4 +24,4 @@ const StyledMenu = styled.nav`
     span {
         color: ${({theme}) => theme.colors.tertiary};
     }
-`
+`;
