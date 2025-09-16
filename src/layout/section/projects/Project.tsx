@@ -13,15 +13,15 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
-            <ProjectImage src={props.srcImageProject} alt={props.titleProject}/>
-            <ProjectSkills>{props.listSkillsProject}</ProjectSkills>
-            <ProjectWrapper>
+            <Image src={props.srcImageProject} alt={props.titleProject}/>
+            <MeSkills>{props.listSkillsProject}</MeSkills>
+            <Wrapper>
                 <FlexWrapper direction={'column'} gap={'16px'}>
-                    <ProjectTitle>{props.titleProject}</ProjectTitle>
-                    <ProjectDescription>{props.descriptionProject}</ProjectDescription>
+                    <Title>{props.titleProject}</Title>
+                    <Description>{props.descriptionProject}</Description>
                     <Button type="button">Live</Button>
                 </FlexWrapper>
-            </ProjectWrapper>
+            </Wrapper>
         </StyledProject>
     );
 };
@@ -33,13 +33,13 @@ const StyledProject = styled.div`
     height: fit-content;
 `;
 
-const ProjectImage = styled.img`
+const Image = styled.img`
     width: 100%;
     max-height: 200px;
     height: 100%;
 `;
 
-const ProjectSkills = styled.div`
+const MeSkills = styled.div`
     border-bottom: 1px solid ${({theme}) => theme.colors.secondary};
     padding: 8px;
     font-family: 'Fira Code',sans-serif;
@@ -47,17 +47,17 @@ const ProjectSkills = styled.div`
     color: ${({theme}) => theme.colors.secondary};
 `;
 
-const ProjectWrapper = styled.div`
+const Wrapper = styled.div`
     padding: 16px`;
 
-const ProjectTitle = styled.div`
+const Title = styled.div`
     font-family: 'Fira Code',sans-serif;
     font-weight: 500;
     font-size: 24px;
     line-height: 31px;
 `;
 
-const ProjectDescription = styled.div`
+const Description = styled.div`
     font-family: 'Fira Code',sans-serif;
     line-height: 21px;
     color: ${({theme}) => theme.colors.secondary};

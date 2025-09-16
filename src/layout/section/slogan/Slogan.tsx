@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const Slogan = () => {
     return (
         <StyledSlogan>
-            <SloganText>With great power comes great electricity bill</SloganText>
-            <SloganAuthor>- Dr. Who</SloganAuthor>
+            <Text>With great power comes great electricity bill</Text>
+            <Author>- Dr. Who</Author>
         </StyledSlogan>
     );
 };
@@ -21,12 +21,12 @@ const StyledSlogan = styled.section`
     text-align: center;
 `;
 
-const SloganText = styled.div`
+const Text = styled.div`
     padding: 32px;
     border: 1px solid ${({theme}) => theme.colors.secondary};
 `;
 
-const SloganAuthor = styled.div`
+const Author = styled.div`
     width: 162px;
     padding: 15px;
     border: 1px solid ${({theme}) => theme.colors.secondary};

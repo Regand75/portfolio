@@ -13,31 +13,31 @@ export const Footer = () => {
                     <FlexWrapper direction={'column'} gap={'16px'}>
                         <FlexWrapper align={'center'} gap={'24px'}>
                             <Logo/>
-                            <FooterLink>urazovs_k@mail.ru</FooterLink>
+                            <Link>urazovs_k@mail.ru</Link>
                         </FlexWrapper>
-                        <FooterSkills>Web designer and front-end developer</FooterSkills>
+                        <Skills>Web designer and front-end developer</Skills>
                     </FlexWrapper>
                     <FlexWrapper direction={'column'} gap={'12px'}>
-                        <FooterText>Media</FooterText>
-                        <FooterSocialIconsList>
+                        <Text>Media</Text>
+                        <SocialIconsList>
                             <FlexWrapper>
-                                <FooterIconItem>
-                                    <FooterIconLink href='#'>
+                                <IconItem>
+                                    <IconLink href='#'>
                                         <Icon iconId={'github'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                    </FooterIconLink>
-                                </FooterIconItem>
-                                <FooterIconItem>
-                                    <FooterIconLink href='#'>
+                                    </IconLink>
+                                </IconItem>
+                                <IconItem>
+                                    <IconLink href='#'>
                                         <Icon iconId={'figma'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                    </FooterIconLink>
-                                </FooterIconItem>
-                                <FooterIconItem>
-                                    <FooterIconLink href='#'>
+                                    </IconLink>
+                                </IconItem>
+                                <IconItem>
+                                    <IconLink href='#'>
                                         <Icon iconId={'bitcoin'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                    </FooterIconLink>
-                                </FooterIconItem>
+                                    </IconLink>
+                                </IconItem>
                             </FlexWrapper>
-                        </FooterSocialIconsList>
+                        </SocialIconsList>
                     </FlexWrapper>
                 </FlexWrapper>
                 <Copyright>© Copyright 2022. Made by Elias</Copyright>
@@ -46,36 +46,36 @@ export const Footer = () => {
     );
 };
 
-const StyledFooter = styled.section`;
+const StyledFooter = styled.footer`;
     padding: 32px 0;
     border-top: 1px solid ${({theme}) => theme.colors.secondary};
 `;
 
-const FooterLink = styled.div`
+const Link = styled.div`
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
 `;
 
-const FooterSkills = styled.div`
+const Skills = styled.div`
     color: ${({theme}) => theme.colors.primary};
 `;
 
-const FooterText = styled.div`
+const Text = styled.div`
     font-family: 'Fira Code', sans-serif;
     font-weight: 500;
     font-size: 24px;
     color: ${({theme}) => theme.colors.primary};
 `;
 
-const FooterSocialIconsList = styled.ul`
+const SocialIconsList = styled.ul`
 
 `;
 
-const FooterIconItem = styled.li`
+const IconItem = styled.li`
     cursor: pointer;
 `;
 
-const FooterIconLink = styled.a`
+const IconLink = styled.a`
 
 `;
 

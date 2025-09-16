@@ -10,19 +10,19 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper align={'start'} justify={'space-between'}>
-                    <MainInfo>
-                        <MainTitle>Andrey is a <span>front-end developer</span></MainTitle>
-                        <MainDescription>He crafts responsive websites where technologies meet creativity</MainDescription>
+                    <Info>
+                        <Title>Andrey is a <span>front-end developer</span></Title>
+                        <Description>He crafts responsive websites where technologies meet creativity</Description>
                         <Button>Contact me!!</Button>
-                    </MainInfo>
+                    </Info>
                     <MainImageWrapper>
-                        <MainImage src={mainImage} alt=""/>
-                        <MainInfoWork>
+                        <Image src={mainImage} alt=""/>
+                        <InfoWork>
                             <FlexWrapper align={'center'}>
-                                <MainInfoWorkBlock />
+                                <InfoWorkBlock />
                                 <p>Currently working on <span>Portfolio</span></p>
                             </FlexWrapper>
-                        </MainInfoWork>
+                        </InfoWork>
                     </MainImageWrapper>
                 </FlexWrapper>
             </Container>
@@ -30,18 +30,18 @@ export const Main = () => {
     );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     padding-top: 123px;
     padding-bottom: 112px;
     display: flex;
 `;
 
-const MainInfo = styled.div`
+const Info = styled.div`
     margin-top: 75px;
     max-width: 537px;
 `;
 
-const MainTitle = styled.h1`
+const Title = styled.h1`
     margin-bottom: 32px;
     font-family: 'Fira Code', sans-serif;
     font-weight: 600;
@@ -54,7 +54,7 @@ const MainTitle = styled.h1`
     }
 `;
 
-const MainDescription = styled.p`
+const Description = styled.p`
     margin-bottom: 24px;
     font-family: 'Fira Code', sans-serif;
     line-height: 25px;
@@ -64,13 +64,13 @@ const MainDescription = styled.p`
 const MainImageWrapper = styled.div`
 `;
 
-const MainImage = styled.img`
+const Image = styled.img`
     width: 457px;
     height: 386px;
     object-fit: cover;
 `;
 
-const MainInfoWork = styled.div`
+const InfoWork = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     padding: 8px;
     width: 402px;
@@ -83,7 +83,7 @@ const MainInfoWork = styled.div`
     }
 `;
 
-const MainInfoWorkBlock = styled.div`
+const InfoWorkBlock = styled.div`
     width: 16px;
     height: 16px;
     margin-right: 10px;

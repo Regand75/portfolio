@@ -59,4 +59,16 @@ export const GlobalStyles = createGlobalStyle`
     ul {
         list-style: none;
     }
+    
+    :focus-visible {
+        outline-color: ${({theme}) => theme.colors.tertiary};;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+    }
 `;

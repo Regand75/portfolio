@@ -9,8 +9,8 @@ type SkillPropsType = {
 export const Skill = ({title, list}: SkillPropsType) => {
     return (
         <StyledSkill>
-            <SkillTitle>{title}</SkillTitle>
-            <SkillList>{list}</SkillList>
+            <Title>{title}</Title>
+            <List>{list}</List>
         </StyledSkill>
     );
 };
@@ -22,7 +22,7 @@ const StyledSkill = styled.div`
     text-align: start;
 `;
 
-const SkillTitle = styled.h3`
+const Title = styled.h3`
     font-family: 'Fira Code', sans-serif;
     font-weight: 600;
     color: ${({theme}) => theme.colors.primary};
@@ -30,7 +30,7 @@ const SkillTitle = styled.h3`
     padding: 8px;
 `;
 
-const SkillList = styled.p`
+const List = styled.p`
     padding: 8px;
 `;
 

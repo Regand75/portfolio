@@ -20,8 +20,8 @@ export const Skills = () => {
             <Container>
                 <SectionTitle title={'skills'} width={'250px'} left={'133px'} mb={'12px'}/>
                 <FlexWrapper justify={'space-between'} gap={'59px'}>
-                    <SkillsGroupImage src={skillsGroupImage} alt="group"/>
-                    <SkillsWrapper>
+                    <GroupImage src={skillsGroupImage} alt="group"/>
+                    <Wrapper>
                         <FlexWrapper direction={'column'} wrap={'wrap-reverse'} gap={'16px'}>
                             {skillsItems.map((skill, index) => (
                                 <React.Fragment key={index}>
@@ -29,7 +29,7 @@ export const Skills = () => {
                                 </React.Fragment>
                             ))}
                         </FlexWrapper>
-                    </SkillsWrapper>
+                    </Wrapper>
                 </FlexWrapper>
             </Container>
         </StyledSkills>
@@ -40,13 +40,13 @@ const StyledSkills = styled.section`
     padding-bottom: 112px;
 `;
 
-const SkillsGroupImage = styled.img`
+const GroupImage = styled.img`
     width: 350px;
     height: 284px;
     object-fit: cover;
 `;
 
-const SkillsWrapper = styled(FlexWrapper)`
+const Wrapper = styled(FlexWrapper)`
     margin-top: 31px;
     height: 280px;
 `;

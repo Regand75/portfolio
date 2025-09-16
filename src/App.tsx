@@ -9,7 +9,7 @@ import {Footer} from "./layout/footer/Footer.tsx";
 import {GlobalStyles} from "./styles/GlobalStyles.tsx";
 import {ThemeProvider} from "styled-components";
 import {darkTheme, lightTheme} from "./styles/ThemeStyles.tsx";
-import {Slogan} from "./layout/section/slogan/slogan.tsx";
+import {Slogan} from "./layout/section/slogan/Slogan.tsx";
 import {useState} from "react";
 
 function App() {

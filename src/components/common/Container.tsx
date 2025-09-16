@@ -6,4 +6,4 @@ export const Container = styled.div`
     min-height: 100%;
     margin-inline: auto;
     padding: 0 15px;
-`
+`;

@@ -10,15 +10,15 @@ export const Contacts = () => {
             <Container>
                 <SectionTitle title={'contacts'} width={'145px'} left={'171px'} mb={'45px'}/>
                 <FlexWrapper justify={'space-between'}>
-                    <ContactsMeDescription>
+                    <MeDescription>
                         <p>
                             I’m interested in freelance opportunities. However, if you have other request or question, don’t
                             hesitate to contact me
                         </p>
-                    </ContactsMeDescription>
-                    <ContactsMessageWrapper>
+                    </MeDescription>
+                    <MessageWrapper>
                         <h3>Message me here</h3>
-                    </ContactsMessageWrapper>
+                    </MessageWrapper>
                 </FlexWrapper>
             </Container>
         </StyledContacts>
@@ -29,7 +29,7 @@ const StyledContacts = styled.section`
     padding-bottom: 145px;
 `;
 
-const ContactsMeDescription = styled.div`
+const MeDescription = styled.div`
     max-width: 515px;
     width: 100%;
     font-family: 'Fira Code', sans-serif;
@@ -37,7 +37,7 @@ const ContactsMeDescription = styled.div`
     color: ${({theme}) => theme.colors.secondary};
 `;
 
-const ContactsMessageWrapper = styled.div`
+const MessageWrapper = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     padding: 16px;
     height: fit-content;

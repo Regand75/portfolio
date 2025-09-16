@@ -5,33 +5,37 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledHeaderMenu>
-            <ul>
+            <List>
                 <FlexWrapper align={'center'} gap={'32px'}>
                     {props.menuItems.map((item, index) => (
-                        <HeaderListItem key={index}>
-                            <HeaderLink href="#"><span>#</span>{item}</HeaderLink>
-                        </HeaderListItem>
+                        <ListItem key={index}>
+                            <Link href="#"><span>#</span>{item}</Link>
+                        </ListItem>
                     ))}
                 </FlexWrapper>
-            </ul>
+            </List>
         </StyledHeaderMenu>
     );
 };
 
 const StyledHeaderMenu = styled.nav`
+    
+`;
+
+const List = styled.ul`
+
+`;
+
+const ListItem = styled.li`
     &:hover {
         color: ${({theme}) => theme.colors.primary};
     }
+`;
 
+const Link = styled.a`
     span {
         color: ${({theme}) => theme.colors.tertiary};
     }
 `;
 
-const HeaderListItem = styled.li`
 
-`;
-
-const HeaderLink = styled.a`
-
-`;

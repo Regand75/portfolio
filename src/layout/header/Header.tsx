@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {Menu} from "../../components/menu/Menu.tsx";
 import {Container} from "../../components/common/Container.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
 import {Icon} from "../../components/icon/Icon.tsx";
@@ -25,13 +24,13 @@ export const Header = ({toggleTheme, isDark}: HeaderProps) => {
                             <option value="english">EN</option>
                             <option value="russain">RU</option>
                         </select>
-                        <HeaderButton onClick={toggleTheme}>
+                        <Button onClick={toggleTheme}>
                             {isDark ? (
                                 <Icon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
                             ) : (
                                 <Icon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
                             )}
-                        </HeaderButton>
+                        </Button>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>
@@ -49,9 +48,11 @@ const StyledHeader = styled.header`
     background-color: ${({theme}) => theme.colors.background};;
 `;
 
-const HeaderButton = styled.button`
+const Button = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
 `;
+
+
 

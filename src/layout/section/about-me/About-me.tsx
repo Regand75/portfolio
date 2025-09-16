@@ -11,10 +11,10 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
                 <FlexWrapper justify={'space-between'}>
-                    <AboutMeWrapper>
+                    <Wrapper>
                         <FlexWrapper direction={'column'} gap={'23px'}>
                             <SectionTitle title={'about-me'} width={'340px'} left={'172px'}/>
-                            <AboutMeDescription>
+                            <Description>
                                 <p>Hello, i'm Andrey</p>
                                 <p>
                                     I am a Junior Frontend Developer with basic experience in Angular and the modern
@@ -31,12 +31,12 @@ export const AboutMe = () => {
                                     I am eager to continue growing in this field and open to constructive feedback and
                                     teamwork.
                                 </p>
-                            </AboutMeDescription>
+                            </Description>
                             <Button type='button'>Read more</Button>
                         </FlexWrapper>
-                    </AboutMeWrapper>
+                    </Wrapper>
                     <div>
-                        <AboutMeImage src={aboutMeImage} alt=''/>
+                        <Image src={aboutMeImage} alt=''/>
                     </div>
                 </FlexWrapper>
             </Container>
@@ -48,11 +48,11 @@ const StyledAboutMe = styled.section`
     padding-bottom: 112px;
 `;
 
-const AboutMeWrapper = styled.div`
+const Wrapper = styled.div`
     max-width: 515px;
 `;
 
-const AboutMeDescription = styled.div`
+const Description = styled.div`
     width: 100%;
     font-family: 'Fira Code', sans-serif;
     line-height: 26px;
@@ -67,6 +67,6 @@ const AboutMeDescription = styled.div`
     }
 `;
 
-const AboutMeImage = styled.img`
+const Image = styled.img`
     width: 100%;
 `;

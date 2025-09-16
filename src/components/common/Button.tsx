@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import {theme} from "../../styles/ThemeStyles.tsx";
 
 type ButtonPropsType = {
-    $colorBorder?: keyof typeof theme.colors,
-    $colorText?: keyof typeof theme.colors,
-    $colorBackground?: keyof typeof theme.colors,
+    $colorBorder?: string,
+    $colorText?: string,
+    $colorBackground?: string,
 }
 
 export const Button = styled.button<ButtonPropsType>`
