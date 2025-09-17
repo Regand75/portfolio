@@ -7,14 +7,14 @@ export const Logo = () => {
     return (
         <a href=''>
             <FlexWrapper align={'center'} gap={'9px'}>
-                <Icon iconId={'logo'}/>
-                <Spane>Andrey</Spane>
+                <LogoIcon iconId={'logo'}/>
+                <LogoSpane>Andrey</LogoSpane>
             </FlexWrapper>
         </a>
     );
 };
 
-const Spane = styled.span`
+const LogoSpane = styled.span`
     display: inline-block;
     font-family: 'Fira Code', sans-serif;
     font-style: normal;
@@ -22,4 +22,14 @@ const Spane = styled.span`
     font-size: 16px;
     color: ${({theme}) => theme.colors.primary};
 `;
+
+const LogoIcon = styled(Icon)`
+    color: ${({ theme }) => theme.colors.primary};
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.secondary};
+    }
+`;
+
+
 

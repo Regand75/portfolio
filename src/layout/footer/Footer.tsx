@@ -23,17 +23,17 @@ export const Footer = () => {
                             <FlexWrapper>
                                 <IconItem>
                                     <IconLink href='#'>
-                                        <Icon iconId={'github'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
+                                        <FooterIcon iconId={'github'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
                                     </IconLink>
                                 </IconItem>
                                 <IconItem>
                                     <IconLink href='#'>
-                                        <Icon iconId={'figma'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
+                                        <FooterIcon iconId={'figma'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
                                     </IconLink>
                                 </IconItem>
                                 <IconItem>
                                     <IconLink href='#'>
-                                        <Icon iconId={'bitcoin'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
+                                        <FooterIcon iconId={'bitcoin'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
                                     </IconLink>
                                 </IconItem>
                             </FlexWrapper>
@@ -84,4 +84,12 @@ const Copyright = styled.div`
     text-align: center;
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
+`;
+
+const FooterIcon = styled(Icon)`
+    color: ${({ theme }) => theme.colors.secondary};
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.primary};
+    }
 `;

@@ -26,9 +26,9 @@ export const Header = ({toggleTheme, isDark}: HeaderProps) => {
                         </select>
                         <Button onClick={toggleTheme}>
                             {isDark ? (
-                                <Icon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                                <SoonIcon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
                             ) : (
-                                <Icon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                                <SumIcon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
                             )}
                         </Button>
                     </FlexWrapper>
@@ -52,6 +52,22 @@ const Button = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
+`;
+
+const SoonIcon = styled(Icon)`
+    color: ${({ theme }) => theme.colors.secondary};
+    
+    &:hover {
+        color: ${({ theme }) => theme.colors.primary};
+    }
+`;
+
+const SumIcon = styled(Icon)`
+    color: ${({ theme }) => theme.colors.secondary};
+    
+    &:hover {
+        color: ${({ theme }) => theme.colors.primary};
+    }
 `;
 
 

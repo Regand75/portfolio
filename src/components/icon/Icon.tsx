@@ -7,19 +7,30 @@ type IconPropsType = {
     width?: string,
     height?: string,
     viewBox?: string,
+    fill?: string,
+    className?: string,
 }
 
 export const Icon = (props: IconPropsType) => {
     return (
-        <IconSvg width={props.width || "16"} height={props.height || "16"} viewBox={props.viewBox || "0 0 16 16"}
-             fill="none" xmlns="http://www.w3.org/2000/svg">
+        <IconSvg
+            className={props.className}
+            width={props.width || "16"}
+            height={props.height || "16"}
+            viewBox={props.viewBox || "0 0 16 16"}
+            $fill={props.fill || "currentColor"}
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
         </IconSvg>
     );
 };
 
-const IconSvg = styled.svg`
+const IconSvg = styled.svg<{ $fill?: string }>`
+    fill: ${(props) => props.$fill || props.theme.colors.primary};
+    transition: filter 0.3s ease, fill 0.3s ease;
+
     &:hover {
-        fill: ${({theme}) => theme.colors.primary};
+        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
     }
 `;
