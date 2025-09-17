@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from "styled-components";
 import mainImage from "../../../assets/images/main-image.png"
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
@@ -32,8 +32,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     padding-top: 123px;
-    padding-bottom: 112px;
-    display: flex;
+    min-height: calc(100vh - 215px);
 `;
 
 const Info = styled.div`

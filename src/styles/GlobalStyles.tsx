@@ -38,6 +38,11 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+
+    html {
+        scroll-behavior: smooth;
+        height: 100%;
+    }
     
     body {
         font-family: 'Fira Code',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -49,11 +54,17 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         font-size: 16px;
         color: ${({theme}) => theme.colors.secondary};
+        height: 100%;
     }
 
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    a.active {
+        color: ${({ theme }) => theme.colors.primary};
+        font-weight: bold;
     }
 
     ul {

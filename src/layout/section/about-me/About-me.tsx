@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
@@ -45,7 +45,8 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-    padding-bottom: 112px;
+    padding-top: 130px;
+    min-height: calc(100vh - 215px);
 `;
 
 const Wrapper = styled.div`

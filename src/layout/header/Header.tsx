@@ -12,7 +12,13 @@ type HeaderProps = {
 }
 
 export const Header = ({toggleTheme, isDark}: HeaderProps) => {
-    const items = ['home', 'project', 'about-me', 'contacts'];
+    const items = [
+        { title: 'home', link: '/' },
+        { title: 'projects', link: '/projects' },
+        { title: 'skills', link: '/skills' },
+        { title: 'about-me', link: '/about' },
+        { title: 'contacts', link: '/contacts' }
+    ];
     return (
         <StyledHeader>
             <Container>

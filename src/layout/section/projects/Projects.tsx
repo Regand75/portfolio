@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
@@ -7,7 +7,6 @@ import {Project} from "./Project.tsx";
 import projectImage1 from "../../../assets/images/project1.png"
 import projectImage2 from "../../../assets/images/project2.png"
 import projectImage3 from "../../../assets/images/project3.png"
-
 
 export const Projects = () => {
     return (
@@ -34,5 +33,6 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-    padding-bottom: 106px;
+    padding-top: 130px;
+    min-height: calc(100vh - 215px);
 `;

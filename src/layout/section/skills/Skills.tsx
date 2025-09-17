@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
@@ -37,13 +37,14 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    padding-bottom: 112px;
+    padding-top: 130px;
+    min-height: calc(100vh - 215px);
 `;
 
 const GroupImage = styled.img`
     width: 350px;
     height: 284px;
-    object-fit: cover;
+    object-fit: contain;
 `;
 
 const Wrapper = styled(FlexWrapper)`

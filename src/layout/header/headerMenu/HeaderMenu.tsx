@@ -1,15 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {NavLink} from "react-router-dom";
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+type MenuItemType = {
+    title: string;
+    link: string;
+};
+
+export const HeaderMenu = (props: { menuItems: Array<MenuItemType> }) => {
     return (
         <StyledHeaderMenu>
             <List>
                 <FlexWrapper align={'center'} gap={'32px'}>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
-                            <Link href="#"><span>#</span>{item}</Link>
+                            <Link
+                                to={item.link}
+                                className={({ isActive }) => isActive ? 'active' :''}
+                            >
+                                <span>#</span>{item.title}
+                            </Link>
                         </ListItem>
                     ))}
                 </FlexWrapper>
@@ -32,7 +43,7 @@ const ListItem = styled.li`
     }
 `;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
     span {
         color: ${({theme}) => theme.colors.tertiary};
     }
