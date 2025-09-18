@@ -19,7 +19,7 @@ export const Project = (props: ProjectPropsType) => {
                 <FlexWrapper direction={'column'} gap={'16px'}>
                     <Title>{props.titleProject}</Title>
                     <Description>{props.descriptionProject}</Description>
-                    <Button type="button">Live</Button>
+                    <Button type="button">Live {'<~>'}</Button>
                 </FlexWrapper>
             </Wrapper>
         </StyledProject>

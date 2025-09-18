@@ -7,12 +7,16 @@ import {Project} from "./Project.tsx";
 import projectImage1 from "../../../assets/images/project1.png"
 import projectImage2 from "../../../assets/images/project2.png"
 import projectImage3 from "../../../assets/images/project3.png"
+import {Link} from "react-router-dom";
 
 export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <SectionTitle title={'projects'} width={'511px'} left={'170px'} mb={'48px'}/>
+                <FlexWrapper align={'start'} justify={'space-between'}>
+                    <SectionTitle title={'projects'} width={'511px'} left={'170px'} mb={'48px'}/>
+                    <LinkWrapper to={'/slogan'}>View all {'~~>'}</LinkWrapper>
+                </FlexWrapper>
                 <FlexWrapper gap={'16px'}>
                     <Project srcImageProject={projectImage1}
                              listSkillsProject={'HTML SCSS Python Flask'}
@@ -36,4 +40,16 @@ const StyledProjects = styled.section`
     padding-top: 130px;
     padding-bottom: 20px;
     min-height: calc(100vh - 215px);
+`;
+
+const LinkWrapper = styled(Link)`
+    display: inline-block;
+    font-family: 'Fira Code', sans-serif;
+    font-weight: 500;
+    color: ${({theme}) => theme.colors.primary};
+    line-height: 42px;
+
+    &:hover {
+        color: ${({theme}) => theme.colors.tertiary};
+    }
 `;
