@@ -4,6 +4,7 @@ import mainImage from "../../../assets/images/main-image.png"
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 export const Main = () => {
     return (
@@ -16,7 +17,9 @@ export const Main = () => {
                         <Button>Contact me!!</Button>
                     </Info>
                     <MainImageWrapper>
+                        <BeforeIcon iconId={'outlineBig'} width={'156px'} height={'156px'} viewBox={'0 0 156 156'}/>
                         <Image src={mainImage} alt=""/>
+                        <AfterIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                         <InfoWork>
                             <FlexWrapper align={'center'}>
                                 <InfoWorkBlock />
@@ -32,6 +35,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     padding-top: 123px;
+    padding-bottom: 20px;
     min-height: calc(100vh - 215px);
 `;
 
@@ -61,12 +65,28 @@ const Description = styled.p`
 `;
 
 const MainImageWrapper = styled.div`
+    position: relative;
+`;
+
+const BeforeIcon = styled(Icon)`
+    position: absolute;
+    top: 84px;
+    left: -8px;
+    z-index: -1;
+`;
+
+const AfterIcon = styled(Icon)`
+    position: absolute;
+    bottom: 110px;
+    right: 15px;
+    z-index: 2;
 `;
 
 const Image = styled.img`
     width: 457px;
     height: 386px;
     object-fit: cover;
+    
 `;
 
 const InfoWork = styled.div`

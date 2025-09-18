@@ -38,6 +38,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     padding-top: 130px;
+    padding-bottom: 20px;
     min-height: calc(100vh - 215px);
 `;
 
