@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";

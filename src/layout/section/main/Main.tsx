@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import styled from "styled-components";
 import mainImage from "../../../assets/images/main-image.png"
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
