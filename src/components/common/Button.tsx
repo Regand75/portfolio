@@ -4,6 +4,7 @@ type ButtonPropsType = {
     $colorBorder?: string,
     $colorText?: string,
     $colorBackground?: string,
+    $hoverBackground?: string,
 }
 
 export const Button = styled.button<ButtonPropsType>`
@@ -20,7 +21,11 @@ export const Button = styled.button<ButtonPropsType>`
             $colorBorder ? theme.colors[$colorBorder] : theme.colors.tertiary};
 
     &:hover {
-        background-color: ${({$colorBackground, theme}) =>
-                $colorBackground ? theme.colors[$colorBackground] : theme.colors.bgTrTertiary};
+        background-color: ${({$hoverBackground, $colorBackground, theme}) =>
+                $hoverBackground
+                        ? theme.colors[$hoverBackground]
+                        : $colorBackground
+                                ? theme.colors[$colorBackground]
+                                : theme.colors.bgTrTertiary};
     }
 `;

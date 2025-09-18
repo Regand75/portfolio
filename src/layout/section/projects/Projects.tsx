@@ -18,18 +18,37 @@ export const Projects = () => {
                     <LinkWrapper to={'/slogan'}>View all {'~~>'}</LinkWrapper>
                 </FlexWrapper>
                 <FlexWrapper gap={'16px'}>
-                    <Project srcImageProject={projectImage1}
-                             listSkillsProject={'HTML SCSS Python Flask'}
-                             titleProject={'ChertNodes'}
-                             descriptionProject={'Minecraft servers hosting'}/>
-                    <Project srcImageProject={projectImage2}
-                             listSkillsProject={'React Express Node.js HTML SCSS Python Flask'}
-                             titleProject={'ProtectX'}
-                             descriptionProject={'Discord anti-crash bot'}/>
-                    <Project srcImageProject={projectImage3}
-                             listSkillsProject={'CSS Express Node.js'}
-                             titleProject={'Kahoot Answers Viewer'}
-                             descriptionProject={'Get answers to your kahoot quiz'}/>
+
+                    <Project
+                        srcImageProject={projectImage1}
+                        listSkillsProject="HTML SCSS Python Flask"
+                        titleProject="ChertNodes"
+                        descriptionProject="Minecraft servers hosting"
+                        buttons={[
+                            { label: "Live <~>", link: "https://github.com/Regand75"},
+                            { label: "Cached >=", $colorBorder: "secondary", $colorText: "secondary", $hoverBackground: "bgTrSecondary" },
+                        ]}
+                    />
+
+                    <Project
+                        srcImageProject={projectImage2}
+                        listSkillsProject="React Express Node.js HTML SCSS Python Flask"
+                        titleProject="ProtectX"
+                        descriptionProject="Discord anti-crash bot"
+                        buttons={[
+                            { label: "Live <~>"},
+                        ]}
+                    />
+
+                    <Project
+                        srcImageProject={projectImage3}
+                        listSkillsProject="CSS Express Node.js'}*"
+                        titleProject="Kahoot Answers Viewer"
+                        descriptionProject="Get answers to your kahoot quiz"
+                        buttons={[
+                            { label: "Live <~>"},
+                        ]}
+                    />
                 </FlexWrapper>
             </Container>
         </StyledProjects>
