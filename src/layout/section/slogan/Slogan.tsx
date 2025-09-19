@@ -19,9 +19,7 @@ export const Slogan = () => {
 };
 
 const StyledSlogan = styled.section`
-    padding-top: 123px;
-    padding-bottom: 20px;
-    min-height: calc(100vh - 215px);
+    padding-bottom: 74px;
     max-width: 732px;
     margin-inline: auto;
     font-family: 'Fira Code', sans-serif;

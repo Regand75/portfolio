@@ -24,8 +24,17 @@ function App() {
                 <Header toggleTheme={toggleTheme} isDark={isDark}/>
 
                 <Routes>
-                    <Route path={'/'} element={<Main/>}/>
-                    <Route path={'/slogan'} element={<Slogan/>}/>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <Main />
+                                <Slogan />
+                            </>
+                        }
+                    />
+                    {/*<Route path={'/'} element={<Main/>}/>*/}
+                    {/*<Route path={'/slogan'} element={<Slogan/>}/>*/}
                     <Route path={'/projects'} element={<Projects/>}/>
                     <Route path={'/skills'} element={<Skills/>}/>
                     <Route path={'/about'} element={<AboutMe/>}/>

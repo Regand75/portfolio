@@ -2,26 +2,9 @@ import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../../components/common/Button.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {ProjectType} from "../../../data/ProjectsData.tsx";
 
-type ProjectButton = {
-    label: string,
-    link?: string,
-    onClick?: () => void,
-    $colorBorder?: string,
-    $colorText?: string,
-    $colorBackground?: string,
-    $hoverBackground?: string,
-};
-
-type ProjectPropsType = {
-    srcImageProject: string,
-    listSkillsProject: string,
-    titleProject: string,
-    descriptionProject: string,
-    buttons?: ProjectButton[],
-}
-
-export const Project = (props: ProjectPropsType) => {
+export const Project = (props: ProjectType) => {
     return (
         <StyledProject>
             <Image src={props.srcImageProject} alt={props.titleProject}/>

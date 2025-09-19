@@ -35,7 +35,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     padding-top: 123px;
-    padding-bottom: 20px;
+    padding-bottom: 112px;
     min-height: calc(100vh - 215px);
 `;
 
