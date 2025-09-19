@@ -5,7 +5,7 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
-
+import figures from "../../../assets/images/sideFigures/slogan-right.png";
 
 export const Main = () => {
     return (
@@ -38,6 +38,18 @@ const StyledMain = styled.section`
     padding-top: 123px;
     padding-bottom: 112px;
     min-height: calc(100vh - 215px);
+
+    &::after {
+        content: "";
+        background-image: url(${figures});
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 680px;
+        right: 0;
+        width: 82px;
+        height: 91px;
+    }
 `;
 
 const Info = styled.div`

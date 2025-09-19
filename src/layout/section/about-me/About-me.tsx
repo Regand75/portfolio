@@ -5,6 +5,8 @@ import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import aboutMeImage from "../../../assets/images/about-me-image.png"
 import {Button} from "../../../components/common/Button.tsx";
+import figuresLeft from "../../../assets/images/sideFigures/about-left.png";
+import figuresRight from "../../../assets/images/sideFigures/about-right.png";
 
 export const AboutMe = () => {
     return (
@@ -48,6 +50,30 @@ const StyledAboutMe = styled.section`
     padding-top: 130px;
     padding-bottom: 20px;
     min-height: calc(100vh - 215px);
+
+    &::before {
+        content: "";
+        background-image: url(${figuresLeft});
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 270px;
+        left: 0;
+        width: 78px;
+        height: 155px;
+    }
+    
+    &::after {
+        content: "";
+        background-image: url(${figuresRight});
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 453px;
+        right: 0;
+        width: 80px;
+        height: 103px;
+    }
 `;
 
 const Wrapper = styled.div`

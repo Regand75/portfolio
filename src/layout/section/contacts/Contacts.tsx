@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import figures from "../../../assets/images/sideFigures/contacts-left.png";
 
 export const Contacts = () => {
     return (
@@ -29,6 +30,18 @@ const StyledContacts = styled.section`
     padding-top: 130px;
     padding-bottom: 20px;
     min-height: calc(100vh - 215px);
+
+    &::before {
+        content: "";
+        background-image: url(${figures});
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 225px;
+        left: 0;
+        width: 52px;
+        height: 103px;
+    }
 `;
 
 const MeDescription = styled.div`
