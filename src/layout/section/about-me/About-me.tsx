@@ -10,10 +10,10 @@ export const AboutMe = () => {
     return (
         <StyledAboutMe>
             <Container>
-                <FlexWrapper justify={'space-between'}>
+                <FlexWrapper $justify='space-between'>
                     <Wrapper>
-                        <FlexWrapper direction={'column'} gap={'23px'}>
-                            <SectionTitle title={'about-me'} width={'340px'} left={'172px'}/>
+                        <FlexWrapper direction={'column'} $gap='23px'>
+                            <SectionTitle title={'about-me'} width={'340px'} $left='172px'/>
                             <Description>
                                 <p>Hello, i'm Andrey</p>
                                 <p>

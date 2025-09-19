@@ -12,7 +12,7 @@ export const HeaderMenu = (props: { menuItems: Array<MenuItemType> }) => {
     return (
         <StyledHeaderMenu>
             <List>
-                <FlexWrapper align={'center'} gap={'32px'}>
+                <FlexWrapper $align='center' $gap='32px'>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
                             <Link

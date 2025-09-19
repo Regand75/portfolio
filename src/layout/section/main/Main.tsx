@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
-import mainImage from "../../../assets/images/main-image.png"
+import mainImage from "../../../assets/images/main-image.png";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 
+
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={'start'} justify={'space-between'}>
+                <FlexWrapper $align='start' $justify='space-between'>
                     <Info>
                         <Title>Andrey is a <span>front-end developer</span></Title>
                         <Description>He crafts responsive websites where technologies meet creativity</Description>
@@ -21,7 +22,7 @@ export const Main = () => {
                         <Image src={mainImage} alt=""/>
                         <AfterIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                         <InfoWork>
-                            <FlexWrapper align={'center'}>
+                            <FlexWrapper $align='center'>
                                 <InfoWorkBlock />
                                 <p>Currently working on <span>Portfolio</span></p>
                             </FlexWrapper>
@@ -35,7 +36,7 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     padding-top: 123px;
-    padding-bottom: 20px;
+    padding-bottom: 112px;
     min-height: calc(100vh - 215px);
 `;
 

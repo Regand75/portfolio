@@ -8,8 +8,8 @@ export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
-                <SectionTitle title={'contacts'} width={'145px'} left={'171px'} mb={'45px'}/>
-                <FlexWrapper justify={'space-between'}>
+                <SectionTitle title={'contacts'} width={'145px'} $left='171px' $mb='45px'/>
+                <FlexWrapper $justify='space-between'>
                     <MeDescription>
                         <p>
                             I’m interested in freelance opportunities. However, if you have other request or question, don’t

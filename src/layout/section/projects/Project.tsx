@@ -2,35 +2,18 @@ import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../../components/common/Button.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {ProjectType} from "../../../data/ProjectsData.tsx";
 
-type ProjectButton = {
-    label: string,
-    link?: string,
-    onClick?: () => void,
-    $colorBorder?: string,
-    $colorText?: string,
-    $colorBackground?: string,
-    $hoverBackground?: string,
-};
-
-type ProjectPropsType = {
-    srcImageProject: string,
-    listSkillsProject: string,
-    titleProject: string,
-    descriptionProject: string,
-    buttons?: ProjectButton[],
-}
-
-export const Project = (props: ProjectPropsType) => {
+export const Project = (props: ProjectType) => {
     return (
         <StyledProject>
             <Image src={props.srcImageProject} alt={props.titleProject}/>
             <MeSkills>{props.listSkillsProject}</MeSkills>
             <Wrapper>
-                <FlexWrapper direction={'column'} gap={'16px'}>
+                <FlexWrapper direction={'column'} $gap='16px'>
                     <Title>{props.titleProject}</Title>
                     <Description>{props.descriptionProject}</Description>
-                    <FlexWrapper gap={'16px'}>
+                    <FlexWrapper $gap='16px'>
                         {props.buttons?.map((btn, index) => (
                             btn.link ? (
                                 <a key={index} href={btn.link} target="_blank" rel="noopener noreferrer">
