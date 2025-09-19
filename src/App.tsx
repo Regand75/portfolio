@@ -24,10 +24,6 @@ function App() {
                 <Header toggleTheme={toggleTheme} isDark={isDark}/>
 
                 <Routes>
-                    {/*<Route path={'/'} element={<React.Fragment>*/}
-                    {/*    <Main/>*/}
-                    {/*    <Slogan/>*/}
-                    {/*</React.Fragment>}/>*/}
                     <Route path={'/'} element={<Main/>}/>
                     <Route path={'/slogan'} element={<Slogan/>}/>
                     <Route path={'/projects'} element={<Projects/>}/>
