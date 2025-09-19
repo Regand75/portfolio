@@ -7,7 +7,9 @@ import {ProjectType} from "../../../data/ProjectsData.tsx";
 export const Project = (props: ProjectType) => {
     return (
         <StyledProject>
-            <Image src={props.srcImageProject} alt={props.titleProject}/>
+            {props.srcImageProject && (
+                <Image src={props.srcImageProject} alt={props.titleProject}/>
+            )}
             <MeSkills>{props.listSkillsProject}</MeSkills>
             <Wrapper>
                 <FlexWrapper direction={'column'} $gap='16px'>
@@ -47,7 +49,7 @@ export const Project = (props: ProjectType) => {
 
 const StyledProject = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
-    min-width: 330px;
+    max-width: 330px;
     width: 100%;
     height: fit-content;
 `;

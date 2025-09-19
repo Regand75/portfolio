@@ -13,11 +13,11 @@ export const Projects = () => {
             <Container>
                 <FlexWrapper $align='start' $justify='space-between'>
                     <SectionTitle title={'projects'} width={'511px'} $left='170px' $mb='48px'/>
-                    <LinkWrapper to={'/slogan'}>View all {'~~>'}</LinkWrapper>
+                    <LinkWrapper to={'/projects-all'}>View all {'~~>'}</LinkWrapper>
                 </FlexWrapper>
                 <FlexWrapper $gap='16px'>
-                    {fullProjects.slice(0, 3).map((project, index) => (
-                        <Project key={index} {...project} />
+                    {fullProjects.slice(0, 3).map((project) => (
+                        <Project key={project.id} {...project} />
                     ))}
                 </FlexWrapper>
             </Container>
