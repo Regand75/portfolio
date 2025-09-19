@@ -22,9 +22,9 @@ export const Header = ({toggleTheme, isDark}: HeaderProps) => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper align={'center'} justify={'space-between'}>
+                <FlexWrapper $align='center' $justify='space-between'>
                     <Logo/>
-                    <FlexWrapper align={'center'} gap={'32px'}>
+                    <FlexWrapper $align='center' $gap='32px'>
                         <HeaderMenu menuItems={items}/>
                         <select name="language" id="language">
                             <option value="english">EN</option>

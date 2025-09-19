@@ -18,11 +18,11 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <SectionTitle title={'skills'} width={'250px'} left={'133px'} mb={'12px'}/>
-                <FlexWrapper justify={'space-between'} gap={'59px'}>
+                <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px'/>
+                <FlexWrapper $justify='space-between' $gap='59px'>
                     <GroupImage src={skillsGroupImage} alt="group"/>
                     <Wrapper>
-                        <FlexWrapper direction={'column'} wrap={'wrap-reverse'} gap={'16px'}>
+                        <FlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>
                             {skillsItems.map((skill, index) => (
                                 <React.Fragment key={index}>
                                     <Skill title={skill.title} list={skill.list}/>

@@ -3,14 +3,14 @@ import React from 'react';
 
 type SectionTitlePropsType = {
     title: string,
-    width: string,
-    left: string,
-    mb?: string,
+    width?: string,
+    $left?: string,
+    $mb?: string,
 }
 
 export const SectionTitle = ({title, width, left, mb}: SectionTitlePropsType) => {
     return (
-        <StyledTitle title={title} width={width} left={left} mb={mb}>
+        <StyledTitle title={title} width={width} $left={left} $mb={mb}>
             <span>#</span>
             {title}
         </StyledTitle>
@@ -23,7 +23,7 @@ const StyledTitle = styled.h2<SectionTitlePropsType>`
     font-size: 32px;
     color: ${({theme}) => theme.colors.primary};
     position: relative;
-    margin-bottom: ${props => props.mb || 0};
+    margin-bottom: ${props => props.$mb || 0};
 
     span {
         color: ${({theme}) => theme.colors.tertiary};
@@ -37,7 +37,7 @@ const StyledTitle = styled.h2<SectionTitlePropsType>`
         position: absolute;
         margin-left: 16px;
         top: 50%;
-        left: ${props => props.left};
+        left: ${props => props.$left};
     }
 `;
 

@@ -27,10 +27,10 @@ export const Project = (props: ProjectPropsType) => {
             <Image src={props.srcImageProject} alt={props.titleProject}/>
             <MeSkills>{props.listSkillsProject}</MeSkills>
             <Wrapper>
-                <FlexWrapper direction={'column'} gap={'16px'}>
+                <FlexWrapper direction={'column'} $gap='16px'>
                     <Title>{props.titleProject}</Title>
                     <Description>{props.descriptionProject}</Description>
-                    <FlexWrapper gap={'16px'}>
+                    <FlexWrapper $gap='16px'>
                         {props.buttons?.map((btn, index) => (
                             btn.link ? (
                                 <a key={index} href={btn.link} target="_blank" rel="noopener noreferrer">

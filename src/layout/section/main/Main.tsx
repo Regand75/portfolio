@@ -10,7 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={'start'} justify={'space-between'}>
+                <FlexWrapper $align='start' $justify='space-between'>
                     <Info>
                         <Title>Andrey is a <span>front-end developer</span></Title>
                         <Description>He crafts responsive websites where technologies meet creativity</Description>
@@ -21,7 +21,7 @@ export const Main = () => {
                         <Image src={mainImage} alt=""/>
                         <AfterIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                         <InfoWork>
-                            <FlexWrapper align={'center'}>
+                            <FlexWrapper $align='center'>
                                 <InfoWorkBlock />
                                 <p>Currently working on <span>Portfolio</span></p>
                             </FlexWrapper>

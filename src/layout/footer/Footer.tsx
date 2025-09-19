@@ -9,15 +9,15 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper justify={'space-between'}>
-                    <FlexWrapper direction={'column'} gap={'16px'}>
-                        <FlexWrapper align={'center'} gap={'24px'}>
+                <FlexWrapper $justify='space-between'>
+                    <FlexWrapper direction={'column'} $gap='16px'>
+                        <FlexWrapper $align='center' $gap='24px'>
                             <Logo/>
                             <Link>urazovs_k@mail.ru</Link>
                         </FlexWrapper>
                         <Skills>Web designer and front-end developer</Skills>
                     </FlexWrapper>
-                    <FlexWrapper direction={'column'} gap={'12px'}>
+                    <FlexWrapper direction={'column'} $gap='12px'>
                         <Text>Media</Text>
                         <SocialIconsList>
                             <FlexWrapper>

@@ -6,7 +6,7 @@ import {FlexWrapper} from "../common/FlexWrapper.tsx";
 export const Logo = () => {
     return (
         <a href=''>
-            <FlexWrapper align={'center'} gap={'9px'}>
+            <FlexWrapper $align='center' $gap='9px'>
                 <LogoIcon iconId={'logo'}/>
                 <LogoSpane>Andrey</LogoSpane>
             </FlexWrapper>

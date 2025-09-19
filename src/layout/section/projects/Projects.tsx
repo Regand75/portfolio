@@ -13,11 +13,11 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <FlexWrapper align={'start'} justify={'space-between'}>
-                    <SectionTitle title={'projects'} width={'511px'} left={'170px'} mb={'48px'}/>
+                <FlexWrapper $align='start' $justify='space-between'>
+                    <SectionTitle title={'projects'} width={'511px'} $left='170px' $mb='48px'/>
                     <LinkWrapper to={'/slogan'}>View all {'~~>'}</LinkWrapper>
                 </FlexWrapper>
-                <FlexWrapper gap={'16px'}>
+                <FlexWrapper $gap='16px'>
 
                     <Project
                         srcImageProject={projectImage1}
