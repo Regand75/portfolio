@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
-import mainImage from "../../../assets/images/main-image.png"
+import mainImage from "../../../assets/images/main-image.png";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
+
 
 export const Main = () => {
     return (
