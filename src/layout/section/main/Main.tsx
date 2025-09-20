@@ -38,12 +38,11 @@ const StyledMain = styled.section`
     position: relative;
     padding-top: 123px;
     padding-bottom: 112px;
-    min-height: calc(100vh - 215px);
 `;
 
 const AfterContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 680px;
+    top: 669px;
     right: 0;
     
     @media screen and (max-width: 1210px) {

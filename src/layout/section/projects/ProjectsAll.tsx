@@ -14,9 +14,7 @@ export const ProjectsAll = () => {
             <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
             <BeforeContentFromDotsBottom iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'} viewBox={'0 0 52 103'}/>
             <Container>
-                <Title>
-                    <span>/</span>projects
-                </Title>
+                <SectionTitle title={'projects'} $mb='14px' $symbol='/'/>
                 <Description>List of my projects</Description>
                 <SectionTitle title={'complete-apps'} />
                 <WrapperFullProjects wrap='wrap' $gap='16px'>
@@ -92,18 +90,6 @@ const AfterContentFromDots = styled(Icon)`
     @media screen and (max-width: 1210px) {
         display: none;
 }
-`;
-
-const Title = styled.h2`
-    font-family: 'Fira Code', sans-serif;
-    font-weight: 500;
-    font-size: 32px;
-    color: ${({theme}) => theme.colors.primary};
-    margin-bottom: 14px;
-
-    span {
-        color: ${({theme}) => theme.colors.tertiary};
-    }
 `;
 
 const Description = styled.p`

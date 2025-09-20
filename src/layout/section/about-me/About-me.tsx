@@ -4,8 +4,13 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import aboutMeImage from "../../../assets/images/about-me-image.png";
 import {Icon} from "../../../components/icon/Icon.tsx";
+import {Link} from "react-router-dom";
 
-export const AboutMe = () => {
+type AboutMePropsType = {
+    showButton?: boolean,
+}
+
+export const AboutMe = (props: AboutMePropsType) => {
     return (
         <StyledAboutMe>
             <FlexWrapper $justify='space-between'>
@@ -29,7 +34,11 @@ export const AboutMe = () => {
                                 teamwork.
                             </p>
                         </Description>
-                        <Button type='button'>Read more</Button>
+                        {props.showButton && (
+                            <Link to={'/about-me/about'}>
+                                <Button type='button'>Read more {'->'}</Button>
+                            </Link>
+                        )}
                     </FlexWrapper>
                 </Wrapper>
                 <ImageWrapper>
@@ -42,7 +51,7 @@ export const AboutMe = () => {
     );
 };
 
-const StyledAboutMe = styled.div`
+const StyledAboutMe = styled.article`
 
 `;
 
@@ -73,7 +82,7 @@ const ImageWrapper = styled.div`
         content: '';
         position: absolute;
         bottom: 0;
-        left: 45px;
+        left: 47px;
         width: 80%;
         height: 1px;
         background-color: ${({theme}) => theme.colors.tertiary};

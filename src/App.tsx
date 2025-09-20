@@ -13,6 +13,7 @@ import {Slogan} from "./layout/section/slogan/Slogan.tsx";
 import {useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
+import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
@@ -35,9 +36,10 @@ function App() {
                         }
                     />
                     <Route path={'/projects'} element={<Projects/>}/>
-                    <Route path={'/projects-all'} element={<ProjectsAll/>}/>
+                    <Route path={'/projects/projects-all'} element={<ProjectsAll/>}/>
                     <Route path={'/skills'} element={<Skills/>}/>
-                    <Route path={'/about'} element={<AboutMeComponent/>}/>
+                    <Route path={'/about-me'} element={<AboutMeComponent/>}/>
+                    <Route path={'/about-me/about'} element={<AboutMeFull/>}/>
                     <Route path={'/contacts'} element={<Contacts/>}/>
                 </Routes>
 

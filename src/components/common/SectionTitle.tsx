@@ -6,12 +6,13 @@ type SectionTitlePropsType = {
     width?: string,
     $left?: string,
     $mb?: string,
+    $symbol?: string,
 }
 
-export const SectionTitle = ({title, width, $left, $mb}: SectionTitlePropsType) => {
+export const SectionTitle = ({title, width, $left, $mb, $symbol}: SectionTitlePropsType) => {
     return (
-        <StyledTitle title={title} width={width} $left={$left} $mb={$mb}>
-            <span>#</span>
+        <StyledTitle title={title} width={width} $left={$left} $mb={$mb} $symbol={$symbol}>
+            <span>{$symbol}</span>
             {title}
         </StyledTitle>
     );

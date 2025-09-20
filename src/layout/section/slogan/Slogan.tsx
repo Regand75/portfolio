@@ -38,6 +38,7 @@ const Text = styled.div`
 const Author = styled.div`
     width: 162px;
     padding: 15px;
-    border: 1px solid ${({theme}) => theme.colors.secondary};
+    border: 0 solid ${({theme}) => theme.colors.secondary};
+    border-width: 0 1px 1px;
     margin-left: auto;
 `;

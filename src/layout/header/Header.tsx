@@ -16,7 +16,7 @@ export const Header = ({toggleTheme, isDark}: HeaderProps) => {
         { title: 'home', link: '/' },
         { title: 'projects', link: '/projects' },
         { title: 'skills', link: '/skills' },
-        { title: 'about-me', link: '/about' },
+        { title: 'about', link: '/about-me' },
         { title: 'contacts', link: '/contacts' }
     ];
     return (

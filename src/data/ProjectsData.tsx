@@ -1,7 +1,7 @@
-import projectImage1 from "../assets/images/project1.png"
-import projectImage2 from "../assets/images/project2.png"
-import projectImage3 from "../assets/images/project3.png"
-import projectImage4 from "../assets/images/project4.png"
+import projectImage1 from "../assets/images/projects-images/project1.png"
+import projectImage2 from "../assets/images/projects-images/project2.png"
+import projectImage3 from "../assets/images/projects-images/project3.png"
+import projectImage4 from "../assets/images/projects-images/project4.png"
 
 export type ProjectButton = {
     label: string;

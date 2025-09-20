@@ -10,7 +10,7 @@ export const Contacts = () => {
         <StyledContacts>
             <BeforeContentFromDots iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'} viewBox={'0 0 52 103'}/>
             <Container>
-                <SectionTitle title={'contacts'} width={'145px'} $left='171px' $mb='45px'/>
+                <SectionTitle title={'contacts'} width={'145px'} $left='171px' $mb='45px' $symbol='#'/>
                 <FlexWrapper $justify='space-between'>
                     <MeDescription>
                         <p>
@@ -40,8 +40,8 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 20px;
+    padding-top: 114px;
+    padding-bottom: 74px;
     min-height: calc(100vh - 215px);
 `;
 

@@ -13,8 +13,8 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <FlexWrapper $align='start' $justify='space-between'>
-                    <SectionTitle title={'projects'} width={'511px'} $left='170px' $mb='48px'/>
-                    <LinkWrapper to={'/projects-all'}>View all {'~~>'}</LinkWrapper>
+                    <SectionTitle title={'projects'} width={'511px'} $left='170px' $mb='48px' $symbol='#'/>
+                    <LinkWrapper to={'/projects/projects-all'}>View all {'~~>'}</LinkWrapper>
                 </FlexWrapper>
                 <FlexWrapper $gap='16px'>
                     {fullProjects.slice(0, 3).map((project) => (
@@ -29,8 +29,8 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 20px;
+    padding-top: 114px;
+    padding-bottom: 74px;
     min-height: calc(100vh - 215px);
 `;
 

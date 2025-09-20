@@ -10,8 +10,8 @@ export const AboutMeComponent = () => {
         <StyledAboutMe>
             <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
-                <SectionTitle title={'about-me'} width={'340px'} $left='172px' $mb='23px'/>
-                <AboutMe />
+                <SectionTitle title={'about-me'} width={'340px'} $left='172px' $mb='23px' $symbol='#'/>
+                <AboutMe  showButton={true}/>
             </Container>
             <AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>
         </StyledAboutMe>
@@ -20,8 +20,8 @@ export const AboutMeComponent = () => {
 
 const StyledAboutMe = styled.section`
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 20px;
+    padding-top: 114px;
+    padding-bottom: 74px;
     min-height: calc(100vh - 215px);
 `;
 

@@ -18,9 +18,9 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
-                <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px'/>
+                <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px' $symbol='#'/>
                 <FlexWrapper $justify='space-between' $gap='59px'>
-                    <GroupImage src={skillsGroupImage} alt="group"/>
+                    <GroupImage src={skillsGroupImage as string} alt="group"/>
                     <Wrapper>
                         <FlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>
                             {skillsItems.map((skill, index) => (
@@ -37,8 +37,8 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    padding-top: 130px;
-    padding-bottom: 20px;
+    padding-top: 114px;
+    padding-bottom: 74px;
     min-height: calc(100vh - 215px);
 `;
 
