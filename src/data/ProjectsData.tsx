@@ -25,7 +25,7 @@ export type ProjectType = {
 export const fullProjects: ProjectType[] = [
     {
         id: "ChertNodes",
-        srcImageProject: projectImage1,
+        srcImageProject: projectImage1 as string,
         listSkillsProject: "HTML SCSS Python Flask",
         titleProject: "ChertNodes",
         descriptionProject: "Minecraft servers hosting",
@@ -41,7 +41,7 @@ export const fullProjects: ProjectType[] = [
     },
     {
         id: "ProtectX",
-        srcImageProject: projectImage2,
+        srcImageProject: projectImage2 as string,
         listSkillsProject: "React Express Node.js HTML SCSS Python Flask",
         titleProject: "ProtectX",
         descriptionProject: "Discord anti-crash bot",
@@ -51,7 +51,7 @@ export const fullProjects: ProjectType[] = [
     },
     {
         id: "Kahoot",
-        srcImageProject: projectImage3,
+        srcImageProject: projectImage3 as string,
         listSkillsProject: "CSS Express Node.js",
         titleProject: "Kahoot Answers Viewer",
         descriptionProject: "Get answers to your kahoot quiz",
@@ -61,7 +61,7 @@ export const fullProjects: ProjectType[] = [
     },
     {
         id: "Portfolio",
-        srcImageProject: projectImage4,
+        srcImageProject: projectImage4 as string,
         listSkillsProject: "CSS Express Node.js",
         titleProject: "Portfolio",
         descriptionProject: "You’re using it rn",

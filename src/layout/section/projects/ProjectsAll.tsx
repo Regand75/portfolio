@@ -5,13 +5,17 @@ import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {fullProjects, smallProjects} from "../../../data/ProjectsData.tsx";
 import {Project} from "./Project.tsx";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 export const ProjectsAll = () => {
     return (
         <StyledProjectsAll>
+            <BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'} viewBox={'0 0 78 49'}/>
+            <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
+            <BeforeContentFromDotsBottom iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'} viewBox={'0 0 52 103'}/>
             <Container>
                 <Title>
-                    <span>/</span>project
+                    <span>/</span>projects
                 </Title>
                 <Description>List of my projects</Description>
                 <SectionTitle title={'complete-apps'} />
@@ -27,14 +31,67 @@ export const ProjectsAll = () => {
                     ))}
                 </WrapperSmallProjects>
             </Container>
+            <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={ '155px'} viewBox={'0 0 68 155'} fill={'none'}/>
+            <AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>
         </StyledProjectsAll>
     );
 };
 
 const StyledProjectsAll = styled.section`
+    position: relative;
     padding-top: 114px;
     padding-bottom: 20px;
     min-height: calc(100vh - 215px);
+`;
+
+const BeforeContentFromDotsTop = styled(Icon)`
+    position: absolute;
+    top: 410px;
+    left: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
+`;
+
+const BeforeContentFromBlock = styled(Icon)`
+    position: absolute;
+    bottom: 800px;
+    left: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
+`;
+
+const BeforeContentFromDotsBottom = styled(Icon)`
+    position: absolute;
+    bottom: 370px;
+    left: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
+`;
+
+const AfterContentFromBlock = styled(Icon)`
+    position: absolute;
+    top: 270px;
+    right: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
+`;
+
+const AfterContentFromDots = styled(Icon)`
+    position: absolute;
+    bottom: 780px;
+    right: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
 `;
 
 const Title = styled.h2`

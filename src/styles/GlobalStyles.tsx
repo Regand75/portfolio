@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
         src: url(${FiraCodeRegular}) format("truetype");
         font-weight: 400;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -17,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
         src: url(${FiraCodeMedium}) format("truetype");
         font-weight: 500;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -24,6 +26,7 @@ export const GlobalStyles = createGlobalStyle`
         src: url(${FiraCodeSemiBold}) format("truetype");
         font-weight: 600;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -31,6 +34,7 @@ export const GlobalStyles = createGlobalStyle`
         src: url(${FiraCodeBold}) format("truetype");
         font-weight: 700;
         font-style: normal;
+        font-display: swap;
     }
 
     *, *::before, *::after {
@@ -41,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
 
     html {
         scroll-behavior: smooth;
-        height: 100%;
+        min-height: 100vh;
     }
     
     body {

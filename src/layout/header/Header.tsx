@@ -51,7 +51,7 @@ const StyledHeader = styled.header`
     right: 0;
     left: 0;
     z-index: 9999;
-    background-color: ${({theme}) => theme.colors.background};;
+    background-color: ${({theme}) => theme.colors.background};
 `;
 
 const Button = styled.button`

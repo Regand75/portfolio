@@ -5,7 +5,6 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
-import figures from "../../../assets/images/sideFigures/slogan-right.png";
 
 export const Main = () => {
     return (
@@ -17,9 +16,9 @@ export const Main = () => {
                         <Description>He crafts responsive websites where technologies meet creativity</Description>
                         <Button>Contact me!!</Button>
                     </Info>
-                    <MainImageWrapper>
+                    <ImageWrapper>
                         <BeforeIcon iconId={'outlineBig'} width={'156px'} height={'156px'} viewBox={'0 0 156 156'}/>
-                        <Image src={mainImage} alt=""/>
+                        <Image src={mainImage as string} alt="Fhoto"/>
                         <AfterIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                         <InfoWork>
                             <FlexWrapper $align='center'>
@@ -27,29 +26,29 @@ export const Main = () => {
                                 <p>Currently working on <span>Portfolio</span></p>
                             </FlexWrapper>
                         </InfoWork>
-                    </MainImageWrapper>
+                    </ImageWrapper>
                 </FlexWrapper>
             </Container>
+            <AfterContentFromBlock iconId={'blockForAfter82-91'} width={'82px'} height={'91px'} viewBox={'0 0 82 91'} fill={'none'}/>
         </StyledMain>
     );
 };
 
 const StyledMain = styled.section`
+    position: relative;
     padding-top: 123px;
     padding-bottom: 112px;
     min-height: calc(100vh - 215px);
+`;
 
-    &::after {
-        content: "";
-        background-image: url(${figures});
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 680px;
-        right: 0;
-        width: 82px;
-        height: 91px;
-    }
+const AfterContentFromBlock = styled(Icon)`
+    position: absolute;
+    top: 680px;
+    right: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
 `;
 
 const Info = styled.div`
@@ -77,7 +76,7 @@ const Description = styled.p`
     color: ${({theme}) => theme.colors.secondary};
 `;
 
-const MainImageWrapper = styled.div`
+const ImageWrapper = styled.div`
     position: relative;
 `;
 

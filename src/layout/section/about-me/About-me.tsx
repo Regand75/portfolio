@@ -5,12 +5,12 @@ import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import aboutMeImage from "../../../assets/images/about-me-image.png"
 import {Button} from "../../../components/common/Button.tsx";
-import figuresLeft from "../../../assets/images/sideFigures/about-left.png";
-import figuresRight from "../../../assets/images/sideFigures/about-right.png";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
+            <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
                 <FlexWrapper $justify='space-between'>
                     <Wrapper>
@@ -37,43 +37,43 @@ export const AboutMe = () => {
                             <Button type='button'>Read more</Button>
                         </FlexWrapper>
                     </Wrapper>
-                    <div>
-                        <Image src={aboutMeImage} alt=''/>
-                    </div>
+                    <ImageWrapper>
+                        <BeforeIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
+                        <Image src={aboutMeImage as string} alt=''/>
+                        <AfterIcon iconId={'dotsForAboutImage'} width={'104px'} height={'58px'} viewBox={'0 0 104 58'}/>
+                    </ImageWrapper>
                 </FlexWrapper>
             </Container>
+            <AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>
         </StyledAboutMe>
     );
 };
 
 const StyledAboutMe = styled.section`
+    position: relative;
     padding-top: 130px;
     padding-bottom: 20px;
     min-height: calc(100vh - 215px);
+`;
 
-    &::before {
-        content: "";
-        background-image: url(${figuresLeft});
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 270px;
-        left: 0;
-        width: 78px;
-        height: 155px;
-    }
+const BeforeContentFromBlock = styled(Icon)`
+    position: absolute;
+    top: 270px;
+    left: 0;
     
-    &::after {
-        content: "";
-        background-image: url(${figuresRight});
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 453px;
-        right: 0;
-        width: 80px;
-        height: 103px;
-    }
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
+`;
+
+const AfterContentFromDots = styled(Icon)`
+    position: absolute;
+    top: 453px;
+    right: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
 `;
 
 const Wrapper = styled.div`
@@ -95,6 +95,34 @@ const Description = styled.div`
     }
 `;
 
+const ImageWrapper = styled.div`
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 45px;
+        width: 80%;
+        height: 1px;
+        background-color: ${({theme}) => theme.colors.tertiary};
+    }
+`;
+
+const BeforeIcon = styled(Icon)`
+    position: absolute;
+    top: 60px;
+    left: -5px;
+    z-index: 2;
+`;
+
 const Image = styled.img`
     width: 100%;
+`;
+
+const AfterIcon = styled(Icon)`
+    position: absolute;
+    bottom: 176px;
+    right: 16px;
+    z-index: 2;
 `;

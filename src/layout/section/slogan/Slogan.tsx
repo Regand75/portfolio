@@ -27,8 +27,6 @@ const StyledSlogan = styled.section`
     font-size: 24px;
     color: ${({theme}) => theme.colors.primary};
     text-align: center;
-    position: relative;
-    overflow: hidden;
 `;
 
 const Text = styled.div`
