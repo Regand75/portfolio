@@ -1,79 +1,49 @@
 import React from 'react';
 import styled from "styled-components";
-import {Container} from "../../../components/common/Container.tsx";
-import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
-import aboutMeImage from "../../../assets/images/about-me-image.png"
 import {Button} from "../../../components/common/Button.tsx";
+import aboutMeImage from "../../../assets/images/about-me-image.png";
 import {Icon} from "../../../components/icon/Icon.tsx";
 
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
-            <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
-            <Container>
-                <FlexWrapper $justify='space-between'>
-                    <Wrapper>
-                        <FlexWrapper direction={'column'} $gap='23px'>
-                            <SectionTitle title={'about-me'} width={'340px'} $left='172px'/>
-                            <Description>
-                                <p>Hello, i'm Andrey</p>
-                                <p>
-                                    I am a Junior Frontend Developer with basic experience in Angular and the modern
-                                    tech
-                                    stack
-                                    (JavaScript, TypeScript, HTML, CSS, etc.).
-                                    I learn quickly and adapt to new technologies: I completed an online frontend
-                                    development
-                                    course by Aitylogy, successfully finishing all assignments on time while paying
-                                    attention to
-                                    code clarity and structure.
-                                </p>
-                                <p>
-                                    I am eager to continue growing in this field and open to constructive feedback and
-                                    teamwork.
-                                </p>
-                            </Description>
-                            <Button type='button'>Read more</Button>
-                        </FlexWrapper>
-                    </Wrapper>
-                    <ImageWrapper>
-                        <BeforeIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
-                        <Image src={aboutMeImage as string} alt=''/>
-                        <AfterIcon iconId={'dotsForAboutImage'} width={'104px'} height={'58px'} viewBox={'0 0 104 58'}/>
-                    </ImageWrapper>
-                </FlexWrapper>
-            </Container>
-            <AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>
+            <FlexWrapper $justify='space-between'>
+                <Wrapper>
+                    <FlexWrapper direction={'column'} $gap='23px'>
+                        <Description>
+                            <p>Hello, i'm Andrey</p>
+                            <p>
+                                I am a Junior Frontend Developer with basic experience in Angular and the modern
+                                tech
+                                stack
+                                (JavaScript, TypeScript, HTML, CSS, etc.).
+                                I learn quickly and adapt to new technologies: I completed an online frontend
+                                development
+                                course by Aitylogy, successfully finishing all assignments on time while paying
+                                attention to
+                                code clarity and structure.
+                            </p>
+                            <p>
+                                I am eager to continue growing in this field and open to constructive feedback and
+                                teamwork.
+                            </p>
+                        </Description>
+                        <Button type='button'>Read more</Button>
+                    </FlexWrapper>
+                </Wrapper>
+                <ImageWrapper>
+                    <BeforeIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
+                    <Image src={aboutMeImage as string} alt=''/>
+                    <AfterIcon iconId={'dotsForAboutImage'} width={'104px'} height={'58px'} viewBox={'0 0 104 58'}/>
+                </ImageWrapper>
+            </FlexWrapper>
         </StyledAboutMe>
     );
 };
 
-const StyledAboutMe = styled.section`
-    position: relative;
-    padding-top: 130px;
-    padding-bottom: 20px;
-    min-height: calc(100vh - 215px);
-`;
+const StyledAboutMe = styled.div`
 
-const BeforeContentFromBlock = styled(Icon)`
-    position: absolute;
-    top: 270px;
-    left: 0;
-    
-    @media screen and (max-width: 1210px) {
-        display: none;
-}
-`;
-
-const AfterContentFromDots = styled(Icon)`
-    position: absolute;
-    top: 453px;
-    right: 0;
-    
-    @media screen and (max-width: 1210px) {
-        display: none;
-}
 `;
 
 const Wrapper = styled.div`
@@ -97,6 +67,7 @@ const Description = styled.div`
 
 const ImageWrapper = styled.div`
     position: relative;
+    margin-top: -64px;
 
     &::after {
         content: '';
