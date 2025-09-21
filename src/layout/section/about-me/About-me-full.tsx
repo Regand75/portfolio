@@ -10,6 +10,7 @@ import skillsGroupImage from "../../../assets/images/group2.png";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {MyFact} from "./MyFact.tsx";
 import {myFunFacts} from "../../../data/FactsData.tsx";
+import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const AboutMeFull = () => {
     return (
@@ -19,6 +20,7 @@ export const AboutMeFull = () => {
             <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
                                     viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
+                <FixedBlockIcon />
                 <AboutMeWrapper>
                     <SectionTitle title={'about-me'} $mb='14px' $symbol='/'/>
                     <Description>List of my projects</Description>
@@ -40,7 +42,9 @@ export const AboutMeFull = () => {
                         <Wrapper>
                             <FlexWrapper wrap={'wrap'} $gap='16px'>
                                 {myFunFacts.map((fact, index) => (
-                                    <MyFact key={index} text={fact.text}/>
+                                    <React.Fragment key={index}>
+                                        <MyFact text={fact.text}/>
+                                    </React.Fragment>
                                 ))}
                             </FlexWrapper>
                         </Wrapper>

@@ -4,12 +4,14 @@ import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {AboutMe} from "./About-me.tsx";
+import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const AboutMeComponent = () => {
     return (
         <StyledAboutMe>
             <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
+                <FixedBlockIcon />
                 <SectionTitle title={'about-me'} width={'340px'} $left='172px' $mb='23px' $symbol='#'/>
                 <AboutMe  showButton={true}/>
             </Container>

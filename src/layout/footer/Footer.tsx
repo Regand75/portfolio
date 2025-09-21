@@ -2,8 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../components/common/Container.tsx";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {Icon} from "../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
+import {IconsList} from "../../components/common/IconsList.tsx";
 
 export const Footer = () => {
     return (
@@ -13,31 +13,15 @@ export const Footer = () => {
                     <FlexWrapper direction={'column'} $gap='16px'>
                         <FlexWrapper $align='center' $gap='24px'>
                             <Logo/>
-                            <Link>urazovs_k@mail.ru</Link>
+                            <LinkEmail href="mailto:urazovs_k@email.ru">
+                                <p>urazovs_k@mail.ru</p>
+                            </LinkEmail>
                         </FlexWrapper>
                         <Skills>Web designer and front-end developer</Skills>
                     </FlexWrapper>
                     <FlexWrapper direction={'column'} $gap='12px'>
                         <Text>Media</Text>
-                        <SocialIconsList>
-                            <FlexWrapper>
-                                <IconItem>
-                                    <IconLink href='#'>
-                                        <FooterIcon iconId={'github'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                    </IconLink>
-                                </IconItem>
-                                <IconItem>
-                                    <IconLink href='#'>
-                                        <FooterIcon iconId={'figma'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                    </IconLink>
-                                </IconItem>
-                                <IconItem>
-                                    <IconLink href='#'>
-                                        <FooterIcon iconId={'bitcoin'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                    </IconLink>
-                                </IconItem>
-                            </FlexWrapper>
-                        </SocialIconsList>
+                        <IconsListFlex/>
                     </FlexWrapper>
                 </FlexWrapper>
                 <Copyright>© Copyright 2022. Made by Elias</Copyright>
@@ -51,7 +35,7 @@ const StyledFooter = styled.footer`;
     border-top: 1px solid ${({theme}) => theme.colors.secondary};
 `;
 
-const Link = styled.div`
+const LinkEmail = styled.a`
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
     transition: filter 0.3s ease, fill 0.3s ease;
@@ -73,16 +57,9 @@ const Text = styled.div`
     color: ${({theme}) => theme.colors.primary};
 `;
 
-const SocialIconsList = styled.ul`
-
-`;
-
-const IconItem = styled.li`
-    cursor: pointer;
-`;
-
-const IconLink = styled.a`
-
+const IconsListFlex = styled(IconsList)`
+    display: flex;
+    gap: 8px;
 `;
 
 const Copyright = styled.div`
@@ -90,12 +67,4 @@ const Copyright = styled.div`
     text-align: center;
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
-`;
-
-const FooterIcon = styled(Icon)`
-    color: ${({ theme }) => theme.colors.secondary};
-
-    &:hover {
-        color: ${({ theme }) => theme.colors.primary};
-    }
 `;

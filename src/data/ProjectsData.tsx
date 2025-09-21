@@ -30,9 +30,11 @@ export const fullProjects: ProjectType[] = [
         titleProject: "ChertNodes",
         descriptionProject: "Minecraft servers hosting",
         buttons: [
-            { label: "Live <~>",
+            {
+                label: "Live <~>",
                 $colorBorder: 'tertiary',
-                link: "https://github.com/Regand75" },
+                link: "https://github.com/Regand75",
+            },
             {
                 label: "Cached =>",
                 $colorBorder: "secondary",
@@ -49,9 +51,11 @@ export const fullProjects: ProjectType[] = [
         titleProject: "ProtectX",
         descriptionProject: "Discord anti-crash bot",
         buttons: [
-            { label: "Live <~>",
+            {
+                label: "Live <~>",
                 $colorBorder: 'tertiary',
-                link: "https://github.com/Regand75" }
+                link: "https://github.com/Regand75"
+            }
         ]
     },
     {
@@ -61,9 +65,11 @@ export const fullProjects: ProjectType[] = [
         titleProject: "Kahoot Answers Viewer",
         descriptionProject: "Get answers to your kahoot quiz",
         buttons: [
-            { label: "Live <~>",
+            {
+                label: "Live <~>",
                 $colorBorder: 'tertiary',
-                link: "https://github.com/Regand75" }
+                link: "https://github.com/Regand75",
+            }
         ]
     },
     {
@@ -91,9 +97,11 @@ export const smallProjects: ProjectType[] = [
         titleProject: "Todo App",
         descriptionProject: "Simple todo list",
         buttons: [
-            { label: "Live <~>",
+            {
+                label: "Live <~>",
                 $colorBorder: 'tertiary',
-                link: "https://github.com/Regand75" }
+                link: "https://github.com/Regand75"
+            }
         ]
     },
     {
@@ -102,9 +110,12 @@ export const smallProjects: ProjectType[] = [
         titleProject: "Portfolio2",
         descriptionProject: "My first portfolio site",
         buttons: [
-            { label: "Live <~>",
+            {
+                label: "Live <~>",
                 $colorBorder: 'tertiary',
-                link: "https://github.com/Regand75" }
+                link: "https://github.com/Regand75"
+            }
         ]
     }
 ];
+

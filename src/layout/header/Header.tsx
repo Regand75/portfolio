@@ -48,9 +48,8 @@ const StyledHeader = styled.header`
     padding: 32px 0 8px;
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
+    width: 100%;
+    z-index: 10;
     background-color: ${({theme}) => theme.colors.background};
 `;
 

@@ -6,11 +6,13 @@ import skillsGroupImage from "../../../assets/images/group.png"
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {Skill} from "./Skill.tsx";
 import {skillsItems} from "../../../data/SkillsData.tsx";
+import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <Container>
+                <FixedBlockIcon />
                 <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px' $symbol='#'/>
                 <FlexWrapper $justify='space-between' $gap='20px'>
                     <GroupImage src={skillsGroupImage as string} alt="group"/>

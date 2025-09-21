@@ -5,16 +5,21 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
+import {Link} from "react-router-dom";
+import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
+                <FixedBlockIcon />
                 <FlexWrapper $align='start' $justify='space-between'>
                     <Info>
                         <Title>Andrey is a <span>front-end developer</span></Title>
                         <Description>He crafts responsive websites where technologies meet creativity</Description>
-                        <Button>Contact me!!</Button>
+                        <Link to={'contacts/contacts-all'}>
+                            <Button>Contact me!!</Button>
+                        </Link>
                     </Info>
                     <ImageWrapper>
                         <BeforeIcon iconId={'outlineBig'} width={'156px'} height={'156px'} viewBox={'0 0 156 156'}/>
@@ -22,14 +27,15 @@ export const Main = () => {
                         <AfterIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                         <InfoWork>
                             <FlexWrapper $align='center'>
-                                <InfoWorkBlock />
+                                <InfoWorkBlock/>
                                 <p>Currently working on <span>Portfolio</span></p>
                             </FlexWrapper>
                         </InfoWork>
                     </ImageWrapper>
                 </FlexWrapper>
             </Container>
-            <AfterContentFromBlock iconId={'blockForAfter82-91'} width={'82px'} height={'91px'} viewBox={'0 0 82 91'} fill={'none'}/>
+            <AfterContentFromBlock iconId={'blockForAfter82-91'} width={'82px'} height={'91px'} viewBox={'0 0 82 91'}
+                                   fill={'none'}/>
         </StyledMain>
     );
 };
@@ -44,10 +50,10 @@ const AfterContentFromBlock = styled(Icon)`
     position: absolute;
     top: 669px;
     right: 0;
-    
+
     @media screen and (max-width: 1210px) {
         display: none;
-}
+    }
 `;
 
 const Info = styled.div`
@@ -97,7 +103,7 @@ const Image = styled.img`
     width: 457px;
     height: 386px;
     object-fit: cover;
-    
+
 `;
 
 const InfoWork = styled.div`
@@ -105,9 +111,9 @@ const InfoWork = styled.div`
     padding: 8px;
     width: 402px;
     margin-inline: auto;
-    
+
     span {
-        font-family: 'Fira Code',sans-serif;
+        font-family: 'Fira Code', sans-serif;
         font-weight: 600;
         color: ${({theme}) => theme.colors.primary};
     }

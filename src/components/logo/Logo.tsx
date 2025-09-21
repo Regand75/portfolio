@@ -8,13 +8,13 @@ export const Logo = () => {
         <a href=''>
             <FlexWrapper $align='center' $gap='9px'>
                 <LogoIcon iconId={'logo'}/>
-                <LogoSpane>Andrey</LogoSpane>
+                <LogoSpan>Andrey</LogoSpan>
             </FlexWrapper>
         </a>
     );
 };
 
-const LogoSpane = styled.span`
+const LogoSpan = styled.span`
     display: inline-block;
     font-family: 'Fira Code', sans-serif;
     font-style: normal;

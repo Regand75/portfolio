@@ -40,6 +40,7 @@ export const Project = (props: ProjectType) => {
                                         $colorBorder={btn.$colorBorder}
                                         $colorText={btn.$colorText}
                                         $colorBackground={btn.$colorBackground}
+                                        $hoverBackground={btn.$hoverBackground}
                                     >
                                         {btn.label}
                                     </Button>

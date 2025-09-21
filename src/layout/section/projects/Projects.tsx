@@ -7,11 +7,13 @@ import {Link} from "react-router-dom";
 import {fullProjects} from "../../../data/ProjectsData.tsx";
 import {Project} from "./Project.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
+import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
+                <FixedBlockIcon/>
                 <FlexWrapper $align='start' $justify='space-between'>
                     <SectionTitle title={'projects'} width={'511px'} $left='170px' $mb='48px' $symbol='#'/>
                     <LinkWrapper to={'/projects/projects-all'}>View all {'~~>'}</LinkWrapper>
@@ -22,7 +24,8 @@ export const Projects = () => {
                     ))}
                 </FlexWrapper>
             </Container>
-            <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={ '155px'} viewBox={'0 0 68 155'} fill={'none'}/>
+            <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
+                                   fill={'none'}/>
         </StyledProjects>
     );
 };
@@ -41,7 +44,7 @@ const AfterContentFromBlock = styled(Icon)`
 
     @media screen and (max-width: 1210px) {
         display: none;
-}
+    }
 `;
 
 const LinkWrapper = styled(Link)`

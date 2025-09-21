@@ -14,6 +14,7 @@ import {useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
 import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
+import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
@@ -41,6 +42,7 @@ function App() {
                     <Route path={'/about-me'} element={<AboutMeComponent/>}/>
                     <Route path={'/about-me/about'} element={<AboutMeFull/>}/>
                     <Route path={'/contacts'} element={<Contacts/>}/>
+                    <Route path={'/contacts/contacts-all'} element={<ContactsAll/>}/>
                 </Routes>
 
                 <Footer/>
