@@ -18,20 +18,20 @@ export const Contacts = () => {
                             hesitate to contact me
                         </p>
                     </MeDescription>
-                    <MessageWrapper>
+                    <MessageBlock>
                         <MessageMeHere>Message me here</MessageMeHere>
                         <FlexWrapper direction={'column'} $justify='space-between' $gap='8px'>
-                            <FlexWrapper $align='center' $gap='8px'>
+                            <MessageWrapper $align='center' $gap='8px'>
                                 <Icon iconId={'discord'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
                                 <p>Urazov#3294</p>
-                            </FlexWrapper>
-                            <FlexWrapper $align='center' $gap='8px'>
+                            </MessageWrapper>
+                            <MessageWrapper $align='center' $gap='8px'>
                                 <Icon iconId={'email'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
                                 <p>urazovs_k@mail.ru</p>
-                            </FlexWrapper>
+                            </MessageWrapper>
                         </FlexWrapper>
 
-                    </MessageWrapper>
+                    </MessageBlock>
                 </FlexWrapper>
             </Container>
         </StyledContacts>
@@ -63,7 +63,7 @@ const MeDescription = styled.div`
     color: ${({theme}) => theme.colors.secondary};
 `;
 
-const MessageWrapper = styled.div`
+const MessageBlock = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     padding: 16px;
     height: fit-content;
@@ -71,4 +71,16 @@ const MessageWrapper = styled.div`
 
 const MessageMeHere = styled.h3`
     margin-bottom: 16px;
+`;
+
+const MessageWrapper = styled(FlexWrapper)`
+    cursor: pointer;
+    
+    p {
+        transition: filter 0.3s ease, fill 0.3s ease;
+
+        &:hover {
+            filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
+        }
+    }
 `;

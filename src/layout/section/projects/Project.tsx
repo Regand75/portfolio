@@ -7,9 +7,20 @@ import {ProjectType} from "../../../data/ProjectsData.tsx";
 export const Project = (props: ProjectType) => {
     return (
         <StyledProject>
-            {props.srcImageProject && (
-                <Image src={props.srcImageProject} alt={props.titleProject}/>
-            )}
+            <ImageWrapper>
+                {props.srcImageProject && props.buttons.length > 0 && (
+                    <>
+                        <Image src={props.srcImageProject} alt={props.titleProject}/>
+                        <Button $colorBackground='background'
+                                $colorBorder={props.buttons[0].$colorBorder}
+                                $hoverBackground={props.buttons[0].$colorBorder}
+                                $hoverText='background'>
+                            VIEW PROJECT</Button>
+                    </>
+                )}
+
+            </ImageWrapper>
+
             <MeSkills>{props.listSkillsProject}</MeSkills>
             <Wrapper>
                 <FlexWrapper direction={'column'} $gap='16px'>
@@ -52,6 +63,35 @@ const StyledProject = styled.div`
     max-width: 330px;
     width: 100%;
     height: fit-content;
+`;
+
+const ImageWrapper = styled.div`
+    position: relative;
+
+    &:hover {
+        ${Button} {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+        }
+    }
+
+    ${Button} {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
 `;
 
 const Image = styled.img`

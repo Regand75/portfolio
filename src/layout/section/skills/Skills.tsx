@@ -5,14 +5,7 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import skillsGroupImage from "../../../assets/images/group.png"
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {Skill} from "./Skill.tsx";
-
-const skillsItems = [
-    {title: 'Databases', list: 'MongoDB Postman Swagger REST API RxJS'},
-    {title: 'Tools', list: 'WebStorm Git GitHub NPM PNPM Yarn'},
-    {title: 'Other', list: 'HTML CSS SASS Webpack'},
-    {title: 'Languages', list: 'JavaScript TypeScript'},
-    {title: 'Frameworks', list: 'Angular React'},
-]
+import {skillsItems} from "../../../data/SkillsData.tsx";
 
 export const Skills = () => {
     return (

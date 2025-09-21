@@ -3,6 +3,9 @@ import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {AboutMe} from "./About-me.tsx";
+import {skillsItems} from "../../../data/SkillsData.tsx";
+import {Skill} from "../skills/Skill.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 
 export const AboutMeFull = () => {
     return (
@@ -15,6 +18,13 @@ export const AboutMeFull = () => {
                 </AboutMeWrapper>
                 <SkillsWrapper>
                     <SectionTitle title={'skills'} $mb='48px' $symbol='#'/>
+                    <FlexWrapper wrap={'wrap'} $gap='16px'>
+                        {skillsItems.map((skill, index) => (
+                            <React.Fragment key={index}>
+                                <Skill $height='192px' title={skill.title} list={skill.list}/>
+                            </React.Fragment>
+                        ))}
+                    </FlexWrapper>
                 </SkillsWrapper>
                 <FactsWrapper>
                     <SectionTitle title={'my-fun-facts'} $mb='20px' $symbol='#'/>

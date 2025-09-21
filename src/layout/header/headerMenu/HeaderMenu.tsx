@@ -44,6 +44,12 @@ const ListItem = styled.li`
 `;
 
 const Link = styled(NavLink)`
+    transition: filter 0.3s ease, fill 0.3s ease;
+
+    &:hover {
+        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
+    }
+    
     span {
         color: ${({theme}) => theme.colors.tertiary};
     }

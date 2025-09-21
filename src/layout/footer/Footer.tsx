@@ -54,6 +54,12 @@ const StyledFooter = styled.footer`;
 const Link = styled.div`
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
+    transition: filter 0.3s ease, fill 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
+    }
 `;
 
 const Skills = styled.div`

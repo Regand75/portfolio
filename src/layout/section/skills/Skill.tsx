@@ -1,22 +1,24 @@
 import React from 'react';
 import styled from "styled-components";
+import {SkillPropsType} from "../../../data/SkillsData.tsx";
 
-type SkillPropsType = {
-    title: string,
-    list: string,
-}
+type SkillStyleProps = {
+    $height?: string;
+};
 
-export const Skill = ({title, list}: SkillPropsType) => {
+type SkillProps = SkillPropsType & SkillStyleProps;
+
+export const Skill = ({title, list, $height}: SkillProps) => {
     return (
-        <StyledSkill>
+        <StyledSkill $height={$height}>
             <Title>{title}</Title>
             <List>{list}</List>
         </StyledSkill>
     );
 };
 
-const StyledSkill = styled.div`
-    width: 178px;
+const StyledSkill = styled.div<SkillStyleProps>`
+    width: ${props => props.$height || '178px'};
     height: fit-content;
     border: 1px solid ${({theme}) => theme.colors.secondary};
     text-align: start;
@@ -32,5 +34,6 @@ const Title = styled.h3`
 
 const List = styled.p`
     padding: 8px;
+    line-height: 1.5;
 `;
 

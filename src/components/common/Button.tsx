@@ -5,11 +5,13 @@ type ButtonPropsType = {
     $colorText?: string,
     $colorBackground?: string,
     $hoverBackground?: string,
+    $hoverText?: string,
 }
 
 export const Button = styled.button<ButtonPropsType>`
     padding: 8px 16px;
-    background-color: transparent;
+    background-color: ${({ $colorBackground, theme }) =>
+            $colorBackground ? theme.colors[$colorBackground] : "transparent"};
     text-align: center;
     width: fit-content;
     font-family: 'Fira Code', sans-serif;
@@ -21,11 +23,15 @@ export const Button = styled.button<ButtonPropsType>`
             $colorBorder ? theme.colors[$colorBorder] : theme.colors.tertiary};
 
     &:hover {
-        background-color: ${({$hoverBackground, $colorBackground, theme}) =>
+        background-color: ${({ $hoverBackground, theme }) =>
                 $hoverBackground
                         ? theme.colors[$hoverBackground]
-                        : $colorBackground
-                                ? theme.colors[$colorBackground]
-                                : theme.colors.bgTrTertiary};
+                        : theme.colors.bgTrTertiary};
+        color: ${({ $hoverText, $colorText, theme }) =>
+                $hoverText
+                        ? theme.colors[$hoverText]
+                        : $colorText
+                                ? theme.colors[$colorText]
+                                : theme.colors.primary};
     }
 `;
