@@ -11,11 +11,17 @@ export const Project = (props: ProjectType) => {
                 {props.srcImageProject && props.buttons.length > 0 && (
                     <>
                         <Image src={props.srcImageProject} alt={props.titleProject}/>
+                        <a
+                            href={props.buttons[0].link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                         <Button $colorBackground='background'
                                 $colorBorder={props.buttons[0].$colorBorder}
                                 $hoverBackground={props.buttons[0].$colorBorder}
                                 $hoverText='background'>
                             VIEW PROJECT</Button>
+                        </a>
                     </>
                 )}
 

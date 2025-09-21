@@ -38,6 +38,7 @@ export const fullProjects: ProjectType[] = [
                 $colorBorder: "secondary",
                 $colorText: "secondary",
                 $hoverBackground: "bgTrSecondary",
+                link: "https://github.com/Regand75",
             }
         ]
     },
@@ -77,11 +78,11 @@ export const fullProjects: ProjectType[] = [
                 $colorBorder: "secondary",
                 $colorText: "secondary",
                 $hoverBackground: "bgTrSecondary",
+                link: "https://github.com/Regand75",
             }
         ]
     }
 ];
-
 
 export const smallProjects: ProjectType[] = [
     {
