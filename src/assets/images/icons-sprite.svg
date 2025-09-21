@@ -207,6 +207,24 @@
         <circle cx="76.25" cy="101" r="2" fill="currentColor"/>
     </symbol>
 
+    <symbol id="dotsForAfter53-103">
+        <circle cx="2" cy="2" r="2" fill="currentColor"/>
+        <circle cx="26.75" cy="2" r="2" fill="currentColor"/>
+        <circle cx="51.5" cy="2" r="2" fill="currentColor"/>
+        <circle cx="2" cy="26.75" r="2" fill="currentColor"/>
+        <circle cx="26.75" cy="26.75" r="2" fill="currentColor"/>
+        <circle cx="51.5" cy="26.75" r="2" fill="currentColor"/>
+        <circle cx="2" cy="51.5" r="2" fill="currentColor"/>
+        <circle cx="26.75" cy="51.5" r="2" fill="currentColor"/>
+        <circle cx="51.5" cy="51.5" r="2" fill="currentColor"/>
+        <circle cx="2" cy="76.25" r="2" fill="currentColor"/>
+        <circle cx="26.75" cy="76.25" r="2" fill="currentColor"/>
+        <circle cx="51.5" cy="76.25" r="2" fill="currentColor"/>
+        <circle cx="2" cy="101" r="2" fill="currentColor"/>
+        <circle cx="26.75" cy="101" r="2" fill="currentColor"/>
+        <circle cx="51.5" cy="101" r="2" fill="currentColor"/>
+    </symbol>
+
     <symbol id="dotsForBefore52-103">
             <circle cx="0.5" cy="2" r="2" fill="currentColor"/>
             <circle cx="25.25" cy="2" r="2" fill="currentColor"/>

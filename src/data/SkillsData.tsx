@@ -1,7 +1,7 @@
 export type SkillPropsType = {
     title: string,
     list: string,
-}
+};
 
 export const skillsItems: SkillPropsType[] = [
     {title: 'Databases', list: 'MongoDB Postman Swagger REST API RxJS'},
@@ -9,4 +9,4 @@ export const skillsItems: SkillPropsType[] = [
     {title: 'Other', list: 'HTML CSS SASS Webpack'},
     {title: 'Languages', list: 'JavaScript TypeScript'},
     {title: 'Frameworks', list: 'Angular React'},
-]
+];

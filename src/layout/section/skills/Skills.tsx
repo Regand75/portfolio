@@ -12,7 +12,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px' $symbol='#'/>
-                <FlexWrapper $justify='space-between' $gap='59px'>
+                <FlexWrapper $justify='space-between' $gap='20px'>
                     <GroupImage src={skillsGroupImage as string} alt="group"/>
                     <Wrapper>
                         <FlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>

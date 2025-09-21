@@ -6,10 +6,18 @@ import {AboutMe} from "./About-me.tsx";
 import {skillsItems} from "../../../data/SkillsData.tsx";
 import {Skill} from "../skills/Skill.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import skillsGroupImage from "../../../assets/images/group2.png";
+import {Icon} from "../../../components/icon/Icon.tsx";
+import {MyFact} from "./MyFact.tsx";
+import {myFunFacts} from "../../../data/FactsData.tsx";
 
 export const AboutMeFull = () => {
     return (
         <StyledAboutMeFull>
+            <BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'}
+                                      viewBox={'0 0 78 49'}/>
+            <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
+                                    viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
                 <AboutMeWrapper>
                     <SectionTitle title={'about-me'} $mb='14px' $symbol='/'/>
@@ -28,8 +36,24 @@ export const AboutMeFull = () => {
                 </SkillsWrapper>
                 <FactsWrapper>
                     <SectionTitle title={'my-fun-facts'} $mb='20px' $symbol='#'/>
+                    <FlexWrapper $justify='space-between' $gap='20px'>
+                        <Wrapper>
+                            <FlexWrapper wrap={'wrap'} $gap='16px'>
+                                {myFunFacts.map((fact, index) => (
+                                    <MyFact key={index} text={fact.text}/>
+                                ))}
+                            </FlexWrapper>
+                        </Wrapper>
+                        <GroupImage src={skillsGroupImage as string} alt="group2"/>
+                    </FlexWrapper>
                 </FactsWrapper>
             </Container>
+            <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
+                                   fill={'none'}/>
+            <AfterContentFromDots1 iconId={'dotsForAfter53-103'} width={'53px'} height={'103px'}
+                                   viewBox={'0 0 53 103'}/>
+            <AfterContentFromDots2 iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'}
+                                   viewBox={'0 0 80 103'}/>
         </StyledAboutMeFull>
     );
 };
@@ -38,6 +62,26 @@ const StyledAboutMeFull = styled.section`
     position: relative;
     padding-top: 114px;
     min-height: calc(100vh - 215px);
+`;
+
+const BeforeContentFromDotsTop = styled(Icon)`
+    position: absolute;
+    top: 410px;
+    left: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+    }
+`;
+
+const BeforeContentFromBlock = styled(Icon)`
+    position: absolute;
+    top: 1240px;
+    left: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+    }
 `;
 
 const AboutMeWrapper = styled.div`
@@ -54,5 +98,46 @@ const SkillsWrapper = styled.div`
 
 const FactsWrapper = styled.div`
     padding-bottom: 114px;
+`;
+
+const Wrapper = styled(FlexWrapper)`
+    max-width: 610px;
+`;
+
+const GroupImage = styled.img`
+    width: 178px;
+    height: 169px;
+    margin-right: 85px;
+    object-fit: contain;
+`;
+
+const AfterContentFromBlock = styled(Icon)`
+    position: absolute;
+    top: 270px;
+    right: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+    }
+`;
+
+const AfterContentFromDots1 = styled(Icon)`
+    position: absolute;
+    top: 810px;
+    right: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+    }
+`;
+
+const AfterContentFromDots2 = styled(Icon)`
+    position: absolute;
+    top: 1407px;
+    right: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+    }
 `;
 

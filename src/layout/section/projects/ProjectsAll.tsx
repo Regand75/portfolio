@@ -54,7 +54,7 @@ const BeforeContentFromDotsTop = styled(Icon)`
 
 const BeforeContentFromBlock = styled(Icon)`
     position: absolute;
-    bottom: 800px;
+    top: 1240px;
     left: 0;
     
     @media screen and (max-width: 1210px) {
@@ -64,28 +64,8 @@ const BeforeContentFromBlock = styled(Icon)`
 
 const BeforeContentFromDotsBottom = styled(Icon)`
     position: absolute;
-    bottom: 370px;
+    top: 1640px;
     left: 0;
-    
-    @media screen and (max-width: 1210px) {
-        display: none;
-}
-`;
-
-const AfterContentFromBlock = styled(Icon)`
-    position: absolute;
-    top: 270px;
-    right: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-}
-`;
-
-const AfterContentFromDots = styled(Icon)`
-    position: absolute;
-    bottom: 780px;
-    right: 0;
     
     @media screen and (max-width: 1210px) {
         display: none;
@@ -104,4 +84,24 @@ const WrapperFullProjects = styled(FlexWrapper)`
 const WrapperSmallProjects = styled(FlexWrapper)`
     margin-top: 48px;
     margin-bottom: 167px;
+`;
+
+const AfterContentFromBlock = styled(Icon)`
+    position: absolute;
+    top: 270px;
+    right: 0;
+
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
+`;
+
+const AfterContentFromDots = styled(Icon)`
+    position: absolute;
+    top: 1407px;
+    right: 0;
+    
+    @media screen and (max-width: 1210px) {
+        display: none;
+}
 `;
