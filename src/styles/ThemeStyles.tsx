@@ -6,6 +6,7 @@ export const darkTheme = {
         background: '#282C33',
         bgTrTertiary: '#C778DD33',
         bgTrSecondary: '#ABB2BF33',
+        bgPopup: '#000000D1',
     }
 }
 
@@ -17,5 +18,6 @@ export const lightTheme = {
         background: '#FFFFFF',
         bgTrTertiary: '#C778DD33',
         bgTrSecondary: '#4F5B6633',
+        bgPopup:'#FFFFFFD1',
     }
 }

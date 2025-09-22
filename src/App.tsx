@@ -15,24 +15,32 @@ import {Route, Routes} from "react-router-dom";
 import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
 import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
+import {items} from "./data/ItemsData.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
     const toggleTheme = () => setIsDark(!isDark);
+    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+    const toggleBurger = () => setIsBurgerOpen(!isBurgerOpen);
+    const closeBurger = () => setIsBurgerOpen(false);
 
     return (
         <div className="App">
             <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
                 <GlobalStyles/>
-                <Header toggleTheme={toggleTheme} isDark={isDark}/>
-
+                <Header toggleTheme={toggleTheme}
+                        isDark={isDark}
+                        toggleBurger={toggleBurger}
+                        isBurgerOpen={isBurgerOpen}
+                        closeBurger={closeBurger}
+                        menuItems={items}/>
                 <Routes>
                     <Route
                         path="/"
                         element={
                             <>
-                                <Main />
-                                <Slogan />
+                                <Main/>
+                                <Slogan/>
                             </>
                         }
                     />

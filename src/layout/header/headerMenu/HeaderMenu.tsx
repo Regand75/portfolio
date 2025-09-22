@@ -2,13 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {NavLink} from "react-router-dom";
+import {HeaderProps} from "../../../data/ItemsData.tsx";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
-type MenuItemType = {
-    title: string;
-    link: string;
-};
-
-export const HeaderMenu = (props: { menuItems: Array<MenuItemType> }) => {
+export const HeaderMenu = (props: HeaderProps) => {
     return (
         <StyledHeaderMenu>
             <List>
@@ -17,12 +14,23 @@ export const HeaderMenu = (props: { menuItems: Array<MenuItemType> }) => {
                         <ListItem key={index}>
                             <Link
                                 to={item.link}
-                                className={({ isActive }) => isActive ? 'active' :''}
+                                className={({isActive}) => isActive ? 'active' : ''}
                             >
                                 <span>#</span>{item.title}
                             </Link>
                         </ListItem>
                     ))}
+                    <select name="language" id="language">
+                        <option value="english">EN</option>
+                        <option value="russain">RU</option>
+                    </select>
+                    <Button onClick={props.toggleTheme}>
+                        {props.isDark ? (
+                            <SoonIcon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                        ) : (
+                            <SumIcon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                        )}
+                    </Button>
                 </FlexWrapper>
             </List>
         </StyledHeaderMenu>
@@ -54,6 +62,28 @@ const Link = styled(NavLink)`
     
     span {
         color: ${({theme}) => theme.colors.tertiary};
+    }
+`;
+
+const Button = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+`;
+
+const SoonIcon = styled(Icon)`
+    color: ${({ theme }) => theme.colors.secondary};
+    
+    &:hover {
+        color: ${({ theme }) => theme.colors.primary};
+    }
+`;
+
+const SumIcon = styled(Icon)`
+    color: ${({ theme }) => theme.colors.secondary};
+    
+    &:hover {
+        color: ${({ theme }) => theme.colors.primary};
     }
 `;
 
