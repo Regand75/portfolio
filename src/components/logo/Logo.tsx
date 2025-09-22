@@ -7,7 +7,7 @@ export const Logo = () => {
     return (
         <a href=''>
             <FlexWrapper $align='center' $gap='9px'>
-                <LogoIcon iconId={'logo'}/>
+                <LogoIcon iconId={'logo'} width={'16px'} height={'16px'} viewBox={'0 0 16 16'} />
                 <LogoSpan>Andrey</LogoSpan>
             </FlexWrapper>
         </a>

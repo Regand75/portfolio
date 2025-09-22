@@ -22,7 +22,7 @@ export const Header = ({toggleTheme, isDark}: HeaderProps) => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper $align='center' $justify='space-between'>
+                <FlexWrapper $align='center' $justify='space-between' $gap='32px'>
                     <Logo/>
                     <FlexWrapper $align='center' $gap='32px'>
                         <HeaderMenu menuItems={items}/>
@@ -37,6 +37,8 @@ export const Header = ({toggleTheme, isDark}: HeaderProps) => {
                                 <SumIcon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
                             )}
                         </Button>
+                        <MenuIcon iconId={'menu'} width={'24px'} height={'24px'} viewBox={'0 0 24 24'}/>
+                        <CloseIcon iconId={'close'} width={'24px'} height={'24px'} viewBox={'0 0 24 24'}/>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>
@@ -73,6 +75,18 @@ const SumIcon = styled(Icon)`
     &:hover {
         color: ${({ theme }) => theme.colors.primary};
     }
+`;
+
+const MenuIcon = styled(Icon)`
+    display: none;
+
+    @media screen and (max-width: 760px) {
+        display: inline-block;
+    }
+`;
+
+const CloseIcon = styled(Icon)`
+    display: none;
 `;
 
 

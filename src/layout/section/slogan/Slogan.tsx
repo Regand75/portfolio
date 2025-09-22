@@ -33,6 +33,10 @@ const Text = styled.div`
     position: relative;
     padding: 32px 15px;
     border: 1px solid ${({theme}) => theme.colors.secondary};
+
+    @media screen and (max-width: 620px) {
+        padding: 15px;
+    }
 `;
 
 const Author = styled.div`

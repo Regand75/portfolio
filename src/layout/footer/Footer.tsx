@@ -9,7 +9,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper $justify='space-between'>
+                <FooterFlexWrapper $justify='space-between' $gap='20px'>
                     <FlexWrapper direction={'column'} $gap='16px'>
                         <FlexWrapper $align='center' $gap='24px'>
                             <Logo/>
@@ -23,7 +23,7 @@ export const Footer = () => {
                         <Text>Media</Text>
                         <IconsListFlex/>
                     </FlexWrapper>
-                </FlexWrapper>
+                </FooterFlexWrapper>
                 <Copyright>© Copyright 2022. Made by Elias</Copyright>
             </Container>
         </StyledFooter>
@@ -33,6 +33,12 @@ export const Footer = () => {
 const StyledFooter = styled.footer`;
     padding: 32px 0;
     border-top: 1px solid ${({theme}) => theme.colors.secondary};
+`;
+
+const FooterFlexWrapper = styled(FlexWrapper)`
+    @media screen and (max-width: 425px) {
+        flex-direction: column;
+    }
 `;
 
 const LinkEmail = styled.a`

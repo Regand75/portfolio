@@ -30,7 +30,9 @@ export const HeaderMenu = (props: { menuItems: Array<MenuItemType> }) => {
 };
 
 const StyledHeaderMenu = styled.nav`
-    
+    @media screen and (max-width: 760px) {
+        display: none;
+    }
 `;
 
 const List = styled.ul`

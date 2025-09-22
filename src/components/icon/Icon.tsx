@@ -13,16 +13,16 @@ type IconPropsType = {
 
 export const Icon = (props: IconPropsType) => {
     return (
-        <IconSvg
-            className={props.className}
-            width={props.width || "16px"}
-            height={props.height || "16px"}
-            viewBox={props.viewBox || "0 0 16 16"}
-            $fill={props.fill || "currentColor"}
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
-        </IconSvg>
+            <IconSvg
+                className={props.className}
+                width={props.width || "16px"}
+                height={props.height || "16px"}
+                viewBox={props.viewBox || "0 0 16 16"}
+                $fill={props.fill || "currentColor"}
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
+            </IconSvg>
     );
 };
 
