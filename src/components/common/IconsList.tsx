@@ -40,3 +40,5 @@ const FooterIcon = styled(Icon)`
         color: ${({theme}) => theme.colors.primary};
     }
 `;
+
+

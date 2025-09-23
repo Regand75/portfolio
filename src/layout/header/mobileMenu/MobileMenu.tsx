@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
@@ -35,7 +35,7 @@ export const MobileMenu = (props: HeaderProps) => {
             </BurgerButton>
 
             <MobileMenuPopup $isBurgerOpen={props.isBurgerOpen}>
-                <MenuContent>
+                <PopupFlexWrapper direction={'column'} $align='center' $justify='space-between'>
                     <ul>
                         <FlexWrapper direction={'column'} $align='center' $gap='32px'>
                             {props.menuItems.map((item, index) => (
@@ -49,31 +49,31 @@ export const MobileMenu = (props: HeaderProps) => {
                                     </LinkMobile>
                                 </ListItemMobile>
                             ))}
-
                             <ControlsWrapper direction={'column'} $align='center' $gap='20px'>
                                 <ThemeButton onClick={props.toggleTheme}>
                                     {props.isDark ? (
-                                        <MoonIcon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                                        <MoonIcon iconId={'moon'} width={'23px'} height={'23px'}
+                                                  viewBox={'0 0 23 23'}/>
                                     ) : (
-                                        <SunIcon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
+                                        <SunIcon iconId={'sun'} width={'23px'} height={'23px'}
+                                                 viewBox={'0 0 23 23'}/>
                                     )}
                                 </ThemeButton>
                                 <LangSelect $fontSize='30px'/>
                             </ControlsWrapper>
-                            <IconsListFlex />
                         </FlexWrapper>
                     </ul>
-                </MenuContent>
+                    <IconsListFlex/>
+                </PopupFlexWrapper>
             </MobileMenuPopup>
-
-            {props.isBurgerOpen && <Overlay onClick={props.closeBurger} />}
+            {props.isBurgerOpen && <Overlay onClick={props.closeBurger}/>}
         </StyledMobileMenu>
     );
 };
 
 const StyledMobileMenu = styled.nav`
     display: none;
-    
+
     @media screen and (max-width: 760px) {
         display: block;
     }
@@ -92,13 +92,9 @@ const MobileMenuPopup = styled.div<{ $isBurgerOpen: boolean }>`
     box-shadow: ${props => props.$isBurgerOpen ? '2px 0 10px rgba(0,0,0,0.1)' : 'none'};
 `;
 
-const MenuContent = styled.div`
-    padding: 80px 30px 30px;
+const PopupFlexWrapper = styled(FlexWrapper)`
+    padding: 30px;
     height: 100%;
-    
-    ul {
-        height: 100%;
-    }
 `;
 
 const ListItemMobile = styled.li`
@@ -142,7 +138,7 @@ const ThemeButton = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
-    
+
     &:hover {
         color: ${({theme}) => theme.colors.primary};
     }
@@ -166,7 +162,7 @@ const BurgerButton = styled.button<{ $isBurgerOpen: boolean }>`
     cursor: pointer;
     z-index: 30;
     display: ${props => props.$isBurgerOpen ? 'fixed' : 'block'};
-    
+
     @media screen and (min-width: 761px) {
         display: none;
     }
@@ -180,7 +176,7 @@ const Overlay = styled.div`
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 15;
-    
+
     @media screen and (min-width: 761px) {
         display: none;
     }
@@ -189,7 +185,5 @@ const Overlay = styled.div`
 const IconsListFlex = styled(IconsList)`
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     gap: 8px;
-    flex-grow:1;
 `;

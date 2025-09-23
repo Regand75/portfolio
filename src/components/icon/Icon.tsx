@@ -15,8 +15,8 @@ export const Icon = (props: IconPropsType) => {
     return (
             <IconSvg
                 className={props.className}
-                width={props.width || "16px"}
-                height={props.height || "16px"}
+                $width={props.width || "16px"}
+                $height={props.height || "16px"}
                 viewBox={props.viewBox || "0 0 16 16"}
                 $fill={props.fill || "currentColor"}
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,10 +26,10 @@ export const Icon = (props: IconPropsType) => {
     );
 };
 
-const IconSvg = styled.svg<{ $fill?: string }>`
+const IconSvg = styled.svg<{ $fill?: string, $width?: string, $height?: string }>`
     fill: ${(props) => props.$fill || props.theme.colors.primary};
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
+    width: ${(props) => props.$width};
+    height: ${(props) => props.$height};
     transition: filter 0.3s ease, fill 0.3s ease;
 
     &:hover {

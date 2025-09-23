@@ -24,13 +24,17 @@ export const ProjectsAll = () => {
                 <SectionTitle title={'complete-apps'}/>
                 <WrapperFullProjects wrap='wrap' $gap='16px'>
                     {fullProjects.map((project) => (
-                        <Project key={project.id} {...project} />
+                        <React.Fragment key={project.id}>
+                            <Project {...project} />
+                        </React.Fragment>
                     ))}
                 </WrapperFullProjects>
                 <SectionTitle title={'small-projects'}/>
                 <WrapperSmallProjects wrap='wrap' $gap='16px'>
                     {smallProjects.map((project) => (
-                        <Project key={project.id} {...project} />
+                        <React.Fragment key={project.id}>
+                            <Project {...project} />
+                        </React.Fragment>
                     ))}
                 </WrapperSmallProjects>
             </Container>

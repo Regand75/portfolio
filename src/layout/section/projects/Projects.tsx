@@ -20,7 +20,9 @@ export const Projects = () => {
                 </FlexWrapper>
                 <FlexWrapper $gap='16px'>
                     {fullProjects.slice(0, 3).map((project) => (
-                        <Project key={project.id} {...project} />
+                        <React.Fragment key={project.id}>
+                            <Project {...project} />
+                        </React.Fragment>
                     ))}
                 </FlexWrapper>
             </Container>
