@@ -2,7 +2,7 @@ import React from 'react';
 import iconsSprite from '../../assets/images/icons-sprite.svg';
 import styled from "styled-components";
 
-type IconPropsType = {
+export type IconPropsType = {
     iconId: string,
     width?: string,
     height?: string,
@@ -28,6 +28,8 @@ export const Icon = (props: IconPropsType) => {
 
 const IconSvg = styled.svg<{ $fill?: string }>`
     fill: ${(props) => props.$fill || props.theme.colors.primary};
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
     transition: filter 0.3s ease, fill 0.3s ease;
 
     &:hover {

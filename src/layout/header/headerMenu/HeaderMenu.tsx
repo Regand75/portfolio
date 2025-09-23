@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {NavLink} from "react-router-dom";
 import {HeaderProps} from "../../../data/ItemsData.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
+import {LangSelect} from "../LangSelect.tsx";
 
 export const HeaderMenu = (props: HeaderProps) => {
     return (
@@ -20,10 +21,7 @@ export const HeaderMenu = (props: HeaderProps) => {
                             </Link>
                         </ListItem>
                     ))}
-                    <select name="language" id="language">
-                        <option value="english">EN</option>
-                        <option value="russain">RU</option>
-                    </select>
+                    <LangSelect />
                     <Button onClick={props.toggleTheme}>
                         {props.isDark ? (
                             <SoonIcon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>

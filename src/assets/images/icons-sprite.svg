@@ -144,6 +144,11 @@
               fill="currentColor"/>
     </symbol>
 
+    <symbol id="arrow">
+        <line x1="0.707107" y1="1.29289" x2="5.70711" y2="6.29289" stroke="currentColor" stroke-width="2"/>
+        <line x1="4.29289" y1="6.29289" x2="9.29289" y2="1.29289" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+
     <symbol id="dots">
         <circle cx="2" cy="2" r="2" fill="currentColor"/>
         <circle cx="22" cy="2" r="2" fill="currentColor"/>

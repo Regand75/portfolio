@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {HeaderProps} from "../../../data/ItemsData.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
+import {LangSelect} from "../LangSelect.tsx";
 
 export const MobileMenu = (props: HeaderProps) => {
     useEffect(() => {
@@ -49,11 +50,6 @@ export const MobileMenu = (props: HeaderProps) => {
                             ))}
 
                             <ControlsWrapper direction={'column'} $align='center' $gap='20px'>
-                                <LanguageSelect name="language" id="language">
-                                    <option value="english">EN</option>
-                                    <option value="russian">RU</option>
-                                </LanguageSelect>
-
                                 <ThemeButton onClick={props.toggleTheme}>
                                     {props.isDark ? (
                                         <MoonIcon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
@@ -61,6 +57,7 @@ export const MobileMenu = (props: HeaderProps) => {
                                         <SunIcon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
                                     )}
                                 </ThemeButton>
+                                <LangSelect $fontSize='30px'/>
                             </ControlsWrapper>
                         </FlexWrapper>
                     </ul>
@@ -133,14 +130,6 @@ const ControlsWrapper = styled(FlexWrapper)`
     margin-top: 10px;
     padding-top: 40px;
     border-top: 1px solid ${props => props.theme.colors.secondary};
-`;
-
-const LanguageSelect = styled.select`
-    background-color: transparent;
-    border: none;
-    color: ${props => props.theme.colors.secondary};
-    padding: 8px 12px;
-    border-radius: 4px;
 `;
 
 const ThemeButton = styled.button`
