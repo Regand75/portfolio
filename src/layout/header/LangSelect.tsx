@@ -35,7 +35,7 @@ export const LangSelect = (props: LangSelectPropsType) => {
     return (
         <StyledLangSelect ref={ref} $fontSize={props.$fontSize}>
             <LangFlexWrapper $align="center" $gap="4px" onClick={togglePopup}>
-                <div>{selectedLang}</div>
+                <Lang>{selectedLang}</Lang>
                 <Icon iconId="arrow" width="10px" height="7px" viewBox="0 0 10 7" />
             </LangFlexWrapper>
 
@@ -61,7 +61,11 @@ const LangFlexWrapper = styled(FlexWrapper)`
 
   &:hover {
     filter: drop-shadow(0 0 6px ${({ theme }) => theme.colors.secondary});
+      color: ${({theme}) => theme.colors.primary};
   }
+`;
+
+const Lang = styled.div`
 `;
 
 const LangPopup = styled.ul<{ $fontSize?: string; $isOpen: boolean }>`
@@ -91,14 +95,15 @@ const LangPopup = styled.ul<{ $fontSize?: string; $isOpen: boolean }>`
 `;
 
 const List = styled.li`
-  cursor: pointer;
-  transition: filter 0.3s ease, fill 0.3s ease;
+    cursor: pointer;
+    transition: filter 0.3s ease, fill 0.3s ease;
 
-  &:hover {
-    filter: drop-shadow(0 0 6px ${({ theme }) => theme.colors.secondary});
-  }
+    &:hover {
+        filter: drop-shadow(0 0 6px ${({theme}) => theme.colors.secondary});
+        color: ${({theme}) => theme.colors.primary};
+    }
 
-  &:not(:last-child) {
-    padding-bottom: 8px;
-  }
+    &:not(:last-child) {
+        padding-bottom: 8px;
+    }
 `;

@@ -49,6 +49,7 @@ const LinkEmail = styled.a`
 
     &:hover {
         filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
+        color: ${({theme}) => theme.colors.primary};
     }
 `;
 

@@ -2,15 +2,16 @@ import React from 'react';
 import {Icon} from "../icon/Icon.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../common/FlexWrapper.tsx";
+import {Link} from "react-router-dom";
 
 export const Logo = () => {
     return (
-        <a href=''>
+        <Link to={'/'}>
             <FlexWrapper $align='center' $gap='9px'>
                 <LogoIcon iconId={'logo'} width={'16px'} height={'16px'} viewBox={'0 0 16 16'} />
                 <LogoSpan>Andrey</LogoSpan>
             </FlexWrapper>
-        </a>
+        </Link>
     );
 };
 
