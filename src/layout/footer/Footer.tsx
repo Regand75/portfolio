@@ -71,6 +71,7 @@ const IconsListFlex = styled(IconsList)`
 const Copyright = styled.div`
     margin-top: 48px;
     text-align: center;
+    justify-self: end;
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
 `;

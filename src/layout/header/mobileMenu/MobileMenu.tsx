@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {HeaderProps} from "../../../data/ItemsData.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {LangSelect} from "../LangSelect.tsx";
+import {IconsList} from "../../../components/common/IconsList.tsx";
 
 export const MobileMenu = (props: HeaderProps) => {
     useEffect(() => {
@@ -59,6 +60,7 @@ export const MobileMenu = (props: HeaderProps) => {
                                 </ThemeButton>
                                 <LangSelect $fontSize='30px'/>
                             </ControlsWrapper>
+                            <IconsListFlex />
                         </FlexWrapper>
                     </ul>
                 </MenuContent>
@@ -93,6 +95,10 @@ const MobileMenuPopup = styled.div<{ $isBurgerOpen: boolean }>`
 const MenuContent = styled.div`
     padding: 80px 30px 30px;
     height: 100%;
+    
+    ul {
+        height: 100%;
+    }
 `;
 
 const ListItemMobile = styled.li`
@@ -178,4 +184,12 @@ const Overlay = styled.div`
     @media screen and (min-width: 761px) {
         display: none;
     }
+`;
+
+const IconsListFlex = styled(IconsList)`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+    flex-grow:1;
 `;
