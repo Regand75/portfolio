@@ -35,11 +35,12 @@ const StyledSkills = styled.section`
 `;
 
 const ImageWrapper = styled.div`
+    margin-left: 30px;
     max-width: 350px;
     max-height: 284px;
     width: 100%;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 974px) {
         display: none;
     }
 `;
@@ -53,13 +54,13 @@ const Wrapper = styled(FlexWrapper)`
     margin-top: 31px;
     height: 280px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 974px) {
         height: auto;
     }
 `;
 
 const SkillsFlexWrapper = styled(FlexWrapper)`
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 974px) {
         flex-direction: row;
         flex-wrap: wrap;
     }

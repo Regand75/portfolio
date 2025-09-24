@@ -7,7 +7,6 @@ import {Button} from "../../../components/common/Button.tsx";
 import {Icon} from "../../../components/common/Icon.tsx";
 import {Link} from "react-router-dom";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
-import {Skills} from "../skills/Skills.tsx";
 import {Slogan} from "../slogan/Slogan.tsx";
 
 export const Main = () => {
@@ -149,7 +148,7 @@ const BeforeIcon = styled(Icon)`
 
 const AfterIcon = styled(Icon)`
     position: absolute;
-    bottom: 110px;
+    bottom: 55px;
     right: 15px;
     z-index: 2;
 

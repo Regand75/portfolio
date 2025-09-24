@@ -49,7 +49,7 @@ const MeDescription = styled.div`
     max-width: 515px;
     width: 100%;
     font-family: 'Fira Code', sans-serif;
-    line-height: 26px;
+    line-height: 25px;
     color: ${({theme}) => theme.colors.secondary};
 `;
 

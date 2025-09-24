@@ -21,7 +21,7 @@ export const ProjectsAll = () => {
                 <FixedBlockIcon/>
                 <SectionTitle title={'projects'} $mb='14px' $symbol='/'/>
                 <Description>List of my projects</Description>
-                <SectionTitle title={'complete-apps'}/>
+                <SectionTitle title={'complete-apps'} $symbol='#'/>
                 <WrapperFullProjects wrap='wrap' $gap='16px'>
                     {fullProjects.map((project) => (
                         <React.Fragment key={project.id}>
@@ -29,7 +29,7 @@ export const ProjectsAll = () => {
                         </React.Fragment>
                     ))}
                 </WrapperFullProjects>
-                <SectionTitle title={'small-projects'}/>
+                <SectionTitle title={'small-projects'} $symbol='#'/>
                 <WrapperSmallProjects wrap='wrap' $gap='16px'>
                     {smallProjects.map((project) => (
                         <React.Fragment key={project.id}>
@@ -54,7 +54,7 @@ const StyledProjectsAll = styled.section`
 
 const BeforeContentFromDotsTop = styled(Icon)`
     position: absolute;
-    top: 410px;
+    top: 405px;
     left: 0;
 
     @media screen and (max-width: 1210px) {
@@ -64,7 +64,7 @@ const BeforeContentFromDotsTop = styled(Icon)`
 
 const BeforeContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 1240px;
+    top: 1260px;
     left: 0;
 
     @media screen and (max-width: 1210px) {
@@ -98,7 +98,7 @@ const WrapperSmallProjects = styled(FlexWrapper)`
 
 const AfterContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 270px;
+    top: 260px;
     right: 0;
 
     @media screen and (max-width: 1210px) {
@@ -108,7 +108,7 @@ const AfterContentFromBlock = styled(Icon)`
 
 const AfterContentFromDots = styled(Icon)`
     position: absolute;
-    top: 1407px;
+    top: 1430px;
     right: 0;
 
     @media screen and (max-width: 1210px) {

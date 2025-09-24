@@ -48,7 +48,7 @@ const StyledContactsAll = styled.section`
 
 const BeforeContentFromDotsTop = styled(Icon)`
     position: absolute;
-    top: 410px;
+    top: 400px;
     left: 0;
 
     @media screen and (max-width: 1210px) {
@@ -82,7 +82,7 @@ const MediaWrapper = styled(FlexWrapper)`
 
 const AfterContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 270px;
+    top: 255px;
     right: 0;
 
     @media screen and (max-width: 1210px) {

@@ -2,21 +2,18 @@ import './App.css'
 import {Header} from "./layout/header/Header.tsx";
 import {Main} from "./layout/section/main/Main.tsx";
 import {Projects} from "./layout/section/projects/Projects.tsx";
-import {Skills} from "./layout/section/skills/Skills.tsx";
 import {AboutMeComponent} from "./layout/section/about-me/About-me-component.tsx";
 import {Contacts} from "./layout/section/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 import {GlobalStyles} from "./styles/GlobalStyles.tsx";
 import {ThemeProvider} from "styled-components";
 import {darkTheme, lightTheme} from "./styles/ThemeStyles.tsx";
-import {Slogan} from "./layout/section/slogan/Slogan.tsx";
 import {useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
 import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
 import {items} from "./data/ItemsData.tsx";
-import {Project} from "./layout/section/projects/Project.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);

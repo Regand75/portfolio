@@ -62,7 +62,7 @@ const Wrapper = styled.div`
 const Description = styled.div`
     width: 100%;
     font-family: 'Fira Code', sans-serif;
-    line-height: 26px;
+    line-height: 25px;
     color: ${({theme}) => theme.colors.secondary};
 
     p {
@@ -76,7 +76,7 @@ const Description = styled.div`
 
 const ImageWrapper = styled.div`
     position: relative;
-    margin-top: -64px;
+    margin-top: -105px;
 
     &::after {
         content: '';
@@ -92,7 +92,7 @@ const ImageWrapper = styled.div`
 const BeforeIcon = styled(Icon)`
     position: absolute;
     top: 60px;
-    left: -5px;
+    left: 5px;
     z-index: 2;
 `;
 
@@ -102,7 +102,7 @@ const Image = styled.img`
 
 const AfterIcon = styled(Icon)`
     position: absolute;
-    bottom: 176px;
-    right: 16px;
+    bottom: 175px;
+    right: 7px;
     z-index: 2;
 `;

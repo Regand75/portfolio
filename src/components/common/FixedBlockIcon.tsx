@@ -27,7 +27,7 @@ const StyledFixedBlockIcon = styled.div`
 
 const Line = styled.div`
     width: 0;
-    height: 155px;
+    height: 193px;
     margin-inline: auto;
     outline: 1px solid ${({theme}) => theme.colors.secondary};
 `;

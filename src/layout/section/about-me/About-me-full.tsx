@@ -80,7 +80,7 @@ const BeforeContentFromDotsTop = styled(Icon)`
 
 const BeforeContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 1240px;
+    top: 1200px;
     left: 0;
 
     @media screen and (max-width: 1210px) {
@@ -127,7 +127,7 @@ const AfterContentFromBlock = styled(Icon)`
 
 const AfterContentFromDots1 = styled(Icon)`
     position: absolute;
-    top: 810px;
+    top: 767px;
     right: 0;
 
     @media screen and (max-width: 1210px) {
@@ -137,7 +137,7 @@ const AfterContentFromDots1 = styled(Icon)`
 
 const AfterContentFromDots2 = styled(Icon)`
     position: absolute;
-    top: 1407px;
+    top: 1370px;
     right: 0;
 
     @media screen and (max-width: 1210px) {

@@ -23,13 +23,13 @@ export const AboutMeComponent = () => {
 const StyledAboutMe = styled.section`
     position: relative;
     padding-top: 114px;
-    padding-bottom: 84px;
+    padding-bottom: 160px;
     min-height: calc(100vh - 215px);
 `;
 
 const BeforeContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 270px;
+    top: 257px;
     left: 0;
     
     @media screen and (max-width: 1210px) {
@@ -39,7 +39,7 @@ const BeforeContentFromBlock = styled(Icon)`
 
 const AfterContentFromDots = styled(Icon)`
     position: absolute;
-    top: 453px;
+    top: 400px;
     right: 0;
     
     @media screen and (max-width: 1210px) {

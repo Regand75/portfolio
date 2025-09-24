@@ -15,6 +15,7 @@ export const Button = styled.button<ButtonPropsType>`
     text-align: center;
     width: fit-content;
     font-family: 'Fira Code', sans-serif;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     color: ${({$colorText, theme}) =>
