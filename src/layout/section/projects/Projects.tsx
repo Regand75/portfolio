@@ -15,18 +15,20 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <FixedBlockIcon/>
-                <FlexWrapper $align='start' $justify='space-between'>
-                    <SectionTitle title={'projects'} width={'511px'} $left='170px' $mb='48px' $symbol='#'/>
-                    <LinkWrapper to={'/projects/projects-all'}>View all {'~~>'}</LinkWrapper>
-                </FlexWrapper>
-                <FlexWrapper $gap='16px'>
+                <ProjectsFlexWrapper $align='start' $justify='space-between' $gap='20px'>
+                    <ProjectSectionTitle title={'projects'} width={'511px'} $mb='48px' $symbol='#'/>
+                    <LinkWrapper to={'/projects/projects-all'}>
+                        <button>View all {'~~>'}</button>
+                    </LinkWrapper>
+                </ProjectsFlexWrapper>
+                <FlexWrapper wrap={'wrap'} $gap='16px'>
                     {fullProjects.slice(0, 3).map((project) => (
                         <React.Fragment key={project.id}>
                             <Project {...project} />
                         </React.Fragment>
                     ))}
                 </FlexWrapper>
-                <Skills />
+                <Skills/>
             </Container>
             <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
                                    fill={'none'}/>
@@ -41,6 +43,18 @@ const StyledProjects = styled.section`
     min-height: calc(100vh - 215px);
 `;
 
+const ProjectsFlexWrapper = styled(FlexWrapper)`
+    @media screen and (max-width: 375px) {
+        flex-wrap: wrap;
+    }
+`;
+
+const ProjectSectionTitle = styled(SectionTitle)`
+    @media screen and (max-width: 375px) {
+        margin-bottom: 0;
+    }
+`;
+
 const AfterContentFromBlock = styled(Icon)`
     position: absolute;
     top: 400px;
@@ -52,13 +66,20 @@ const AfterContentFromBlock = styled(Icon)`
 `;
 
 const LinkWrapper = styled(Link)`
-    display: inline-block;
-    font-family: 'Fira Code', sans-serif;
-    font-weight: 500;
-    color: ${({theme}) => theme.colors.primary};
-    line-height: 42px;
+    
+    button {
+        border: none;
+        background-color: transparent;
+        text-align: end;
+        cursor: pointer;
+        width: 100px;
+        font-family: 'Fira Code', sans-serif;
+        font-weight: 500;
+        color: ${({theme}) => theme.colors.primary};
+        line-height: 42px;
 
-    &:hover {
-        color: ${({theme}) => theme.colors.tertiary};
+        &:hover {
+            color: ${({theme}) => theme.colors.tertiary};
+        }
     }
 `;

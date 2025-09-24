@@ -12,7 +12,7 @@ export const Contacts = () => {
             <BeforeContentFromDots iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'} viewBox={'0 0 52 103'}/>
             <Container>
                 <FixedBlockIcon />
-                <SectionTitle title={'contacts'} width={'145px'} $left='171px' $mb='45px' $symbol='#'/>
+                <SectionTitle title={'contacts'} width={'145px'} $mb='45px' $symbol='#'/>
                 <ContactsBlock showBlock={false}/>
             </Container>
         </StyledContacts>

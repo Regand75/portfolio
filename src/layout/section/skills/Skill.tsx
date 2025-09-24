@@ -22,6 +22,10 @@ const StyledSkill = styled.div<SkillStyleProps>`
     height: fit-content;
     border: 1px solid ${({theme}) => theme.colors.secondary};
     text-align: start;
+
+    @media screen and (max-width: 401px) {
+        width: 100%;
+    }
 `;
 
 const Title = styled.h3`

@@ -70,6 +70,11 @@ const StyledProject = styled.div`
     max-width: 330px;
     width: 100%;
     height: fit-content;
+
+    @media screen and (max-width: 401px) {
+        max-width: none;
+        width: 100%;
+    }
 `;
 
 const ImageWrapper = styled.div`

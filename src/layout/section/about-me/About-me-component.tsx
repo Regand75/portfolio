@@ -12,7 +12,7 @@ export const AboutMeComponent = () => {
             <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'} viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
                 <FixedBlockIcon />
-                <SectionTitle title={'about-me'} width={'340px'} $left='172px' $mb='23px' $symbol='#'/>
+                <SectionTitle title={'about-me'} width={'340px'} $mb='23px' $symbol='#'/>
                 <AboutMe  showButton={true}/>
             </Container>
             <AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>

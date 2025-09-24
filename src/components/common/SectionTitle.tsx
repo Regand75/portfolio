@@ -1,44 +1,57 @@
 import styled from "styled-components";
 import React from 'react';
+import {FlexWrapper} from "./FlexWrapper.tsx";
 
 type SectionTitlePropsType = {
-    title: string,
+    title?: string,
     width?: string,
-    $left?: string,
     $mb?: string,
     $symbol?: string,
 }
 
-export const SectionTitle = ({title, width, $left, $mb, $symbol}: SectionTitlePropsType) => {
+export const SectionTitle = ({title, width, $mb, $symbol}: SectionTitlePropsType) => {
     return (
-        <StyledTitle title={title} width={width} $left={$left} $mb={$mb} $symbol={$symbol}>
-            <span>{$symbol}</span>
-            {title}
+        <StyledTitle title={title} $mb={$mb} $symbol={$symbol}>
+            <FlexWrapper $gap='16px'>
+                <TitleWrapper>
+                    <span>{$symbol}</span>
+                    {title}
+                </TitleWrapper>
+                <LineWrapper width={width} />
+            </FlexWrapper>
         </StyledTitle>
     );
 };
 
-const StyledTitle = styled.h2<SectionTitlePropsType>`
+const StyledTitle = styled.div<SectionTitlePropsType>`
+    margin-bottom: ${props => props.$mb || 0};
+    width: 100%;
+`;
+
+const TitleWrapper = styled.h2<SectionTitlePropsType>`
     font-family: 'Fira Code', sans-serif;
     font-weight: 500;
     font-size: 32px;
     color: ${({theme}) => theme.colors.primary};
-    position: relative;
-    margin-bottom: ${props => props.$mb || 0};
-
+  
     span {
         color: ${({theme}) => theme.colors.tertiary};
     }
+`;
 
-    ::after {
+const LineWrapper = styled.div<SectionTitlePropsType>`
+    max-width: ${props => props.width || 0};
+    width: 100%;
+    position: relative;
+    
+    &::after {
         content: "";
         height: 2px;
-        width: ${props => props.width};
+        width: 100%;
         background-color: ${({theme}) => theme.colors.tertiary};
         position: absolute;
-        margin-left: 16px;
+        left: 0;
         top: 50%;
-        left: ${props => props.$left};
     }
 `;
 

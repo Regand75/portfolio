@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {Container} from "../../../components/common/Container.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import skillsGroupImage from "../../../assets/images/group.png"
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
@@ -12,17 +11,19 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <FixedBlockIcon/>
-            <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px' $symbol='#'/>
-            <FlexWrapper $justify='space-between' $gap='20px'>
-                <GroupImage src={skillsGroupImage as string} alt="group"/>
+            <SectionTitle title={'skills'} width={'250px'} $mb='12px' $symbol='#'/>
+            <FlexWrapper $justify='space-between' $gap='15px'>
+                <ImageWrapper>
+                    <GroupImage src={skillsGroupImage as string} alt="group"/>
+                </ImageWrapper>
                 <Wrapper>
-                    <FlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>
+                    <SkillsFlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>
                         {skillsItems.map((skill, index) => (
                             <React.Fragment key={index}>
                                 <Skill title={skill.title} list={skill.list}/>
                             </React.Fragment>
                         ))}
-                    </FlexWrapper>
+                    </SkillsFlexWrapper>
                 </Wrapper>
             </FlexWrapper>
         </StyledSkills>
@@ -33,13 +34,33 @@ const StyledSkills = styled.section`
     padding-top: 106px;
 `;
 
+const ImageWrapper = styled.div`
+    max-width: 350px;
+    max-height: 284px;
+    width: 100%;
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+`;
+
 const GroupImage = styled.img`
-    width: 350px;
-    height: 284px;
-    object-fit: contain;
+    width: 100%;
+    height: auto;
 `;
 
 const Wrapper = styled(FlexWrapper)`
     margin-top: 31px;
     height: 280px;
+
+    @media screen and (max-width: 1024px) {
+        height: auto;
+    }
+`;
+
+const SkillsFlexWrapper = styled(FlexWrapper)`
+    @media screen and (max-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 `;
