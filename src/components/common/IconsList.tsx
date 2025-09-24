@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../icon/Icon.tsx";
+import {Icon} from "./Icon.tsx";
 
 export const IconsList = ({className}: {className?: string}) => {
     return (

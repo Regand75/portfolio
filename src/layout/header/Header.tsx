@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo.tsx";
+import {Logo} from "../../components/common/Logo.tsx";
 import {Container} from "../../components/common/Container.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
 import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";

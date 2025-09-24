@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Button} from "../../../components/common/Button.tsx";
 import aboutMeImage from "../../../assets/images/about-me-image.png";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {Link} from "react-router-dom";
 
 type AboutMePropsType = {

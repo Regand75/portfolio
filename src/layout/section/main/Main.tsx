@@ -4,9 +4,11 @@ import mainImage from "../../../assets/images/main-image.png";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Container} from "../../../components/common/Container.tsx";
 import {Button} from "../../../components/common/Button.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {Link} from "react-router-dom";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {Skills} from "../skills/Skills.tsx";
+import {Slogan} from "../slogan/Slogan.tsx";
 
 export const Main = () => {
     return (
@@ -33,6 +35,7 @@ export const Main = () => {
                         </InfoWork>
                     </ImageWrapper>
                 </MainFlexWrapper>
+                <Slogan />
             </Container>
             <AfterContentFromBlock iconId={'blockForAfter82-91'} width={'82px'} height={'91px'} viewBox={'0 0 82 91'}
                                    fill={'none'}/>
@@ -43,7 +46,8 @@ export const Main = () => {
 const StyledMain = styled.section`
     position: relative;
     padding-top: 123px;
-    padding-bottom: 112px;
+    padding-bottom: 84px;
+    min-height: calc(100vh - 215px);
 
     @media screen and (max-width: 710px) {
         padding-top: 80px;
@@ -55,6 +59,7 @@ const StyledMain = styled.section`
 `;
 
 const MainFlexWrapper = styled(FlexWrapper)`
+    padding-bottom: 151px;
     @media screen and (max-width: 425px) {
         flex-direction: column;
     }

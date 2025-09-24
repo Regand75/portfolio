@@ -6,8 +6,9 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Link} from "react-router-dom";
 import {fullProjects} from "../../../data/ProjectsData.tsx";
 import {Project} from "./Project.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {Skills} from "../skills/Skills.tsx";
 
 export const Projects = () => {
     return (
@@ -25,6 +26,7 @@ export const Projects = () => {
                         </React.Fragment>
                     ))}
                 </FlexWrapper>
+                <Skills />
             </Container>
             <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
                                    fill={'none'}/>
@@ -35,7 +37,7 @@ export const Projects = () => {
 const StyledProjects = styled.section`
     position: relative;
     padding-top: 114px;
-    padding-bottom: 74px;
+    padding-bottom: 84px;
     min-height: calc(100vh - 215px);
 `;
 

@@ -4,7 +4,7 @@ import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {ContactsBlock} from "./ContactsBlock.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const ContactsAll = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 
 type ContactsBlockShowPropsType = {
     showBlock?: boolean,

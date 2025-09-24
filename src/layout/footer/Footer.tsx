@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../components/common/Container.tsx";
-import {Logo} from "../../components/logo/Logo.tsx";
+import {Logo} from "../../components/common/Logo.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
 import {IconsList} from "../../components/common/IconsList.tsx";
 

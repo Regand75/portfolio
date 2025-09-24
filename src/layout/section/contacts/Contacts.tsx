@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {ContactsBlock} from "./ContactsBlock.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
@@ -22,7 +22,7 @@ export const Contacts = () => {
 const StyledContacts = styled.section`
     position: relative;
     padding-top: 114px;
-    padding-bottom: 74px;
+    padding-bottom: 84px;
     min-height: calc(100vh - 215px);
 `;
 

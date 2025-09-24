@@ -11,30 +11,26 @@ import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 export const Skills = () => {
     return (
         <StyledSkills>
-            <Container>
-                <FixedBlockIcon />
-                <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px' $symbol='#'/>
-                <FlexWrapper $justify='space-between' $gap='20px'>
-                    <GroupImage src={skillsGroupImage as string} alt="group"/>
-                    <Wrapper>
-                        <FlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>
-                            {skillsItems.map((skill, index) => (
-                                <React.Fragment key={index}>
-                                    <Skill title={skill.title} list={skill.list}/>
-                                </React.Fragment>
-                            ))}
-                        </FlexWrapper>
-                    </Wrapper>
-                </FlexWrapper>
-            </Container>
+            <FixedBlockIcon/>
+            <SectionTitle title={'skills'} width={'250px'} $left='133px' $mb='12px' $symbol='#'/>
+            <FlexWrapper $justify='space-between' $gap='20px'>
+                <GroupImage src={skillsGroupImage as string} alt="group"/>
+                <Wrapper>
+                    <FlexWrapper direction={'column'} wrap={'wrap-reverse'} $gap='16px'>
+                        {skillsItems.map((skill, index) => (
+                            <React.Fragment key={index}>
+                                <Skill title={skill.title} list={skill.list}/>
+                            </React.Fragment>
+                        ))}
+                    </FlexWrapper>
+                </Wrapper>
+            </FlexWrapper>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
-    padding-top: 114px;
-    padding-bottom: 74px;
-    min-height: calc(100vh - 215px);
+    padding-top: 106px;
 `;
 
 const GroupImage = styled.img`

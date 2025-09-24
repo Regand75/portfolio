@@ -1,7 +1,7 @@
 import React from 'react';
-import {Icon} from "../icon/Icon.tsx";
+import {Icon} from "./Icon.tsx";
 import styled from "styled-components";
-import {FlexWrapper} from "../common/FlexWrapper.tsx";
+import {FlexWrapper} from "./FlexWrapper.tsx";
 import {Link} from "react-router-dom";
 
 export const Logo = () => {
@@ -33,6 +33,7 @@ const LogoSpan = styled.span`
 
 const LogoIcon = styled(Icon)`
     color: ${({ theme }) => theme.colors.primary};
+    
 `;
 
 

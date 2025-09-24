@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { FlexWrapper } from '../../components/common/FlexWrapper.tsx';
-import { Icon } from '../../components/icon/Icon.tsx';
+import { Icon } from '../../components/common/Icon.tsx';
 
 type LangSelectPropsType = {
     $fontSize?: string;

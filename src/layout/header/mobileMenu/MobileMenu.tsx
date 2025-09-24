@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {HeaderProps} from "../../../data/ItemsData.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {LangSelect} from "../LangSelect.tsx";
 import {IconsList} from "../../../components/common/IconsList.tsx";
 
@@ -63,7 +63,7 @@ export const MobileMenu = (props: HeaderProps) => {
                             </ControlsWrapper>
                         </FlexWrapper>
                     </ul>
-                    <IconsListFlex/>
+                    <IconsListFlex />
                 </PopupFlexWrapper>
             </MobileMenuPopup>
             {props.isBurgerOpen && <Overlay onClick={props.closeBurger}/>}
@@ -186,4 +186,8 @@ const IconsListFlex = styled(IconsList)`
     display: flex;
     flex-direction: row;
     gap: 8px;
+    svg {
+        width: 64px;
+        height: 64px;
+    }
 `;

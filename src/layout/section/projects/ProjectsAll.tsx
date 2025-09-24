@@ -5,7 +5,7 @@ import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {fullProjects, smallProjects} from "../../../data/ProjectsData.tsx";
 import {Project} from "./Project.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 
 export const ProjectsAll = () => {
@@ -48,7 +48,7 @@ export const ProjectsAll = () => {
 const StyledProjectsAll = styled.section`
     position: relative;
     padding-top: 114px;
-    padding-bottom: 20px;
+    padding-bottom: 84px;
     min-height: calc(100vh - 215px);
 `;
 
@@ -83,17 +83,17 @@ const BeforeContentFromDotsBottom = styled(Icon)`
 `;
 
 const Description = styled.p`
-    margin-bottom: 68px;
+    padding-bottom: 68px;
 `;
 
 const WrapperFullProjects = styled(FlexWrapper)`
-    margin-top: 48px;
-    margin-bottom: 81px;
+    padding-top: 48px;
+    padding-bottom: 81px;
 `;
 
 const WrapperSmallProjects = styled(FlexWrapper)`
-    margin-top: 48px;
-    margin-bottom: 167px;
+    padding-top: 48px;
+    padding-bottom: 167px;
 `;
 
 const AfterContentFromBlock = styled(Icon)`

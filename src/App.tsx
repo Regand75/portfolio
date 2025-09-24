@@ -16,6 +16,7 @@ import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
 import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
 import {items} from "./data/ItemsData.tsx";
+import {Project} from "./layout/section/projects/Project.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
@@ -35,18 +36,9 @@ function App() {
                         closeBurger={closeBurger}
                         menuItems={items}/>
                 <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <>
-                                <Main/>
-                                <Slogan/>
-                            </>
-                        }
-                    />
+                    <Route path={'/'} element={<Main/>}/>
                     <Route path={'/projects'} element={<Projects/>}/>
                     <Route path={'/projects/projects-all'} element={<ProjectsAll/>}/>
-                    <Route path={'/skills'} element={<Skills/>}/>
                     <Route path={'/about-me'} element={<AboutMeComponent/>}/>
                     <Route path={'/about-me/about'} element={<AboutMeFull/>}/>
                     <Route path={'/contacts'} element={<Contacts/>}/>

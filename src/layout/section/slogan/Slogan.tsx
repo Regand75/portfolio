@@ -1,25 +1,21 @@
 import React from 'react';
 import styled from "styled-components";
 import {Quotes} from "./quotes/Quotes.tsx";
-import {Container} from "../../../components/common/Container.tsx";
 
 export const Slogan = () => {
     return (
         <StyledSlogan>
-            <Container>
-                <Text>
-                    <Quotes $top='-14px' $left='19px'/>
-                    With great power comes great electricity bill
-                    <Quotes $bottom='-16px' $right='19px'/>
-                </Text>
-                <Author>- Dr. Who</Author>
-            </Container>
+            <Text>
+                <Quotes $top='-14px' $left='19px'/>
+                With great power comes great electricity bill
+                <Quotes $bottom='-16px' $right='19px'/>
+            </Text>
+            <Author>- Dr. Who</Author>
         </StyledSlogan>
     );
 };
 
 const StyledSlogan = styled.section`
-    padding-bottom: 74px;
     max-width: 732px;
     margin-inline: auto;
     font-family: 'Fira Code', sans-serif;

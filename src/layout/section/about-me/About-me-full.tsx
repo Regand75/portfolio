@@ -7,7 +7,7 @@ import {skillsItems} from "../../../data/SkillsData.tsx";
 import {Skill} from "../skills/Skill.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import skillsGroupImage from "../../../assets/images/group2.png";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {MyFact} from "./MyFact.tsx";
 import {myFunFacts} from "../../../data/FactsData.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";

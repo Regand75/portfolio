@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {NavLink} from "react-router-dom";
 import {HeaderProps} from "../../../data/ItemsData.tsx";
-import {Icon} from "../../../components/icon/Icon.tsx";
+import {Icon} from "../../../components/common/Icon.tsx";
 import {LangSelect} from "../LangSelect.tsx";
 
 export const HeaderMenu = (props: HeaderProps) => {
