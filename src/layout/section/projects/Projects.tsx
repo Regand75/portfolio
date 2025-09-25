@@ -84,4 +84,12 @@ const ProjectsFlexWrapper = styled(FlexWrapper)`
     @media screen and (max-width: 974px) {
         flex-wrap: wrap;
     }
+    
+    @media screen and (max-width: 768px) {
+        justify-content: space-between;
+    }
+    
+    @media screen and (max-width: 426px) {
+        justify-content: center;
+    }
 `;

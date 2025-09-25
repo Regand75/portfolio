@@ -64,4 +64,8 @@ const SkillsFlexWrapper = styled(FlexWrapper)`
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    @media screen and (max-width: 768px) {
+        justify-content: space-around;
+    }
 `;

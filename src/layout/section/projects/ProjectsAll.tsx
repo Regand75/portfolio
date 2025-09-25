@@ -89,11 +89,27 @@ const Description = styled.p`
 const WrapperFullProjects = styled(FlexWrapper)`
     padding-top: 48px;
     padding-bottom: 81px;
+
+    @media screen and (max-width: 768px) {
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 426px) {
+        justify-content: center;
+    }
 `;
 
 const WrapperSmallProjects = styled(FlexWrapper)`
     padding-top: 48px;
     padding-bottom: 167px;
+
+    @media screen and (max-width: 768px) {
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 426px) {
+        justify-content: center;
+    }
 `;
 
 const AfterContentFromBlock = styled(Icon)`

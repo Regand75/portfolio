@@ -20,11 +20,11 @@ export const AboutMeFull = () => {
             <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
                                     viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
-                <FixedBlockIcon />
+                <FixedBlockIcon/>
                 <AboutMeWrapper>
                     <SectionTitle title={'about-me'} $mb='14px' $symbol='/'/>
                     <Description>List of my projects</Description>
-                    <AboutMe showButton={false}/>
+                    <AboutMe showButton={false} $mt='-105px'/>
                 </AboutMeWrapper>
                 <SkillsWrapper>
                     <SectionTitle title={'skills'} $mb='48px' $symbol='#'/>
@@ -70,7 +70,7 @@ const StyledAboutMeFull = styled.section`
 
 const BeforeContentFromDotsTop = styled(Icon)`
     position: absolute;
-    top: 410px;
+    top: 403px;
     left: 0;
 
     @media screen and (max-width: 1210px) {
@@ -94,10 +94,20 @@ const AboutMeWrapper = styled.div`
 
 const Description = styled.p`
     padding-bottom: 112px;
+
+    @media screen and (max-width: 845px) {
+        padding-bottom: 30px;
+    }
 `;
 
 const SkillsWrapper = styled.div`
     padding-bottom: 83px;
+
+    ${FlexWrapper} {
+        @media screen and (max-width: 768px) {
+            justify-content: space-around;
+        }
+    }
 `;
 
 const FactsWrapper = styled.div`
@@ -113,11 +123,19 @@ const GroupImage = styled.img`
     height: 169px;
     margin-right: 85px;
     object-fit: contain;
+
+    @media screen and (max-width: 637px) {
+        margin-right: 0;
+    }
+    
+    @media screen and (max-width: 580px) {
+        display: none;
+    }
 `;
 
 const AfterContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 270px;
+    top: 260px;
     right: 0;
 
     @media screen and (max-width: 1210px) {

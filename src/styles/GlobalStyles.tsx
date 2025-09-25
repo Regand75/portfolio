@@ -59,6 +59,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 16px;
         color: ${({theme}) => theme.colors.secondary};
         height: 100%;
+        min-width: 320px;
     }
 
     a {

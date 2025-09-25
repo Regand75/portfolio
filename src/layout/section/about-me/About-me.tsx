@@ -8,12 +8,13 @@ import {Link} from "react-router-dom";
 
 type AboutMePropsType = {
     showButton?: boolean,
+    $mt?: string,
 }
 
 export const AboutMe = (props: AboutMePropsType) => {
     return (
         <StyledAboutMe>
-            <FlexWrapper $justify='space-between'>
+            <AboutMeFlexWrapper $justify='space-between' $gap='10px'>
                 <Wrapper>
                     <FlexWrapper direction={'column'} $gap='23px'>
                         <Description>
@@ -41,18 +42,24 @@ export const AboutMe = (props: AboutMePropsType) => {
                         )}
                     </FlexWrapper>
                 </Wrapper>
-                <ImageWrapper>
+                <ImageWrapper $mt={props.$mt}>
                     <BeforeIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                     <Image src={aboutMeImage as string} alt=''/>
                     <AfterIcon iconId={'dotsForAboutImage'} width={'104px'} height={'58px'} viewBox={'0 0 104 58'}/>
                 </ImageWrapper>
-            </FlexWrapper>
+            </AboutMeFlexWrapper>
         </StyledAboutMe>
     );
 };
 
 const StyledAboutMe = styled.article`
 
+`;
+
+const AboutMeFlexWrapper = styled(FlexWrapper)`
+    @media screen and (max-width: 845px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const Wrapper = styled.div`
@@ -74,9 +81,14 @@ const Description = styled.div`
     }
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<AboutMePropsType>`
     position: relative;
-    margin-top: -105px;
+    margin-top: ${props => props.$mt || '-65px'};
+
+    @media screen and (max-width: 845px) {
+        margin-top: 0;
+        margin-inline: auto;
+    }
 
     &::after {
         content: '';

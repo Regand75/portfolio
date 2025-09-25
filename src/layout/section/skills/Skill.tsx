@@ -23,7 +23,7 @@ const StyledSkill = styled.div<SkillStyleProps>`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     text-align: start;
 
-    @media screen and (max-width: 401px) {
+    @media screen and (max-width: 425px) {
         width: 100%;
     }
 `;

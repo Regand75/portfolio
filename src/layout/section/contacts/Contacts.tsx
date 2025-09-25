@@ -9,12 +9,12 @@ import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 export const Contacts = () => {
     return (
         <StyledContacts>
-            <BeforeContentFromDots iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'} viewBox={'0 0 52 103'}/>
             <Container>
                 <FixedBlockIcon />
                 <SectionTitle title={'contacts'} width={'145px'} $mb='45px' $symbol='#'/>
                 <ContactsBlock showBlock={false}/>
             </Container>
+            <AfterContentFromDots iconId={'dotsForAfter53-103'} width={'53px'} height={'103px'} viewBox={'0 0 53 103'}/>
         </StyledContacts>
     );
 };
@@ -26,10 +26,10 @@ const StyledContacts = styled.section`
     min-height: calc(100vh - 215px);
 `;
 
-const BeforeContentFromDots = styled(Icon)`
+const AfterContentFromDots = styled(Icon)`
     position: absolute;
     top: 225px;
-    left: 0;
+    right: 0;
     
     @media screen and (max-width: 1210px) {
         display: none;

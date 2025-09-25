@@ -2,14 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {NavLink} from "react-router-dom";
-import {HeaderProps} from "../../../data/ItemsData.tsx";
+import {HeaderPropsType} from "../../../data/ItemsData.tsx";
 import {Icon} from "../../../components/common/Icon.tsx";
 import {LangSelect} from "../LangSelect.tsx";
 
-export const HeaderMenu = (props: HeaderProps) => {
+export const HeaderMenu = (props: HeaderPropsType) => {
     return (
         <StyledHeaderMenu>
-            <List>
+            <ul>
                 <FlexWrapper $align='center' $gap='32px'>
                     {props.menuItems.map((item, index) => (
                         <ListItem key={index}>
@@ -30,19 +30,15 @@ export const HeaderMenu = (props: HeaderProps) => {
                         )}
                     </Button>
                 </FlexWrapper>
-            </List>
+            </ul>
         </StyledHeaderMenu>
     );
 };
 
 const StyledHeaderMenu = styled.nav`
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 650px) {
         display: none;
     }
-`;
-
-const List = styled.ul`
-
 `;
 
 const ListItem = styled.li`

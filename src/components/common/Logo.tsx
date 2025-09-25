@@ -4,9 +4,13 @@ import styled from "styled-components";
 import {FlexWrapper} from "./FlexWrapper.tsx";
 import {Link} from "react-router-dom";
 
-export const Logo = () => {
+type LogoPropsType = {
+    onClick?: () => void;
+}
+
+export const Logo = ({onClick}: LogoPropsType) => {
     return (
-        <LogoLink to={'/'}>
+        <LogoLink to={'/'} onClick={onClick}>
             <FlexWrapper $align='center' $gap='9px'>
                 <LogoIcon iconId={'logo'} width={'16px'} height={'16px'} viewBox={'0 0 16 16'} />
                 <LogoSpan>Andrey</LogoSpan>

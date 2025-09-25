@@ -35,8 +35,4 @@ export const Button = styled.button<ButtonPropsType>`
                                 ? theme.colors[$colorText]
                                 : theme.colors.primary};
     }
-    
-    &:active {
-        transform: translateY(2px);
-    }
 `;

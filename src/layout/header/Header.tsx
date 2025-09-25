@@ -4,10 +4,10 @@ import {Logo} from "../../components/common/Logo.tsx";
 import {Container} from "../../components/common/Container.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
 import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
-import {HeaderProps} from "../../data/ItemsData.tsx";
+import {HeaderPropsType} from "../../data/ItemsData.tsx";
 import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
 
-export const Header = (props: HeaderProps) => {
+export const Header = (props: HeaderPropsType) => {
     return (
         <StyledHeader>
             <Container>
@@ -30,6 +30,10 @@ const StyledHeader = styled.header`
     width: 100%;
     z-index: 10;
     background-color: ${({theme}) => theme.colors.background};
+
+    @media screen and (max-width: 650px) {
+        padding-top: 16px;
+    }
 `;
 
 

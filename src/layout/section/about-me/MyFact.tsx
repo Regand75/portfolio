@@ -13,4 +13,8 @@ export const MyFact = (props: FactsDataType) => {
 const StyledMyFact = styled.div`
     padding: 8px;
     border: 1px solid ${({theme}) => theme.colors.secondary};
+
+    @media screen and (max-width: 425px) {
+        width: 100%;
+    }
 `;

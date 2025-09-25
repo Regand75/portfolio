@@ -29,7 +29,7 @@ const StyledAboutMe = styled.section`
 
 const BeforeContentFromBlock = styled(Icon)`
     position: absolute;
-    top: 257px;
+    top: 248px;
     left: 0;
     
     @media screen and (max-width: 1210px) {
@@ -39,7 +39,7 @@ const BeforeContentFromBlock = styled(Icon)`
 
 const AfterContentFromDots = styled(Icon)`
     position: absolute;
-    top: 400px;
+    top: 415px;
     right: 0;
     
     @media screen and (max-width: 1210px) {

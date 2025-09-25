@@ -24,9 +24,7 @@ export const Project = (props: ProjectType) => {
                         </a>
                     </>
                 )}
-
             </ImageWrapper>
-
             <MeSkills>{props.listSkillsProject}</MeSkills>
             <Wrapper>
                 <FlexWrapper direction={'column'} $gap='16px'>
@@ -71,7 +69,7 @@ const StyledProject = styled.div`
     width: 100%;
     height: fit-content;
 
-    @media screen and (max-width: 401px) {
+    @media screen and (max-width: 426px) {
         max-width: none;
         width: 100%;
     }
@@ -79,6 +77,19 @@ const StyledProject = styled.div`
 
 const ImageWrapper = styled.div`
     position: relative;
+    height: auto;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+    }
 
     &:hover {
         ${Button} {
@@ -86,14 +97,7 @@ const ImageWrapper = styled.div`
         }
 
         &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
+           opacity: 1;
         }
     }
 
@@ -104,12 +108,17 @@ const ImageWrapper = styled.div`
         transform: translate(-50%, -50%);
         opacity: 0;
     }
+
+    @media screen and (max-width: 426px) {
+        ${Button} {
+            opacity: 1;
+        }
+    }
 `;
 
 const Image = styled.img`
     width: 100%;
-    max-height: 200px;
-    height: 100%;
+    height: auto;
 `;
 
 const MeSkills = styled.div`

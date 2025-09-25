@@ -59,6 +59,11 @@ const StyledMain = styled.section`
 
 const MainFlexWrapper = styled(FlexWrapper)`
     padding-bottom: 151px;
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: 84px;
+    }
+    
     @media screen and (max-width: 425px) {
         flex-direction: column;
     }
@@ -111,6 +116,11 @@ const ImageWrapper = styled.div`
     max-width: 457px;
     max-height: 386px;
     position: relative;
+
+    @media screen and (max-width: 360px) {
+        margin-inline: auto;
+        width: 92%;
+    }
 `;
 
 const BeforeIcon = styled(Icon)`
@@ -119,7 +129,7 @@ const BeforeIcon = styled(Icon)`
     left: -8px;
     z-index: -1;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 992px) {
         max-width: 126px;
         max-height: 126px;
     }
@@ -130,19 +140,25 @@ const BeforeIcon = styled(Icon)`
     }
 
     @media screen and (max-width: 620px) {
-        max-width: 60px;
-        max-height: 60px;
+        max-width: 70px;
+        max-height: 70px;
+    }
+    
+    @media screen and (max-width: 535px) {
+        top: 54px;
     }
 
     @media screen and (max-width: 425px) {
         max-width: 120px;
         max-height: 120px;
+        top: 84px;
         left: 0;
     }
     
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 360px) {
         max-width: 100px;
         max-height: 100px;
+        top: 58px;
     }
 `;
 
@@ -152,19 +168,24 @@ const AfterIcon = styled(Icon)`
     right: 15px;
     z-index: 2;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 992px) {
+        max-width: 70px;
+        max-height: 70px;
+        bottom: 70px;
+    }
+
+    @media screen and (max-width: 828px) {
+        bottom: 100px;
+    }
+    
+    @media screen and (max-width: 768px) {
         max-width: 60px;
         max-height: 60px;
     }
 
-    @media screen and (max-width: 768px) {
-        max-width: 50px;
-        max-height: 50px;
-    }
-
     @media screen and (max-width: 620px) {
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 40px;
+        max-height: 40px;
     }
 
     @media screen and (max-width: 425px) {
@@ -172,9 +193,10 @@ const AfterIcon = styled(Icon)`
         max-height: 80px;
     }
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 360px) {
         max-width: 60px;
         max-height: 60px;
+        bottom: 96px;
     }
 `;
 

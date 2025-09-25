@@ -10,7 +10,7 @@ export const items = [
     { title: 'contacts', link: '/contacts' }
 ];
 
-export type HeaderProps = {
+export type HeaderPropsType = {
     toggleTheme: () => void,
     toggleBurger: () => void,
     closeBurger: () => void,
