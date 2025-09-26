@@ -1,40 +1,41 @@
 import React from 'react';
-import styled from "styled-components";
-import {Logo} from "../../components/common/Logo.tsx";
+import {S} from "./Header.styles.ts"
+import {HeaderPropsType} from "../../data/ItemsData.tsx";
 import {Container} from "../../components/common/Container.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
-import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
-import {HeaderPropsType} from "../../data/ItemsData.tsx";
-import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {Logo} from "../../components/common/Logo.tsx";
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 
-export const Header = (props: HeaderPropsType) => {
+export const Header: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 650;
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper $align='center' $justify='space-between' $gap='32px'>
                     <Logo/>
-                    <FlexWrapper $align='center' $gap='32px'>
-                        <HeaderMenu {...props}/>
-                    </FlexWrapper>
+                    {width > breakpoint && (
+                        <FlexWrapper $align='center' $gap='32px'>
+                            <DesktopMenu {...props}/>
+                        </FlexWrapper>
+                    )}
                 </FlexWrapper>
-                <MobileMenu {...props}/>
+                {width <= breakpoint && (
+                    <MobileMenu {...props}/>
+                )}
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    padding: 32px 0 8px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: ${({theme}) => theme.colors.background};
 
-    @media screen and (max-width: 650px) {
-        padding-top: 16px;
-    }
-`;
 
 
 
