@@ -39,10 +39,10 @@ export const LangSelect: React.FC<LangSelectProps> = (props: LangSelectProps) =>
                 <Icon iconId="arrow" width="10px" height="7px" viewBox="0 0 10 7" />
             </FlexWrapper>
 
-            <S.LangPopup $isOpen={isOpen} $fontSize={props.$fontSize as string}>
+            <S.Popup $isOpen={isOpen} $fontSize={props.$fontSize as string}>
                 <S.List onClick={() => handleSelect('EN')}>EN</S.List>
                 <S.List onClick={() => handleSelect('RU')}>RU</S.List>
-            </S.LangPopup>
+            </S.Popup>
         </S.LangSelect>
     );
 };

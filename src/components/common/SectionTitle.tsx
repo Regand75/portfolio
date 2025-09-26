@@ -2,16 +2,17 @@ import styled from "styled-components";
 import React from 'react';
 import {FlexWrapper} from "./FlexWrapper.tsx";
 
-type SectionTitlePropsType = {
+type SectionTitlePropsType =  {
     title?: string,
     width?: string,
     $mb?: string,
+    $mbMobile?: string,
     $symbol?: string,
 }
 
-export const SectionTitle = ({title, width, $mb, $symbol}: SectionTitlePropsType) => {
+export const SectionTitle = ({title, width, $mb, $symbol, $mbMobile}: SectionTitlePropsType) => {
     return (
-        <StyledTitle title={title} $mb={$mb} $symbol={$symbol}>
+        <StyledTitle title={title} $mb={$mb} $symbol={$symbol} $mbMobile={$mbMobile}>
             <FlexWrapper $gap='16px'>
                 <TitleWrapper>
                     <span>{$symbol}</span>
@@ -26,6 +27,10 @@ export const SectionTitle = ({title, width, $mb, $symbol}: SectionTitlePropsType
 const StyledTitle = styled.div<SectionTitlePropsType>`
     margin-bottom: ${props => props.$mb || 0};
     width: 100%;
+
+    @media screen and (max-width: 375px) {
+        margin-bottom: ${props => props.$mbMobile || props.$mb || 0};
+    }
 `;
 
 const TitleWrapper = styled.h2<SectionTitlePropsType>`

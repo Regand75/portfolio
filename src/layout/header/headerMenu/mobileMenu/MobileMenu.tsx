@@ -27,14 +27,14 @@ export const MobileMenu: React.FC<HeaderPropsType> = (props: HeaderPropsType) =>
     return (
         <nav>
             <BurgerButton toggleBurger={props.toggleBurger} isBurgerOpen={props.isBurgerOpen}/>
-            <S.MobileMenuPopup $isBurgerOpen={props.isBurgerOpen}>
-                <S.PopupFlexWrapper direction={'column'} $justify='space-between'>
+            <S.Popup $isBurgerOpen={props.isBurgerOpen}>
+                <S.Wrapper direction={'column'} $justify='space-between'>
                     <FlexWrapper direction={'column'} $gap='20px'>
                         <Logo onClick={handleLinkClick}/>
                         <ul>
                             <FlexWrapper direction={'column'} $align='center' $gap='32px'>
                                 {props.menuItems.map((item, index) => (
-                                    <S.ListItemMobile key={index}>
+                                    <S.ItemMobile key={index}>
                                         <S.Link
                                             to={item.link}
                                             className={({isActive}) => isActive ? 'active' : ''}
@@ -42,7 +42,7 @@ export const MobileMenu: React.FC<HeaderPropsType> = (props: HeaderPropsType) =>
                                         >
                                             <span>#</span>{item.title}
                                         </S.Link>
-                                    </S.ListItemMobile>
+                                    </S.ItemMobile>
                                 ))}
                                 <S.ControlsWrapper direction={'column'} $align='center' $gap='20px'>
                                     <ThemeButton toggleTheme={props.toggleTheme} isDark={props.isDark}/>
@@ -52,8 +52,8 @@ export const MobileMenu: React.FC<HeaderPropsType> = (props: HeaderPropsType) =>
                         </ul>
                     </FlexWrapper>
                     <S.IconsListFlex/>
-                </S.PopupFlexWrapper>
-            </S.MobileMenuPopup>
+                </S.Wrapper>
+            </S.Popup>
             {props.isBurgerOpen && <S.Overlay onClick={props.closeBurger}/>}
         </nav>
     );

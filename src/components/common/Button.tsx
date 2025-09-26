@@ -14,6 +14,7 @@ export const Button = styled.button<ButtonPropsType>`
             $colorBackground ? theme.colors[$colorBackground] : "transparent"};
     text-align: center;
     width: fit-content;
+    white-space: nowrap;
     font-family: 'Fira Code', sans-serif;
     font-size: 16px;
     font-weight: 500;

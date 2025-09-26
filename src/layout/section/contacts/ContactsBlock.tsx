@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Icon} from "../../../components/common/Icon.tsx";
+import {hoverEffect} from "../../../styles/Mixins.ts";
 
 type ContactsBlockShowPropsType = {
     showBlock?: boolean,
@@ -113,10 +114,6 @@ const MessageWrapper = styled(FlexWrapper)`
     cursor: pointer;
     
     span {
-        transition: filter 0.3s ease, fill 0.3s ease;
-
-        &:hover {
-            filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
-        }
+        ${hoverEffect()};
     }
 `;

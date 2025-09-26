@@ -2,14 +2,19 @@ import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {IconsList} from "../../../components/common/IconsList.tsx";
+import {hoverEffect} from "../../../styles/Mixins.ts";
 
-const ListItem = styled.li`
-    &:hover {
-        color: ${({theme}) => theme.colors.primary};
+const Link = styled(NavLink)`
+    ${hoverEffect()};
+    
+    span {
+        color: ${({theme}) => theme.colors.tertiary};
     }
 `;
 
-const MobileMenuPopup = styled.div<{ $isBurgerOpen: boolean }>`
+// MobileMenu
+
+const Popup = styled.div<{ $isBurgerOpen: boolean }>`
     position: fixed;
     top: 0;
     left: 0;
@@ -22,12 +27,12 @@ const MobileMenuPopup = styled.div<{ $isBurgerOpen: boolean }>`
     box-shadow: ${props => props.$isBurgerOpen ? '2px 0 10px rgba(0,0,0,0.1)' : 'none'};
 `;
 
-const PopupFlexWrapper = styled(FlexWrapper)`
+const Wrapper = styled(FlexWrapper)`
     padding: 16px;
     height: 100%;
 `;
 
-const ListItemMobile = styled.li`
+const ItemMobile = styled.li`
     list-style: none;
     font-family: 'Fira Code', sans-serif;
     font-weight: 400;
@@ -36,18 +41,6 @@ const ListItemMobile = styled.li`
 
     &:hover {
         color: ${({theme}) => theme.colors.primary};
-    }
-`;
-
-const Link = styled(NavLink)`
-    transition: filter 0.3s ease, fill 0.3s ease;
-
-    &:hover {
-        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
-    }
-    
-    span {
-        color: ${({theme}) => theme.colors.tertiary};
     }
 `;
 
@@ -83,12 +76,20 @@ const IconsListFlex = styled(IconsList)`
     }
 `;
 
+// DesktopMenu
+
+const Item = styled.li`
+    &:hover {
+        color: ${({theme}) => theme.colors.primary};
+    }
+`;
+
 export const S = {
-    ListItem,
+    Item,
     Link,
-    MobileMenuPopup,
-    PopupFlexWrapper,
-    ListItemMobile,
+    Popup,
+    Wrapper,
+    ItemMobile,
     ControlsWrapper,
     Overlay,
     IconsListFlex,

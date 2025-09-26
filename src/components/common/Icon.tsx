@@ -1,6 +1,7 @@
 import React from 'react';
 import iconsSprite from '../../assets/images/icons-sprite.svg';
 import styled from "styled-components";
+import {hoverEffect} from "../../styles/Mixins.ts";
 
 export type IconPropsType = {
     iconId: string,
@@ -30,9 +31,5 @@ const IconSvg = styled.svg<{ $fill?: string, $width?: string, $height?: string }
     fill: ${(props) => props.$fill || props.theme.colors.primary};
     width: ${(props) => props.$width};
     height: ${(props) => props.$height};
-    transition: filter 0.3s ease, fill 0.3s ease;
-
-    &:hover {
-        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
-    }
+    ${hoverEffect()};
 `;

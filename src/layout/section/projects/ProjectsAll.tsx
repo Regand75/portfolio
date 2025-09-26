@@ -1,133 +1,46 @@
 import React from 'react';
-import styled from "styled-components";
 import {Container} from "../../../components/common/Container.tsx";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {fullProjects, smallProjects} from "../../../data/ProjectsData.tsx";
 import {Project} from "./Project.tsx";
-import {Icon} from "../../../components/common/Icon.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {S} from "./Projects.styles.ts"
 
 export const ProjectsAll = () => {
     return (
-        <StyledProjectsAll>
-            <BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'}
+        <S.ProjectsAll>
+            <S.BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'}
                                       viewBox={'0 0 78 49'}/>
-            <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
+            <S.BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
                                     viewBox={'0 0 78 155'} fill={'none'}/>
-            <BeforeContentFromDotsBottom iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'}
+            <S.BeforeContentFromDotsBottom iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'}
                                          viewBox={'0 0 52 103'}/>
             <Container>
                 <FixedBlockIcon/>
                 <SectionTitle title={'projects'} $mb='14px' $symbol='/'/>
-                <Description>List of my projects</Description>
+                <S.DescriptionAll>List of my projects</S.DescriptionAll>
                 <SectionTitle title={'complete-apps'} $symbol='#'/>
-                <WrapperFullProjects wrap='wrap' $gap='16px'>
+                <S.ForAllWrapper>
                     {fullProjects.map((project) => (
                         <React.Fragment key={project.id}>
                             <Project {...project} />
                         </React.Fragment>
                     ))}
-                </WrapperFullProjects>
+                </S.ForAllWrapper>
                 <SectionTitle title={'small-projects'} $symbol='#'/>
-                <WrapperSmallProjects wrap='wrap' $gap='16px'>
+                <S.ForSmallWrapper>
                     {smallProjects.map((project) => (
                         <React.Fragment key={project.id}>
                             <Project {...project} />
                         </React.Fragment>
                     ))}
-                </WrapperSmallProjects>
+                </S.ForSmallWrapper>
             </Container>
-            <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
+            <S.AfterContentFromBlockAll iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
                                    fill={'none'}/>
-            <AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>
-        </StyledProjectsAll>
+            <S.AfterContentFromDots iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'} viewBox={'0 0 80 103'}/>
+        </S.ProjectsAll>
     );
 };
 
-const StyledProjectsAll = styled.section`
-    position: relative;
-    padding-top: 114px;
-    padding-bottom: 84px;
-    min-height: calc(100vh - 215px);
-`;
 
-const BeforeContentFromDotsTop = styled(Icon)`
-    position: absolute;
-    top: 405px;
-    left: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const BeforeContentFromBlock = styled(Icon)`
-    position: absolute;
-    top: 1260px;
-    left: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const BeforeContentFromDotsBottom = styled(Icon)`
-    position: absolute;
-    top: 1640px;
-    left: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const Description = styled.p`
-    padding-bottom: 68px;
-`;
-
-const WrapperFullProjects = styled(FlexWrapper)`
-    padding-top: 48px;
-    padding-bottom: 81px;
-
-    @media screen and (max-width: 768px) {
-        justify-content: space-between;
-    }
-
-    @media screen and (max-width: 426px) {
-        justify-content: center;
-    }
-`;
-
-const WrapperSmallProjects = styled(FlexWrapper)`
-    padding-top: 48px;
-    padding-bottom: 167px;
-
-    @media screen and (max-width: 768px) {
-        justify-content: space-between;
-    }
-
-    @media screen and (max-width: 426px) {
-        justify-content: center;
-    }
-`;
-
-const AfterContentFromBlock = styled(Icon)`
-    position: absolute;
-    top: 260px;
-    right: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const AfterContentFromDots = styled(Icon)`
-    position: absolute;
-    top: 1430px;
-    right: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;

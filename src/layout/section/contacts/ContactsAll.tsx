@@ -6,6 +6,7 @@ import {ContactsBlock} from "./ContactsBlock.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {Icon} from "../../../components/common/Icon.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {hoverEffect} from "../../../styles/Mixins.ts";
 
 export const ContactsAll = () => {
     return (
@@ -72,11 +73,7 @@ const MediaWrapper = styled(FlexWrapper)`
     cursor: pointer;
     
     span {
-        transition: filter 0.3s ease, fill 0.3s ease;
-
-        &:hover {
-            filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
-        }
+        ${hoverEffect()};
     }
 `;
 

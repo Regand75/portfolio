@@ -3,6 +3,7 @@ import {Icon} from "./Icon.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "./FlexWrapper.tsx";
 import {Link} from "react-router-dom";
+import {hoverEffect} from "../../styles/Mixins.ts";
 
 type LogoPropsType = {
     onClick?: () => void;
@@ -20,10 +21,7 @@ export const Logo = ({onClick}: LogoPropsType) => {
 };
 
 const LogoLink = styled(Link)`
-    transition: filter 0.3s ease, fill 0.3s ease;
-    &:hover {
-        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
-    }
+    ${hoverEffect()};
 `;
 
 const LogoSpan = styled.span`

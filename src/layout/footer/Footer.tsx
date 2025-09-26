@@ -4,6 +4,7 @@ import {Container} from "../../components/common/Container.tsx";
 import {Logo} from "../../components/common/Logo.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
 import {IconsList} from "../../components/common/IconsList.tsx";
+import {hoverEffect} from "../../styles/Mixins.ts";
 
 export const Footer = () => {
     return (
@@ -44,13 +45,8 @@ const FooterFlexWrapper = styled(FlexWrapper)`
 const LinkEmail = styled.a`
     font-family: 'Fira Code', sans-serif;
     color: ${({theme}) => theme.colors.secondary};
-    transition: filter 0.3s ease, fill 0.3s ease;
     cursor: pointer;
-
-    &:hover {
-        filter: drop-shadow(0 0 6px ${(props) => props.theme.colors.secondary});
-        color: ${({theme}) => theme.colors.primary};
-    }
+    ${hoverEffect(true)};
 `;
 
 const Skills = styled.div`

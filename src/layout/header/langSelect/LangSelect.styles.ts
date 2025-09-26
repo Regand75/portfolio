@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
 import {LangSelectProps} from "./LangSelect.tsx";
+import {hoverEffect} from "../../../styles/Mixins.ts";
 
 const LangSelect = styled.div<LangSelectProps>`
   position: relative;
@@ -11,16 +12,11 @@ const LangSelect = styled.div<LangSelectProps>`
   cursor: pointer;
     
     ${FlexWrapper} {
-        transition: filter 0.3s ease, fill 0.3s ease;
-
-        &:hover {
-            filter: drop-shadow(0 0 6px ${({ theme }) => theme.colors.secondary});
-            color: ${({theme}) => theme.colors.primary};
-        }
+        ${hoverEffect(true)};
     }
 `;
 
-const LangPopup = styled.ul<{$fontSize: string, $isOpen: boolean }>`
+const Popup = styled.ul<{$fontSize: string, $isOpen: boolean }>`
   position: absolute;
   top: 100%;
   left: 50%;
@@ -48,12 +44,7 @@ const LangPopup = styled.ul<{$fontSize: string, $isOpen: boolean }>`
 
 const List = styled.li`
     cursor: pointer;
-    transition: filter 0.3s ease, fill 0.3s ease;
-
-    &:hover {
-        filter: drop-shadow(0 0 6px ${({theme}) => theme.colors.secondary});
-        color: ${({theme}) => theme.colors.primary};
-    }
+    ${hoverEffect(true)};
 
     &:not(:last-child) {
         padding-bottom: 8px;
@@ -62,6 +53,6 @@ const List = styled.li`
 
 export const S = {
     LangSelect,
-    LangPopup,
+    Popup,
     List,
 };

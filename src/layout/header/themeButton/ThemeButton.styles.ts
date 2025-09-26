@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../../components/common/Icon.tsx";
 
-const ThemeButton = styled.button`
+const Button = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -24,7 +24,7 @@ const SunIcon = styled(Icon)`
 `;
 
 export const S = {
-    ThemeButton,
+    Button,
     SoonIcon,
     SunIcon
 }

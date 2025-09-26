@@ -8,13 +8,13 @@ type ThemeButtonPropsType = {
 
 export const ThemeButton: React.FC<ThemeButtonPropsType> = ({ toggleTheme, isDark }) => {
     return (
-        <S.ThemeButton onClick={toggleTheme}>
+        <S.Button onClick={toggleTheme}>
             {isDark ? (
                 <S.SoonIcon iconId={'moon'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
             ) : (
                 <S.SunIcon iconId={'sun'} width={'23px'} height={'23px'} viewBox={'0 0 23 23'}/>
             )}
-        </S.ThemeButton>
+        </S.Button>
     );
 };
 
