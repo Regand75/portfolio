@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from "./Icon.tsx";
 import styled from "styled-components";
-import {FlexWrapper} from "./FlexWrapper.tsx";
+import {FlexWrapper} from "./FlexWrapper.ts";
 import {Link} from "react-router-dom";
 import {hoverEffect} from "../../styles/Mixins.ts";
 
@@ -9,7 +9,7 @@ type LogoPropsType = {
     onClick?: () => void;
 }
 
-export const Logo = ({onClick}: LogoPropsType) => {
+export const Logo: React.FC<LogoPropsType> = ({onClick}: LogoPropsType) => {
     return (
         <LogoLink to={'/'} onClick={onClick}>
             <FlexWrapper $align='center' $gap='9px'>

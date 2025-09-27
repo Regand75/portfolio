@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "./Icon.tsx";
 
-export const IconsList = ({className}: {className?: string}) => {
+export const IconsList:React.FC = ({className}: {className?: string}) => {
     return (
         <SocialIconsList className={className}>
             <IconItem>

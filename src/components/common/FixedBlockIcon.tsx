@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "./FlexWrapper.tsx";
+import {FlexWrapper} from "./FlexWrapper.ts";
 import {IconsList} from "./IconsList.tsx";
 
-export const FixedBlockIcon = () => {
+export const FixedBlockIcon: React.FC = () => {
     return (
         <StyledFixedBlockIcon>
             <FlexWrapper direction="column" $gap='8px'>

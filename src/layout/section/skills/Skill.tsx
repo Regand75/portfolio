@@ -1,5 +1,5 @@
 import React from 'react';
-import {SkillPropsType} from "../../../data/SkillsData.tsx";
+import {SkillPropsType} from "../../../data/SkillsData.ts";
 import {S} from "./Skills.styles.ts"
 
 export type SkillStyleProps = {

@@ -12,7 +12,7 @@ export type IconPropsType = {
     className?: string,
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
     return (
             <IconSvg
                 className={props.className}

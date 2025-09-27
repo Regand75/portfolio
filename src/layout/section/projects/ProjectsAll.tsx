@@ -1,7 +1,7 @@
 import React from 'react';
-import {Container} from "../../../components/common/Container.tsx";
+import {Container} from "../../../components/common/Container.ts";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
-import {fullProjects, smallProjects} from "../../../data/ProjectsData.tsx";
+import {fullProjects, smallProjects} from "../../../data/ProjectsData.ts";
 import {Project} from "./Project.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 import {S} from "./Projects.styles.ts"

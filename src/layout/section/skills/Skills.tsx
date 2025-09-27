@@ -1,9 +1,9 @@
 import React from 'react';
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import skillsGroupImage from "../../../assets/images/group.png"
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {Skill} from "./Skill.tsx";
-import {skillsItems} from "../../../data/SkillsData.tsx";
+import {skillsItems} from "../../../data/SkillsData.ts";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 import {S} from "./Skills.styles.ts"
 

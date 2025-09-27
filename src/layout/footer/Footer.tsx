@@ -1,75 +1,32 @@
 import React from 'react';
-import styled from "styled-components";
-import {Container} from "../../components/common/Container.tsx";
+import {Container} from "../../components/common/Container.ts";
 import {Logo} from "../../components/common/Logo.tsx";
-import {FlexWrapper} from "../../components/common/FlexWrapper.tsx";
-import {IconsList} from "../../components/common/IconsList.tsx";
-import {hoverEffect} from "../../styles/Mixins.ts";
+import {FlexWrapper} from "../../components/common/FlexWrapper.ts";
+import {S} from "./Footer.styles.ts"
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
-                <FooterFlexWrapper $justify='space-between' $gap='20px'>
+                <S.FooterFlexWrapper $justify='space-between' $gap='20px'>
                     <FlexWrapper direction={'column'} $gap='16px'>
                         <FlexWrapper $align='center' $gap='24px'>
                             <Logo/>
-                            <LinkEmail href="mailto:urazovs_k@email.ru">
+                            <S.LinkEmail href="mailto:urazovs_k@email.ru">
                                 <p>urazovs_k@mail.ru</p>
-                            </LinkEmail>
+                            </S.LinkEmail>
                         </FlexWrapper>
-                        <Skills>Web designer and front-end developer</Skills>
+                        <S.Skills>Web designer and front-end developer</S.Skills>
                     </FlexWrapper>
                     <FlexWrapper direction={'column'} $gap='12px'>
-                        <Text>Media</Text>
-                        <IconsListFlex/>
+                        <S.Text>Media</S.Text>
+                        <S.IconsListFlex/>
                     </FlexWrapper>
-                </FooterFlexWrapper>
-                <Copyright>© Copyright 2022. Made by Elias</Copyright>
+                </S.FooterFlexWrapper>
+                <S.Copyright>© Copyright 2022. Made by Elias</S.Copyright>
             </Container>
-        </StyledFooter>
+        </S.Footer>
     );
 };
 
-const StyledFooter = styled.footer`;
-    padding: 32px 0;
-    border-top: 1px solid ${({theme}) => theme.colors.secondary};
-`;
 
-const FooterFlexWrapper = styled(FlexWrapper)`
-    @media screen and (max-width: 425px) {
-        flex-direction: column;
-    }
-`;
-
-const LinkEmail = styled.a`
-    font-family: 'Fira Code', sans-serif;
-    color: ${({theme}) => theme.colors.secondary};
-    cursor: pointer;
-    ${hoverEffect(true)};
-`;
-
-const Skills = styled.div`
-    color: ${({theme}) => theme.colors.primary};
-`;
-
-const Text = styled.div`
-    font-family: 'Fira Code', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    color: ${({theme}) => theme.colors.primary};
-`;
-
-const IconsListFlex = styled(IconsList)`
-    display: flex;
-    gap: 8px;
-`;
-
-const Copyright = styled.div`
-    margin-top: 48px;
-    margin-inline: auto;
-    text-align: center;
-    justify-self: end;
-    font-family: 'Fira Code', sans-serif;
-    color: ${({theme}) => theme.colors.secondary};
-`;

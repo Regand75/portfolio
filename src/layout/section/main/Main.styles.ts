@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import {Icon} from "../../../components/common/Icon.tsx";
 
 const Main = styled.section`

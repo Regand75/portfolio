@@ -1,23 +1,22 @@
 import React from 'react';
-import styled from "styled-components";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
-import {Button} from "../../../components/common/Button.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
+import {Button} from "../../../components/common/Button.ts";
 import aboutMeImage from "../../../assets/images/about-me-image.png";
-import {Icon} from "../../../components/common/Icon.tsx";
 import {Link} from "react-router-dom";
+import {S} from "./About-me.styles.ts"
 
-type AboutMePropsType = {
+export type AboutMePropsType = {
     showButton?: boolean,
     $mt?: string,
 }
 
-export const AboutMe = (props: AboutMePropsType) => {
+export const AboutMe: React.FC<AboutMePropsType> = (props: AboutMePropsType) => {
     return (
-        <StyledAboutMe>
-            <AboutMeFlexWrapper $justify='space-between' $gap='10px'>
-                <Wrapper>
+        <article>
+            <S.AboutMeFlexWrapper $justify='space-between' $gap='10px'>
+                <S.Wrapper>
                     <FlexWrapper direction={'column'} $gap='23px'>
-                        <Description>
+                        <S.Description>
                             <p>Hello, i'm Andrey</p>
                             <p>
                                 I am a Junior Frontend Developer with basic experience in Angular and the modern
@@ -34,87 +33,23 @@ export const AboutMe = (props: AboutMePropsType) => {
                                 I am eager to continue growing in this field and open to constructive feedback and
                                 teamwork.
                             </p>
-                        </Description>
+                        </S.Description>
                         {props.showButton && (
                             <Link to={'/about-me/about'}>
                                 <Button type='button'>Read more {'->'}</Button>
                             </Link>
                         )}
                     </FlexWrapper>
-                </Wrapper>
-                <ImageWrapper $mt={props.$mt}>
-                    <BeforeIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
-                    <Image src={aboutMeImage as string} alt=''/>
-                    <AfterIcon iconId={'dotsForAboutImage'} width={'104px'} height={'58px'} viewBox={'0 0 104 58'}/>
-                </ImageWrapper>
-            </AboutMeFlexWrapper>
-        </StyledAboutMe>
+                </S.Wrapper>
+                <S.ImageWrapper $mt={props.$mt}>
+                    <S.BeforeIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
+                    <S.Image src={aboutMeImage as string} alt=''/>
+                    <S.AfterIcon iconId={'dotsForAboutImage'} width={'104px'} height={'58px'} viewBox={'0 0 104 58'}/>
+                </S.ImageWrapper>
+            </S.AboutMeFlexWrapper>
+        </article>
     );
 };
 
-const StyledAboutMe = styled.article`
 
-`;
 
-const AboutMeFlexWrapper = styled(FlexWrapper)`
-    @media screen and (max-width: 845px) {
-        flex-wrap: wrap;
-    }
-`;
-
-const Wrapper = styled.div`
-    max-width: 515px;
-`;
-
-const Description = styled.div`
-    width: 100%;
-    font-family: 'Fira Code', sans-serif;
-    line-height: 25px;
-    color: ${({theme}) => theme.colors.secondary};
-
-    p {
-        margin-bottom: 27px;
-    }
-
-    p:last-child {
-        margin-bottom: 4px;
-    }
-`;
-
-const ImageWrapper = styled.div<AboutMePropsType>`
-    position: relative;
-    margin-top: ${props => props.$mt || '-65px'};
-
-    @media screen and (max-width: 845px) {
-        margin-top: 0;
-        margin-inline: auto;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 47px;
-        width: 80%;
-        height: 1px;
-        background-color: ${({theme}) => theme.colors.tertiary};
-    }
-`;
-
-const BeforeIcon = styled(Icon)`
-    position: absolute;
-    top: 60px;
-    left: 5px;
-    z-index: 2;
-`;
-
-const Image = styled.img`
-    width: 100%;
-`;
-
-const AfterIcon = styled(Icon)`
-    position: absolute;
-    bottom: 175px;
-    right: 7px;
-    z-index: 2;
-`;

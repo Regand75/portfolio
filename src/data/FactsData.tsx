@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {ColoredSpan} from "./ColoredSpan.tsx";
+import {ColoredSpan} from "./ColoredSpan.ts";
 
 export type FactsDataType = {
     text: ReactNode,

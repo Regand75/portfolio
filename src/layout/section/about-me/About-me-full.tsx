@@ -1,32 +1,31 @@
 import React from 'react';
-import styled from "styled-components";
-import {Container} from "../../../components/common/Container.tsx";
+import {Container} from "../../../components/common/Container.ts";
 import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
 import {AboutMe} from "./About-me.tsx";
-import {skillsItems} from "../../../data/SkillsData.tsx";
+import {skillsItems} from "../../../data/SkillsData.ts";
 import {Skill} from "../skills/Skill.tsx";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import skillsGroupImage from "../../../assets/images/group2.png";
-import {Icon} from "../../../components/common/Icon.tsx";
-import {MyFact} from "./MyFact.tsx";
+import {MyFact} from "./My-fact.tsx";
 import {myFunFacts} from "../../../data/FactsData.tsx";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {S} from "./About-me.styles.ts"
 
-export const AboutMeFull = () => {
+export const AboutMeFull: React.FC = () => {
     return (
-        <StyledAboutMeFull>
-            <BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'}
+        <S.AboutMeFull>
+            <S.BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'}
                                       viewBox={'0 0 78 49'}/>
-            <BeforeContentFromBlock iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
+            <S.BeforeContentFromBlockFull iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
                                     viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
                 <FixedBlockIcon/>
-                <AboutMeWrapper>
+                <S.AboutMeWrapper>
                     <SectionTitle title={'about-me'} $mb='14px' $symbol='/'/>
-                    <Description>List of my projects</Description>
+                    <S.DescriptionFull>List of my projects</S.DescriptionFull>
                     <AboutMe showButton={false} $mt='-105px'/>
-                </AboutMeWrapper>
-                <SkillsWrapper>
+                </S.AboutMeWrapper>
+                <S.SkillsWrapper>
                     <SectionTitle title={'skills'} $mb='48px' $symbol='#'/>
                     <FlexWrapper wrap={'wrap'} $gap='16px'>
                         {skillsItems.map((skill, index) => (
@@ -35,11 +34,11 @@ export const AboutMeFull = () => {
                             </React.Fragment>
                         ))}
                     </FlexWrapper>
-                </SkillsWrapper>
-                <FactsWrapper>
+                </S.SkillsWrapper>
+                <S.FactsWrapper>
                     <SectionTitle title={'my-fun-facts'} $mb='20px' $symbol='#'/>
                     <FlexWrapper $justify='space-between' $gap='20px'>
-                        <Wrapper>
+                        <S.Wrapper>
                             <FlexWrapper wrap={'wrap'} $gap='16px'>
                                 {myFunFacts.map((fact, index) => (
                                     <React.Fragment key={index}>
@@ -47,119 +46,20 @@ export const AboutMeFull = () => {
                                     </React.Fragment>
                                 ))}
                             </FlexWrapper>
-                        </Wrapper>
-                        <GroupImage src={skillsGroupImage as string} alt="group2"/>
+                        </S.Wrapper>
+                        <S.GroupImage src={skillsGroupImage as string} alt="group2"/>
                     </FlexWrapper>
-                </FactsWrapper>
+                </S.FactsWrapper>
             </Container>
-            <AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
+            <S.AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
                                    fill={'none'}/>
-            <AfterContentFromDots1 iconId={'dotsForAfter53-103'} width={'53px'} height={'103px'}
+            <S.AfterContentFromDots1 iconId={'dotsForAfter53-103'} width={'53px'} height={'103px'}
                                    viewBox={'0 0 53 103'}/>
-            <AfterContentFromDots2 iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'}
+            <S.AfterContentFromDots2 iconId={'dotsForAfter80-103'} width={'80px'} height={'103px'}
                                    viewBox={'0 0 80 103'}/>
-        </StyledAboutMeFull>
+        </S.AboutMeFull>
     );
 };
 
-const StyledAboutMeFull = styled.section`
-    position: relative;
-    padding-top: 114px;
-    min-height: calc(100vh - 215px);
-`;
 
-const BeforeContentFromDotsTop = styled(Icon)`
-    position: absolute;
-    top: 403px;
-    left: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const BeforeContentFromBlock = styled(Icon)`
-    position: absolute;
-    top: 1200px;
-    left: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const AboutMeWrapper = styled.div`
-    padding-bottom: 112px;
-`;
-
-const Description = styled.p`
-    padding-bottom: 112px;
-
-    @media screen and (max-width: 845px) {
-        padding-bottom: 30px;
-    }
-`;
-
-const SkillsWrapper = styled.div`
-    padding-bottom: 83px;
-
-    ${FlexWrapper} {
-        @media screen and (max-width: 768px) {
-            justify-content: space-around;
-        }
-    }
-`;
-
-const FactsWrapper = styled.div`
-    padding-bottom: 114px;
-`;
-
-const Wrapper = styled(FlexWrapper)`
-    max-width: 610px;
-`;
-
-const GroupImage = styled.img`
-    width: 178px;
-    height: 169px;
-    margin-right: 85px;
-    object-fit: contain;
-
-    @media screen and (max-width: 637px) {
-        margin-right: 0;
-    }
-    
-    @media screen and (max-width: 580px) {
-        display: none;
-    }
-`;
-
-const AfterContentFromBlock = styled(Icon)`
-    position: absolute;
-    top: 260px;
-    right: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const AfterContentFromDots1 = styled(Icon)`
-    position: absolute;
-    top: 767px;
-    right: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
-
-const AfterContentFromDots2 = styled(Icon)`
-    position: absolute;
-    top: 1370px;
-    right: 0;
-
-    @media screen and (max-width: 1210px) {
-        display: none;
-    }
-`;
 

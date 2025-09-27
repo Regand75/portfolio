@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {HeaderPropsType} from "../../../../data/ItemsData.tsx";
-import {FlexWrapper} from "../../../../components/common/FlexWrapper.tsx";
+import {HeaderPropsType} from "../../../../data/ItemsData.ts";
+import {FlexWrapper} from "../../../../components/common/FlexWrapper.ts";
 import {BurgerButton} from "../../burgerButton/BurgerButton.tsx";
 import {ThemeButton} from "../../themeButton/ThemeButton.tsx";
 import {LangSelect} from "../../langSelect/LangSelect.tsx";

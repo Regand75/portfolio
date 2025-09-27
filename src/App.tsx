@@ -13,7 +13,7 @@ import {Route, Routes} from "react-router-dom";
 import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
 import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
-import {items} from "./data/ItemsData.tsx";
+import {items} from "./data/ItemsData.ts";
 
 function App() {
     const [isDark, setIsDark] = useState(true);

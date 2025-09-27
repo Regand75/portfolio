@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
-import {FlexWrapper} from "./FlexWrapper.tsx";
+import {FlexWrapper} from "./FlexWrapper.ts";
 
 type SectionTitlePropsType =  {
     title?: string,
@@ -10,7 +10,7 @@ type SectionTitlePropsType =  {
     $symbol?: string,
 }
 
-export const SectionTitle = ({title, width, $mb, $symbol, $mbMobile}: SectionTitlePropsType) => {
+export const SectionTitle: React.FC<SectionTitlePropsType> = ({title, width, $mb, $symbol, $mbMobile}: SectionTitlePropsType) => {
     return (
         <StyledTitle title={title} $mb={$mb} $symbol={$symbol} $mbMobile={$mbMobile}>
             <FlexWrapper $gap='16px'>

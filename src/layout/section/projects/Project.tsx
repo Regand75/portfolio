@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button} from "../../../components/common/Button.tsx";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
-import {ProjectType} from "../../../data/ProjectsData.tsx";
+import {Button} from "../../../components/common/Button.ts";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
+import {ProjectType} from "../../../data/ProjectsData.ts";
 import {S} from "./Projects.styles.ts"
 
 export const Project = (props: ProjectType) => {

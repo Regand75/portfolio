@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import {IconsList} from "../../../components/common/IconsList.tsx";
 import {hoverEffect} from "../../../styles/Mixins.ts";
 
