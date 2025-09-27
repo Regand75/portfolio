@@ -11,7 +11,7 @@ const AboutMeFlexWrapper = styled(FlexWrapper)`
 `;
 
 const Wrapper = styled.div`
-    max-width: 515px;
+    max-width: 610px;
 `;
 
 const Description = styled.div`
@@ -136,11 +136,11 @@ const DescriptionFull = styled.p`
 
 const SkillsWrapper = styled.div`
     padding-bottom: 83px;
+`;
 
-    ${FlexWrapper} {
-        @media screen and (max-width: 768px) {
-            justify-content: space-around;
-        }
+const SkillsFlexWrapper = styled(FlexWrapper)`
+    @media screen and (max-width: 768px) {
+        justify-content: space-around;
     }
 `;
 
@@ -223,6 +223,7 @@ export const S = {
     AboutMeWrapper,
     DescriptionFull,
     SkillsWrapper,
+    SkillsFlexWrapper,
     FactsWrapper,
     WrapperFull,
     GroupImage,

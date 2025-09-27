@@ -27,13 +27,13 @@ export const AboutMeFull: React.FC = () => {
                 </S.AboutMeWrapper>
                 <S.SkillsWrapper>
                     <SectionTitle title={'skills'} $mb='48px' $symbol='#'/>
-                    <FlexWrapper wrap={'wrap'} $gap='16px'>
+                    <S.SkillsFlexWrapper wrap={'wrap'} $gap='16px'>
                         {skillsItems.map((skill, index) => (
                             <React.Fragment key={index}>
                                 <Skill $height='192px' title={skill.title} list={skill.list}/>
                             </React.Fragment>
                         ))}
-                    </FlexWrapper>
+                    </S.SkillsFlexWrapper>
                 </S.SkillsWrapper>
                 <S.FactsWrapper>
                     <SectionTitle title={'my-fun-facts'} $mb='20px' $symbol='#'/>

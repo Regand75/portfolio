@@ -4,9 +4,9 @@ export type SkillPropsType = {
 };
 
 export const skillsItems: SkillPropsType[] = [
-    {title: 'Databases', list: 'MongoDB Postman Swagger REST API RxJS'},
-    {title: 'Tools', list: 'WebStorm Git GitHub NPM PNPM Yarn'},
-    {title: 'Other', list: 'HTML CSS SASS Webpack'},
     {title: 'Languages', list: 'JavaScript TypeScript'},
+    {title: 'Other', list: 'HTML CSS SASS Webpack'},
+    {title: 'Tools', list: 'WebStorm Git GitHub NPM PNPM Yarn'},
+    {title: 'Databases', list: 'MongoDB Postman Swagger REST API RxJS'},
     {title: 'Frameworks', list: 'Angular React'},
 ];

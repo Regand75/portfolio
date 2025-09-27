@@ -33,9 +33,32 @@ const Wrapper = styled(FlexWrapper)`
 `;
 
 const SkillsFlexWrapper = styled(FlexWrapper)`
+    div:nth-child(1) {
+        order: 5;
+    }
+    div:nth-child(2) {
+        order: 4;
+    }
+    div:nth-child(3) {
+        order: 1;
+    }
+    div:nth-child(4) {
+        order: 3;
+    }
+    div:nth-child(5) {
+        order: 2;
+    }
+    
     @media screen and (max-width: 974px) {
         flex-direction: row;
         flex-wrap: wrap;
+        div:nth-child(1),
+        div:nth-child(2),
+        div:nth-child(3),
+        div:nth-child(4),
+        div:nth-child(5) {
+            order: 0;
+        }
     }
 
     @media screen and (max-width: 768px) {
@@ -50,7 +73,12 @@ const Skill = styled.div<SkillStyleProps>`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     text-align: start;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 974px) {
+        width: ${props => props.$height || '192px'};
+        //width: 100%;
+    }
+    
+    @media screen and (max-width: 429px) {
         width: 100%;
     }
 `;
