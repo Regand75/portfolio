@@ -6,7 +6,8 @@ import {Button} from "../../../components/common/Button.ts";
 import {Link} from "react-router-dom";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
 import {Slogan} from "../slogan/Slogan.tsx";
-import {S} from "./Main.styles.ts"
+import {S} from "./Main.styles.ts";
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
     return (
@@ -15,7 +16,28 @@ export const Main: React.FC = () => {
                 <FixedBlockIcon />
                 <S.MainFlexWrapper $align='start' $justify='space-between' $gap='20px'>
                     <S.Info>
-                        <S.Title>Andrey is a <span>front-end developer</span></S.Title>
+                        <S.Title>
+                            <p>Andrey is a front-end developer</p>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter
+                                        .typeString('<span class="primary">Andrey is a </span>')
+                                        .typeString('<span class="tertiary">front-end developer</span>')
+                                        .typeString('<span class="primary">!</span>')
+                                        .callFunction(() => {
+                                            const cursor = document.querySelector('.Typewriter__cursor');
+                                            cursor?.remove();
+                                        })
+                                        .start();
+                                }}
+                                options={{
+                                    autoStart: true,
+                                    loop: false,
+                                    delay: 100,
+                                    html: true,
+                                }}
+                            />
+                        </S.Title>
                         <S.Description>He crafts responsive websites where technologies meet creativity</S.Description>
                         <Link to={'contacts/contacts-all'}>
                             <Button>Contact me!!</Button>

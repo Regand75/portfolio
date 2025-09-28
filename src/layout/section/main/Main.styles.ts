@@ -59,9 +59,17 @@ const Title = styled.h1`
     font-size: 32px;
     line-height: 42px;
     color: ${({theme}) => theme.colors.primary};
+    
+    .primary {
+        color: ${({theme}) => theme.colors.primary};
+    }
 
-    span {
+    .tertiary {
         color: ${({theme}) => theme.colors.tertiary};
+    }
+    
+    p {
+        display: none;
     }
 `;
 
