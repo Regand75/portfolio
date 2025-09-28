@@ -14,6 +14,7 @@ import {ProjectsAll} from "./layout/section/projects/ProjectsAll.tsx";
 import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
 import {items} from "./data/ItemsData.ts";
+import {ContactsPopup} from "./layout/section/main/contactsPopup/ContactsPopup.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
@@ -21,6 +22,9 @@ function App() {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
     const toggleBurger = () => setIsBurgerOpen(!isBurgerOpen);
     const closeBurger = () => setIsBurgerOpen(false);
+    const [isContactsPopupOpen, setIsContactsPopupOpen] = useState(false);
+    const toggleContactsPopup = () => setIsContactsPopupOpen(prev => !prev);
+    const closeContactsPopup = () => setIsContactsPopupOpen(false);
 
     return (
         <div className="App">
@@ -33,7 +37,9 @@ function App() {
                         closeBurger={closeBurger}
                         menuItems={items}/>
                 <Routes>
-                    <Route path={'/'} element={<Main/>}/>
+                    <Route path={'/'} element={
+                        <Main toggleContactsPopup={toggleContactsPopup}/>
+                    }/>
                     <Route path={'/projects'} element={<Projects/>}/>
                     <Route path={'/projects/projects-all'} element={<ProjectsAll/>}/>
                     <Route path={'/about-me'} element={<AboutMeComponent/>}/>
@@ -41,7 +47,11 @@ function App() {
                     <Route path={'/contacts'} element={<Contacts/>}/>
                     <Route path={'/contacts/contacts-all'} element={<ContactsAll/>}/>
                 </Routes>
-
+                <ContactsPopup
+                    toggleContactsPopup={toggleContactsPopup}
+                    closeContactsPopup={closeContactsPopup}
+                    isContactsPopupOpen={isContactsPopupOpen}
+                />
                 <Footer/>
             </ThemeProvider>
         </div>

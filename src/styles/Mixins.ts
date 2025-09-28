@@ -18,3 +18,20 @@ export const gridLayout = css`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
 `;
+
+export const buttonViewAll = css`
+    border: none;
+    background-color: transparent;
+    text-align: end;
+    cursor: pointer;
+    width: 117px;
+    font-family: 'Fira Code', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: ${({theme}) => theme.colors.primary};
+    line-height: 42px;
+
+    &:hover {
+        color: ${({theme}) => theme.colors.tertiary};
+    }
+`;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {Icon} from "../../../components/common/Icon.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {hoverEffect} from "../../../styles/Mixins.ts";
+import {buttonViewAll, hoverEffect} from "../../../styles/Mixins.ts";
+import {Link} from "react-router-dom";
 
 //Contacts
 const Contacts = styled.section`
@@ -9,6 +10,20 @@ const Contacts = styled.section`
     padding-top: 114px;
     padding-bottom: 84px;
     min-height: calc(100vh - 215px);
+`;
+
+const LinkWrapper = styled(Link)`
+    
+    button {
+        ${buttonViewAll}
+    }
+`;
+
+const TitleFlexWrapper = styled(FlexWrapper)`
+    @media screen and (max-width: 375px) {
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+    }
 `;
 
 const AfterContentFromDots = styled(Icon)`
@@ -144,6 +159,8 @@ const AfterContentFromBlock = styled(Icon)`
 
 export const S = {
     Contacts,
+    LinkWrapper,
+    TitleFlexWrapper,
     AfterContentFromDots,
     ContactsBlock,
     MeDescription,

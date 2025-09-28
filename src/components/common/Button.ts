@@ -10,7 +10,7 @@ type ButtonPropsType = {
 
 export const Button = styled.button<ButtonPropsType>`
     padding: 8px 16px;
-    background-color: ${({ $colorBackground, theme }) =>
+    background-color: ${({$colorBackground, theme}) =>
             $colorBackground ? theme.colors[$colorBackground] : "transparent"};
     text-align: center;
     width: fit-content;
@@ -25,11 +25,11 @@ export const Button = styled.button<ButtonPropsType>`
             $colorBorder ? theme.colors[$colorBorder] : theme.colors.tertiary};
 
     &:hover {
-        background-color: ${({ $hoverBackground, theme }) =>
+        background-color: ${({$hoverBackground, theme}) =>
                 $hoverBackground
                         ? theme.colors[$hoverBackground]
                         : theme.colors.bgTrTertiary};
-        color: ${({ $hoverText, $colorText, theme }) =>
+        color: ${({$hoverText, $colorText, theme}) =>
                 $hoverText
                         ? theme.colors[$hoverText]
                         : $colorText
@@ -37,3 +37,4 @@ export const Button = styled.button<ButtonPropsType>`
                                 : theme.colors.primary};
     }
 `;
+

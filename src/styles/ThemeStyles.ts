@@ -7,6 +7,9 @@ export const darkTheme = {
         bgTrTertiary: '#C778DD33',
         bgTrSecondary: '#ABB2BF33',
         bgPopup: '#000000D1',
+    },
+    shadows: {
+        popup: '0 0 1px #ABB2BF'
     }
 }
 
@@ -19,5 +22,8 @@ export const lightTheme = {
         bgTrTertiary: '#C778DD33',
         bgTrSecondary: '#4F5B6633',
         bgPopup:'#FFFFFFD1',
+    },
+    shadows: {
+        popup: '5px 5px 12px #4F5B66'
     }
 }

@@ -3,17 +3,20 @@ import mainImage from "../../../assets/images/main-image.png";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import {Container} from "../../../components/common/Container.ts";
 import {Button} from "../../../components/common/Button.ts";
-import {Link} from "react-router-dom";
 import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
-import {Slogan} from "../slogan/Slogan.tsx";
 import {S} from "./Main.styles.ts";
 import Typewriter from 'typewriter-effect';
+import {Slogan} from "./slogan/Slogan.tsx";
 
-export const Main: React.FC = () => {
+type MainPropsType = {
+    toggleContactsPopup: () => void;
+};
+
+export const Main: React.FC<MainPropsType> = ({toggleContactsPopup}) => {
     return (
         <S.Main>
             <Container>
-                <FixedBlockIcon />
+                <FixedBlockIcon/>
                 <S.MainFlexWrapper $align='start' $justify='space-between' $gap='20px'>
                     <S.Info>
                         <S.Title>
@@ -39,9 +42,7 @@ export const Main: React.FC = () => {
                             />
                         </S.Title>
                         <S.Description>He crafts responsive websites where technologies meet creativity</S.Description>
-                        <Link to={'contacts/contacts-all'}>
-                            <Button>Contact me!!</Button>
-                        </Link>
+                        <Button onClick={toggleContactsPopup}>Contact me!!</Button>
                     </S.Info>
                     <S.ImageWrapper>
                         <S.BeforeIcon iconId={'outlineBig'} width={'156px'} height={'156px'} viewBox={'0 0 156 156'}/>
@@ -55,10 +56,10 @@ export const Main: React.FC = () => {
                         </S.InfoWork>
                     </S.ImageWrapper>
                 </S.MainFlexWrapper>
-                <Slogan />
+                <Slogan/>
             </Container>
             <S.AfterContentFromBlock iconId={'blockForAfter82-91'} width={'82px'} height={'91px'} viewBox={'0 0 82 91'}
-                                   fill={'none'}/>
+                                     fill={'none'}/>
         </S.Main>
     );
 };

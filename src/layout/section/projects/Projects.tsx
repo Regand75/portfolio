@@ -18,17 +18,18 @@ export const Projects = () => {
                         <button>View all {'~~>'}</button>
                     </S.LinkWrapper>
                 </S.TitleFlexWrapper>
-                    <S.ProjectsWrapper>
-                        {fullProjects.slice(0, 3).map((project) => (
-                            <React.Fragment key={project.id}>
-                                <Project {...project} />
-                            </React.Fragment>
-                        ))}
-                    </S.ProjectsWrapper>
+                <S.ProjectsWrapper>
+                    {fullProjects.slice(0, 3).map((project) => (
+                        <React.Fragment key={project.id}>
+                            <Project {...project} />
+                        </React.Fragment>
+                    ))}
+                </S.ProjectsWrapper>
                 <Skills/>
             </Container>
-            <S.AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'} viewBox={'0 0 68 155'}
-                                   fill={'none'}/>
+            <S.AfterContentFromBlock iconId={'blockForAfter68-155'} width={'68px'} height={'155px'}
+                                     viewBox={'0 0 68 155'}
+                                     fill={'none'}/>
         </S.Projects>
     );
 };

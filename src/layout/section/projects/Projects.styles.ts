@@ -3,7 +3,7 @@ import {Button} from "../../../components/common/Button.ts";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import {Icon} from "../../../components/common/Icon.tsx";
 import {Link} from "react-router-dom";
-import {gridLayout} from "../../../styles/Mixins.ts";
+import {buttonViewAll, gridLayout} from "../../../styles/Mixins.ts";
 
 // styles project
 const Project = styled.div`
@@ -100,6 +100,7 @@ const Projects = styled.section`
 const TitleFlexWrapper = styled(FlexWrapper)`
     @media screen and (max-width: 375px) {
         flex-wrap: wrap;
+        padding-bottom: 30px;
     }
 `;
 
@@ -114,31 +115,14 @@ const AfterContentFromBlock = styled(Icon)`
 `;
 
 const LinkWrapper = styled(Link)`
-    
-    button {
-        border: none;
-        background-color: transparent;
-        text-align: end;
-        cursor: pointer;
-        width: 117px;
-        font-family: 'Fira Code', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        color: ${({theme}) => theme.colors.primary};
-        line-height: 42px;
 
-        &:hover {
-            color: ${({theme}) => theme.colors.tertiary};
-        }
+    button {
+        ${buttonViewAll}
     }
 `;
 
 const ProjectsWrapper = styled.div`
     ${gridLayout};
-
-    @media screen and (max-width: 375px) {
-        padding-top: 30px;
-    }
 `;
 
 // styles projectsAll
