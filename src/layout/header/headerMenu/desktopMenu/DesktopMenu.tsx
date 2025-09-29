@@ -1,6 +1,6 @@
 import React from 'react';
 import {HeaderPropsType} from "../../../../data/ItemsData.ts";
-import {FlexWrapper} from "../../../../components/common/FlexWrapper.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
 import {LangSelect} from "../../langSelect/LangSelect.tsx";
 import {ThemeButton} from "../../themeButton/ThemeButton.tsx";
 import {S} from "../HeaderMenu.styles.ts"

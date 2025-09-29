@@ -1,10 +1,9 @@
 import React from 'react';
-import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
+import {Container} from "../../../components/Container.ts";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import {ContactsBlock} from "./ContactsBlock.tsx";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Icon} from "../../../components/common/icon/Icon.tsx";
-import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {Icon} from "../../../components/icon/Icon.tsx";
 import {S} from "./Contacts.styles.ts"
 
 export const ContactsAll: React.FC = () => {
@@ -13,7 +12,6 @@ export const ContactsAll: React.FC = () => {
             <S.BeforeContentFromDotsTop iconId={'dotsForBefore78-49'} width={'78px'} height={'49px'}
                                       viewBox={'0 0 78 49'}/>
             <Container>
-                <FixedBlockIcon />
                 <S.ContactsWrapper>
                     <SectionTitle title={'contacts'} $mb='14px' $symbol='/'/>
                     <S.Description>Who am i?</S.Description>

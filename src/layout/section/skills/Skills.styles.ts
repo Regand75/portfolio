@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {SkillStyleProps} from "./Skill.tsx";
 
 // styles Skill

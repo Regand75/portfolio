@@ -1,14 +1,13 @@
 import React from 'react';
-import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
+import {Container} from "../../../components/Container.ts";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import {AboutMe} from "./About-me.tsx";
 import {skillsItems} from "../../../data/SkillsData.ts";
 import {Skill} from "../skills/Skill.tsx";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import skillsGroupImage from "../../../assets/images/group2.png";
 import {MyFact} from "./My-fact.tsx";
 import {myFunFacts} from "../../../data/FactsData.tsx";
-import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./About-me.styles.ts"
 
 export const AboutMeFull: React.FC = () => {
@@ -19,7 +18,6 @@ export const AboutMeFull: React.FC = () => {
             <S.BeforeContentFromBlockFull iconId={'blockForBefore78-155'} width={'78px'} height={'155px'}
                                     viewBox={'0 0 78 155'} fill={'none'}/>
             <Container>
-                <FixedBlockIcon/>
                 <S.AboutMeWrapper>
                     <SectionTitle title={'about-me'} $mb='14px' $symbol='/'/>
                     <S.DescriptionFull>List of my projects</S.DescriptionFull>

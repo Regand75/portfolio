@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button} from "../../../components/common/Button.ts";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
+import {Button} from "../../../components/Button.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {ProjectType} from "../../../data/ProjectsData.ts";
 import {S} from "./Projects.styles.ts"
 

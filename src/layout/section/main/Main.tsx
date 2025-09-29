@@ -1,9 +1,8 @@
 import React from 'react';
 import mainImage from "../../../assets/images/main-image.png";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Container} from "../../../components/common/Container.ts";
-import {Button} from "../../../components/common/Button.ts";
-import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {Container} from "../../../components/Container.ts";
+import {Button} from "../../../components/Button.ts";
 import {S} from "./Main.styles.ts";
 import Typewriter from 'typewriter-effect';
 import {Slogan} from "./slogan/Slogan.tsx";
@@ -16,7 +15,6 @@ export const Main: React.FC<MainPropsType> = ({toggleContactsPopup}) => {
     return (
         <S.Main>
             <Container>
-                <FixedBlockIcon/>
                 <S.MainFlexWrapper $align='start' $justify='space-between' $gap='20px'>
                     <S.Info>
                         <S.Title>

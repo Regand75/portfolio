@@ -1,15 +1,13 @@
 import React from 'react';
-import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
+import {Container} from "../../../components/Container.ts";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import {ContactsBlock} from "./ContactsBlock.tsx";
-import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./Contacts.styles.ts"
 
 export const Contacts: React.FC = () => {
     return (
         <S.Contacts>
             <Container>
-                <FixedBlockIcon/>
                 <S.TitleFlexWrapper $align='start' $justify='space-between' $gap='20px'>
                     <SectionTitle title={'contacts'} width={'145px'} $mb='45px' $mbMobile='0' $symbol='#'/>
                     <S.LinkWrapper to={'/contacts/contacts-all'}>

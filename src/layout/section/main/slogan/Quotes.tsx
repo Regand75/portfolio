@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from "../../../../components/common/icon/Icon.tsx";
+import {Icon} from "../../../../components/icon/Icon.tsx";
 import {S} from "./Slogan.styles.ts"
 
 export type QuotesPropsType = {

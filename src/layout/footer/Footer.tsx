@@ -1,7 +1,7 @@
 import React from 'react';
-import {Container} from "../../components/common/Container.ts";
-import {Logo} from "../../components/common/logo/Logo.tsx";
-import {FlexWrapper} from "../../components/common/FlexWrapper.ts";
+import {Container} from "../../components/Container.ts";
+import {Logo} from "../../components/logo/Logo.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.ts";
 import {S} from "./Footer.styles.ts"
 
 export const Footer: React.FC = () => {

@@ -1,9 +1,8 @@
 import React from 'react';
-import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
+import {Container} from "../../../components/Container.ts";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import {fullProjects, smallProjects} from "../../../data/ProjectsData.ts";
 import {Project} from "./Project.tsx";
-import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./Projects.styles.ts"
 
 export const ProjectsAll = () => {
@@ -16,7 +15,6 @@ export const ProjectsAll = () => {
             <S.BeforeContentFromDotsBottom iconId={'dotsForBefore52-103'} width={'52px'} height={'103px'}
                                          viewBox={'0 0 52 103'}/>
             <Container>
-                <FixedBlockIcon/>
                 <SectionTitle title={'projects'} $mb='14px' $symbol='/'/>
                 <S.DescriptionAll>List of my projects</S.DescriptionAll>
                 <SectionTitle title={'complete-apps'} $symbol='#'/>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Icon} from "../../../components/common/icon/Icon.tsx";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 const Button = styled.button`
     background-color: transparent;

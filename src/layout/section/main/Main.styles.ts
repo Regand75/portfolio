@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Icon} from "../../../components/common/icon/Icon.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 const Main = styled.section`
     position: relative;

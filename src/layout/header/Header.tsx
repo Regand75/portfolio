@@ -1,9 +1,9 @@
 import React from 'react';
 import {S} from "./Header.styles.ts"
 import {HeaderPropsType} from "../../data/ItemsData.ts";
-import {Container} from "../../components/common/Container.ts";
-import {FlexWrapper} from "../../components/common/FlexWrapper.ts";
-import {Logo} from "../../components/common/logo/Logo.tsx";
+import {Container} from "../../components/Container.ts";
+import {FlexWrapper} from "../../components/FlexWrapper.ts";
+import {Logo} from "../../components/logo/Logo.tsx";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 

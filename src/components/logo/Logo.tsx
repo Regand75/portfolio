@@ -3,7 +3,7 @@ import {Icon} from "../icon/Icon.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper.ts";
 import {Link} from "react-router-dom";
-import {hoverEffect} from "../../../styles/Mixins.ts";
+import {hoverEffect} from "../../styles/Mixins.ts";
 
 type LogoPropsType = {
     onClick?: () => void;

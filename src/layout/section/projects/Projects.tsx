@@ -1,9 +1,8 @@
 import React from 'react';
-import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
+import {Container} from "../../../components/Container.ts";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import {fullProjects} from "../../../data/ProjectsData.ts";
 import {Project} from "./Project.tsx";
-import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {Skills} from "../skills/Skills.tsx";
 import {S} from "./Projects.styles.ts"
 
@@ -11,7 +10,6 @@ export const Projects = () => {
     return (
         <S.Projects>
             <Container>
-                <FixedBlockIcon/>
                 <S.TitleFlexWrapper $align='start' $justify='space-between' $gap='20px'>
                     <SectionTitle title={'projects'} width={'511px'} $mb='48px' $mbMobile='0' $symbol='#'/>
                     <S.LinkWrapper to={'/projects/projects-all'}>

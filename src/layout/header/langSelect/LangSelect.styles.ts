@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {LangSelectProps} from "./LangSelect.tsx";
 import {hoverEffect} from "../../../styles/Mixins.ts";
 

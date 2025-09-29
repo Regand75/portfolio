@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {Button} from "../../../components/common/Button.ts";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Icon} from "../../../components/common/icon/Icon.tsx";
+import {Button} from "../../../components/Button.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {Icon} from "../../../components/icon/Icon.tsx";
 import {Link} from "react-router-dom";
 import {buttonViewAll, gridLayout} from "../../../styles/Mixins.ts";
 
@@ -10,7 +10,11 @@ const Project = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     width: 100%;
     height: fit-content;
-
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.03);
+    }
     @media screen and (max-width: 426px) {
         max-width: none;
         width: 100%;
@@ -66,7 +70,8 @@ const Image = styled.img`
 `;
 
 const MeSkills = styled.div`
-    border: 1px solid ${({theme}) => theme.colors.secondary};
+    border-top: 1px solid ${({theme}) => theme.colors.secondary};
+    border-bottom: 1px solid ${({theme}) => theme.colors.secondary};
     padding: 8px;
     font-family: 'Fira Code', sans-serif;
     line-height: 21px;

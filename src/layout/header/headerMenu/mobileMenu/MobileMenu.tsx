@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {HeaderPropsType} from "../../../../data/ItemsData.ts";
-import {FlexWrapper} from "../../../../components/common/FlexWrapper.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
 import {BurgerButton} from "../../burgerButton/BurgerButton.tsx";
 import {ThemeButton} from "../../themeButton/ThemeButton.tsx";
 import {LangSelect} from "../../langSelect/LangSelect.tsx";
-import {Logo} from "../../../../components/common/logo/Logo.tsx";
+import {Logo} from "../../../../components/logo/Logo.tsx";
 import {S} from "../HeaderMenu.styles.ts"
 
 export const MobileMenu: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {

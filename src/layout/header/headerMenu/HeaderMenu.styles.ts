@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
-import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {IconsList} from "../../../components/common/iconList/IconsList.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {IconsList} from "../../../components/iconList/IconsList.tsx";
 import {hoverEffect} from "../../../styles/Mixins.ts";
 
 const Link = styled(NavLink)`

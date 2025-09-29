@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {S} from "./Contacts-popup.styles.ts";
-import {Button} from "../../../../components/common/Button.ts";
-import {FlexWrapper} from "../../../../components/common/FlexWrapper.ts";
+import {Button} from "../../../../components/Button.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
 
 export type ContactsPopupPropsType = {
     toggleContactsPopup: () => void;

@@ -7,8 +7,10 @@ import {darkTheme, lightTheme} from "./styles/ThemeStyles.ts";
 import {useState} from "react";
 import {items} from "./data/ItemsData.ts";
 import {ContactsPopup} from "./layout/section/main/contactsPopup/ContactsPopup.tsx";
-import {Particle} from "./components/common/particle/Particle.tsx";
-import AnimatedRoutes from "./components/common/animatedRoutes/AnimatedRoutes.tsx";
+import {Particle} from "./components/particle/Particle.tsx";
+import AnimatedRoutes from "./components/animatedRoutes/AnimatedRoutes.tsx";
+import {ScrollToTop} from "./components/goTop/ScrollToTop.tsx";
+import {FixedBlockIcon} from "./components/fixedBlockIcon/FixedBlockIcon.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
@@ -25,12 +27,14 @@ function App() {
             <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
                 <GlobalStyles/>
                 <Particle />
+                <FixedBlockIcon />
                 <Header toggleTheme={toggleTheme}
                         isDark={isDark}
                         toggleBurger={toggleBurger}
                         isBurgerOpen={isBurgerOpen}
                         closeBurger={closeBurger}
                         menuItems={items}/>
+                <ScrollToTop />
                 <AnimatedRoutes toggleContactsPopup={toggleContactsPopup} />
                 <ContactsPopup
                     toggleContactsPopup={toggleContactsPopup}
