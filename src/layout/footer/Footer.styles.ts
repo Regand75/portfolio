@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/common/FlexWrapper.ts";
 import {hoverEffect} from "../../styles/Mixins.ts";
-import {IconsList} from "../../components/common/IconsList.tsx";
+import {IconsList} from "../../components/common/iconList/IconsList.tsx";
 
 const Footer = styled.footer`;
     padding: 32px 0;

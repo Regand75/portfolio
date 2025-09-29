@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from "../../../components/common/Icon.tsx";
+import {Icon} from "../../../components/common/icon/Icon.tsx";
 import {S} from "./BurgerButton.styles.ts"
 
 type BurgerButtonPropsType = {

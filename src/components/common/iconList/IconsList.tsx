@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "./Icon.tsx";
+import {Icon} from "../icon/Icon.tsx";
 
 export const IconsList:React.FC = ({className}: {className?: string}) => {
     return (

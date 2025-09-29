@@ -3,7 +3,7 @@ import mainImage from "../../../assets/images/main-image.png";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import {Container} from "../../../components/common/Container.ts";
 import {Button} from "../../../components/common/Button.ts";
-import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./Main.styles.ts";
 import Typewriter from 'typewriter-effect';
 import {Slogan} from "./slogan/Slogan.tsx";
@@ -45,7 +45,8 @@ export const Main: React.FC<MainPropsType> = ({toggleContactsPopup}) => {
                         <Button onClick={toggleContactsPopup}>Contact me!!</Button>
                     </S.Info>
                     <S.ImageWrapper>
-                        <S.BeforeIcon iconId={'outlineBig'} width={'156px'} height={'156px'} viewBox={'0 0 156 156'}/>
+                        <S.BeforeIcon iconId={'outlineBig'} width={'156px'} height={'156px'}
+                                      viewBox={'0 0 156 156'}/>
                         <S.Image src={mainImage as string} alt="Fhoto"/>
                         <S.AfterIcon iconId={'dots'} width={'85px'} height={'85px'} viewBox={'0 0 85 85'}/>
                         <S.InfoWork>
@@ -61,7 +62,8 @@ export const Main: React.FC<MainPropsType> = ({toggleContactsPopup}) => {
             <S.AfterContentFromBlock iconId={'blockForAfter82-91'} width={'82px'} height={'91px'} viewBox={'0 0 82 91'}
                                      fill={'none'}/>
         </S.Main>
-    );
+    )
+        ;
 };
 
 

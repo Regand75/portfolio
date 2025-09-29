@@ -15,6 +15,7 @@ import {AboutMeFull} from "./layout/section/about-me/About-me-full.tsx";
 import {ContactsAll} from "./layout/section/contacts/ContactsAll.tsx";
 import {items} from "./data/ItemsData.ts";
 import {ContactsPopup} from "./layout/section/main/contactsPopup/ContactsPopup.tsx";
+import {Particle} from "./components/common/particle/Particle.tsx";
 
 function App() {
     const [isDark, setIsDark] = useState(true);
@@ -30,6 +31,7 @@ function App() {
         <div className="App">
             <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
                 <GlobalStyles/>
+                <Particle />
                 <Header toggleTheme={toggleTheme}
                         isDark={isDark}
                         toggleBurger={toggleBurger}

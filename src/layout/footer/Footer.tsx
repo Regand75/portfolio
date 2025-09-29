@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from "../../components/common/Container.ts";
-import {Logo} from "../../components/common/Logo.tsx";
+import {Logo} from "../../components/common/logo/Logo.tsx";
 import {FlexWrapper} from "../../components/common/FlexWrapper.ts";
 import {S} from "./Footer.styles.ts"
 

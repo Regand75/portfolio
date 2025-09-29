@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "./FlexWrapper.ts";
-import {IconsList} from "./IconsList.tsx";
+import {FlexWrapper} from "../FlexWrapper.ts";
+import {IconsList} from "../iconList/IconsList.tsx";
 
 export const FixedBlockIcon: React.FC = () => {
     return (

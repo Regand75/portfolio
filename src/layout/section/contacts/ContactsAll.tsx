@@ -1,10 +1,10 @@
 import React from 'react';
 import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
 import {ContactsBlock} from "./ContactsBlock.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Icon} from "../../../components/common/Icon.tsx";
-import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {Icon} from "../../../components/common/icon/Icon.tsx";
+import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./Contacts.styles.ts"
 
 export const ContactsAll: React.FC = () => {

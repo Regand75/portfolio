@@ -1,8 +1,8 @@
 import React from 'react';
 import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
 import {ContactsBlock} from "./ContactsBlock.tsx";
-import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./Contacts.styles.ts"
 
 export const Contacts: React.FC = () => {

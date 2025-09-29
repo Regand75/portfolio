@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Icon} from "../../../components/common/Icon.tsx";
+import {Icon} from "../../../components/common/icon/Icon.tsx";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import {buttonViewAll, hoverEffect} from "../../../styles/Mixins.ts";
 import {Link} from "react-router-dom";

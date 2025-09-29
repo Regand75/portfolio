@@ -1,7 +1,7 @@
 import React from 'react';
-import iconsSprite from '../../assets/images/icons-sprite.svg';
+import iconsSprite from '../../../assets/images/icons-sprite.svg';
 import styled from "styled-components";
-import {hoverEffect} from "../../styles/Mixins.ts";
+import {hoverEffect} from "../../../styles/Mixins.ts";
 
 export type IconPropsType = {
     iconId: string,

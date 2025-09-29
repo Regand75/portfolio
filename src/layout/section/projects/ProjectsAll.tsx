@@ -1,9 +1,9 @@
 import React from 'react';
 import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
 import {fullProjects, smallProjects} from "../../../data/ProjectsData.ts";
 import {Project} from "./Project.tsx";
-import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./Projects.styles.ts"
 
 export const ProjectsAll = () => {

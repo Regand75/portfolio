@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Icon} from "../../../components/common/Icon.tsx";
+import {Icon} from "../../../components/common/icon/Icon.tsx";
 import {S} from "./Contacts.styles.ts"
 
 export type ContactsBlockShowPropsType = {

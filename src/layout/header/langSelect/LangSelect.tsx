@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Icon } from '../../../components/common/Icon.tsx';
+import { Icon } from '../../../components/common/icon/Icon.tsx';
 import {S} from "./LangSelect.styles.ts"
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 

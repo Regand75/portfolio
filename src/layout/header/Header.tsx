@@ -3,7 +3,7 @@ import {S} from "./Header.styles.ts"
 import {HeaderPropsType} from "../../data/ItemsData.ts";
 import {Container} from "../../components/common/Container.ts";
 import {FlexWrapper} from "../../components/common/FlexWrapper.ts";
-import {Logo} from "../../components/common/Logo.tsx";
+import {Logo} from "../../components/common/logo/Logo.tsx";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from "../../../components/common/Container.ts";
-import {SectionTitle} from "../../../components/common/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/common/sectionTitle/SectionTitle.tsx";
 import {AboutMe} from "./About-me.tsx";
 import {skillsItems} from "../../../data/SkillsData.ts";
 import {Skill} from "../skills/Skill.tsx";
@@ -8,7 +8,7 @@ import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
 import skillsGroupImage from "../../../assets/images/group2.png";
 import {MyFact} from "./My-fact.tsx";
 import {myFunFacts} from "../../../data/FactsData.tsx";
-import {FixedBlockIcon} from "../../../components/common/FixedBlockIcon.tsx";
+import {FixedBlockIcon} from "../../../components/common/fixedBlockIcon/FixedBlockIcon.tsx";
 import {S} from "./About-me.styles.ts"
 
 export const AboutMeFull: React.FC = () => {

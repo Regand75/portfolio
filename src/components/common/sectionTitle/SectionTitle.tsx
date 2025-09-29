@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
-import {FlexWrapper} from "./FlexWrapper.ts";
+import {FlexWrapper} from "../FlexWrapper.ts";
 
 type SectionTitlePropsType =  {
     title?: string,

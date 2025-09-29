@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Button} from "../../../components/common/Button.ts";
 import {FlexWrapper} from "../../../components/common/FlexWrapper.ts";
-import {Icon} from "../../../components/common/Icon.tsx";
+import {Icon} from "../../../components/common/icon/Icon.tsx";
 import {Link} from "react-router-dom";
 import {buttonViewAll, gridLayout} from "../../../styles/Mixins.ts";
 
