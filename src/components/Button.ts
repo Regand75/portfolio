@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {animations} from "framer-motion";
 
 type ButtonPropsType = {
     $colorBorder?: string,
@@ -23,7 +24,8 @@ export const Button = styled.button<ButtonPropsType>`
             $colorText ? theme.colors[$colorText] : theme.colors.primary};
     border: 1px solid ${({$colorBorder, theme}) =>
             $colorBorder ? theme.colors[$colorBorder] : theme.colors.tertiary};
-
+    transition: ${({theme}) => theme.animations.transition};
+    
     &:hover {
         background-color: ${({$hoverBackground, theme}) =>
                 $hoverBackground

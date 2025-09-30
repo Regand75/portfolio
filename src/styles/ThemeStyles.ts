@@ -10,6 +10,9 @@ export const darkTheme = {
     },
     shadows: {
         popup: '0 0 1px #ABB2BF'
+    },
+    animations: {
+        transition: '.3s ease-in-out',
     }
 }
 
@@ -25,5 +28,8 @@ export const lightTheme = {
     },
     shadows: {
         popup: '5px 5px 12px #4F5B66'
+    },
+    animations: {
+        transition: '.3s ease-in-out',
     }
 }

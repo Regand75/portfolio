@@ -10,11 +10,12 @@ const Project = styled.div`
     border: 1px solid ${({theme}) => theme.colors.secondary};
     width: 100%;
     height: fit-content;
-    transition: transform 0.3s ease;
+    transition: ${({theme}) => theme.animations.transition};
     
     &:hover {
         transform: scale(1.03);
     }
+    
     @media screen and (max-width: 426px) {
         max-width: none;
         width: 100%;
