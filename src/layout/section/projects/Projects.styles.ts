@@ -25,7 +25,7 @@ const Project = styled.div`
 const ImageWrapper = styled.div`
     position: relative;
     height: auto;
-
+    
     &::before {
         content: '';
         position: absolute;
@@ -34,13 +34,15 @@ const ImageWrapper = styled.div`
         top: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(2px);
         opacity: 0;
+        transition: .3s ease-in-out;
     }
 
     &:hover {
         ${Button} {
             opacity: 1;
+            transform: translate(-50%, -50%);
         }
 
         &::before {
@@ -52,8 +54,9 @@ const ImageWrapper = styled.div`
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -40%);
         opacity: 0;
+        transition: .3s ease-in-out;
     }
 
     @media screen and (max-width: 426px) {

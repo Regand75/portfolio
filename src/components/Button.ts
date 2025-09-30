@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {animations} from "framer-motion";
 
 type ButtonPropsType = {
     $colorBorder?: string,

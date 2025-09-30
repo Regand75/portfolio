@@ -1,7 +1,7 @@
 import {css} from "styled-components";
 
 export const hoverEffect = (withColor: boolean = false) => css`
-  transition: filter 0.3s ease, fill 0.3s ease;
+  transition: filter .3s ease-in-out, fill .3s ease-in-out, color .3s ease-in-out;
 
   &:hover {
     filter: drop-shadow(0 0 6px ${({ theme }) => theme.colors.secondary});
@@ -30,7 +30,8 @@ export const buttonViewAll = css`
     font-weight: 500;
     color: ${({theme}) => theme.colors.primary};
     line-height: 42px;
-
+    ${hoverEffect};
+    
     &:hover {
         color: ${({theme}) => theme.colors.tertiary};
     }
