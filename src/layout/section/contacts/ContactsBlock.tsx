@@ -1,11 +1,17 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Icon} from "../../../components/icon/Icon.tsx";
-import {S} from "./Contacts.styles.ts"
+import {S} from "./Contacts.styles.ts";
+import {motion} from "framer-motion";
 
 export type ContactsBlockShowPropsType = {
     showBlock?: boolean,
 }
+
+const blockVariants = {
+    hidden: {opacity: 0, y: 20},
+    visible: {opacity: 1, y: 0, transition: {duration: 0.5}}
+};
 
 export const ContactsBlock: React.FC<ContactsBlockShowPropsType> = (props: ContactsBlockShowPropsType) => {
     return (
@@ -19,24 +25,37 @@ export const ContactsBlock: React.FC<ContactsBlockShowPropsType> = (props: Conta
                 </S.MeDescription>
                 <S.BlockFlexWrapper $gap='8px'>
                     {props.showBlock && (
-                        <S.SupportBlock>
-                            <S.SupportTitle>Support me here</S.SupportTitle>
-                            <span>4149500120690030</span>
-                        </S.SupportBlock>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={blockVariants}
+                        >
+                            <S.SupportBlock>
+                                <S.SupportTitle>Support me here</S.SupportTitle>
+                                <span>4149500120690030</span>
+                            </S.SupportBlock>
+                        </motion.div>
                     )}
-                    <S.MessageBlock>
-                        <S.MessageTitle>Message me here</S.MessageTitle>
-                        <FlexWrapper direction={'column'} $justify='space-between' $gap='8px'>
-                            <S.MessageWrapper $align='center' $gap='8px'>
-                                <Icon iconId={'discord'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                <span>Urazov#3294</span>
-                            </S.MessageWrapper>
-                            <S.MessageWrapper $align='center' $gap='8px'>
-                                <Icon iconId={'email'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
-                                <span>urazovs_k@mail.ru</span>
-                            </S.MessageWrapper>
-                        </FlexWrapper>
-                    </S.MessageBlock>
+                    <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={blockVariants}
+                        transition={{delay: 0.3}}
+                    >
+                        <S.MessageBlock>
+                            <S.MessageTitle>Message me here</S.MessageTitle>
+                            <FlexWrapper direction={'column'} $justify='space-between' $gap='8px'>
+                                <S.MessageWrapper $align='center' $gap='8px'>
+                                    <Icon iconId={'discord'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
+                                    <span>Urazov#3294</span>
+                                </S.MessageWrapper>
+                                <S.MessageWrapper $align='center' $gap='8px'>
+                                    <Icon iconId={'email'} width={'32px'} height={'32px'} viewBox={'0 0 32 32'}/>
+                                    <span>urazovs_k@mail.ru</span>
+                                </S.MessageWrapper>
+                            </FlexWrapper>
+                        </S.MessageBlock>
+                    </motion.div>
                 </S.BlockFlexWrapper>
             </FlexWrapper>
         </S.ContactsBlock>
